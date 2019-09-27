@@ -1,0 +1,29 @@
+<ion-grid>
+  <ion-row>
+    <ion-col text-center>
+      <h2>Please, rate passenger!</h2>
+      <div class="user-photo" padding-top>
+        <ion-avatar>
+          <img [src]="user?.photo || '/assets/icon/favicon.jpg'">
+        </ion-avatar>
+      </div>
+      <h3>{{user.name}}</h3>
+      <ion-icon name="star" style="font-size: 30px" *ngFor="let num of [1,2,3,4,5]" (click)="rate(num)"
+                [ngStyle]="{'color': getColor(num)}"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+    <ion-item>
+      <ion-label text-center position="floating">Your comment (optional):</ion-label>
+      <ion-textarea [(ngModel)]="this.rating.comment" maxlength="50"></ion-textarea>
+    </ion-item>
+
+
+
+    <ion-footer text-center>
+      <ion-button (click)="closeModal()" [disabled]="!ratingNumber">Rate</ion-button>
+    </ion-footer>
+
+
+
+</ion-grid>

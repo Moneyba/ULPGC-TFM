@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Ride Details</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <div class="map">
+            <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [streetViewControl]="false"
+                     [zoomControl]="false">
+                <agm-direction *ngIf="direction" [origin]="direction.origin"
+                               [destination]="direction.destination"></agm-direction>
+                <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="!direction"></agm-marker>
+            </agm-map>
+            <ion-fab vertical="top" horizontal="end" slot="fixed">
+                <ion-fab-button>
+                    <ion-icon name="pin"></ion-icon>
+                </ion-fab-button>
+            </ion-fab>
+        </div>
+        <ion-item class="card-driver-container">
+            <div class="user-info" (click)="goToDriverDetailsPage()">
+                <ion-avatar slot="start">
+                    <img [src]="user?.photo">
+                </ion-avatar>
+                <div class="user-name">
+                    <label>{{user?.name}}</label>
+                    <div>
+                        <ion-icon name="star" slot="start"></ion-icon>
+                        <label>{{user?.averageRating}}/5 ({{user?.numberOfRatings}})</label>
+                    </div>
+                </div>
+            </div>
+            <ion-button (click)="contactTheDriver()">Contact</ion-button>
+        </ion-item>
+        <ion-item>
+            <label>From: {{ride.originName}}</label>
+        </ion-item>
+        <ion-item>
+            <label>To: {{ride.destinationName}}</label>
+        </ion-item>
+        <ion-item>
+            <label>Date and time: {{ride?.dateTime | date:'dd MMM h:mm'}}</label>
+        </ion-item>
+        <ion-item >
+            <label>Seats Available: {{availableSeats}}/{{ride?.numberOfSeats}}</label>
+            <label *ngIf="availableSeats == 0" id="no-seats-text" slot="end">no seats available</label>
+        </ion-item>
+
+        <div class="footer" *ngIf="!isBooked && availableSeats > 0 && ride.userId != currentUser.id">
+            <ion-button (click)="createRequest()">Book</ion-button>
+        </div>
+        <p *ngIf="isBooked" text-center>You have already booked this ride ;)</p>
+    </ion-card>
+
+</ion-content>
+
+

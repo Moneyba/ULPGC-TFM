@@ -1,0 +1,16 @@
+{
+  "HOME": {
+    "title": "ULPGC MaaS",
+    "text": "This is random text to show translation in application",
+    "searchButton": "Find your ride"
+  },
+  "GENERIC": {
+    "from": "From",
+    "to": "To",
+    "date": "Date",
+    "time": "Time",
+    "cancel": "Cancel",
+    "search": "Search",
+    "dateTime": "Date and time:"
+  }
+}

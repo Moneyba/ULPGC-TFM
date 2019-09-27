@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="profileForm">
+    <div class="user-photo" padding-top>
+      <ion-avatar>
+        <img [src]="photo" (click)="uploadNewPhoto()">
+      </ion-avatar>
+    </div>
+    <ion-item>
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-label>Display Name</ion-label>
+      <ion-input formControlName="name" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" slot="start"></ion-icon>
+      <ion-label>Phone Number</ion-label>
+      <ion-input formControlName="phoneNumber" disabled></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="car" slot="start"></ion-icon>
+      <ion-label>Car Plate</ion-label>
+      <ion-input formControlName="carPlate"></ion-input>
+    </ion-item>
+  </form>
+  <ion-item>
+    <ion-label>Select Language</ion-label>
+    <ion-select placeholder="Select One" [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
+      <ion-select-option value="en">English</ion-select-option>
+      <ion-select-option value="es">Spanish</ion-select-option>
+
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="alert" slot="start" color="danger"></ion-icon>
+    <ion-label color="danger" (click)="presentAlertConfirm()">Cancel Account</ion-label>
+  </ion-item>
+
+  <ion-button expand="full" type="submit" (click)="updateUser()"
+              [disabled]="profileForm.invalid">Save</ion-button>
+
+</ion-content>

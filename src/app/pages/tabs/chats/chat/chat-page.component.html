@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title (click)="goToRidePlanPage()">{{ride?.originName}}
+            -
+            {{ride?.destinationName}}</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-icon id="icon-more" name="md-more" slot="end" (click)="presentPopover($event)"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div class="message-area" *ngIf="chat">
+        <div class="message" *ngFor="let message of messages" [ngClass]="getClasses(message)">
+            <ion-avatar *ngIf="message.fromUser != currentUser.id" (click)="goToDriverDetailsPage()">
+                <img src="{{otherUser?.photo}}"></ion-avatar>
+            <p>{{message.content}}</p>
+            <span>{{message.date}}</span>
+        </div>
+        <ion-card-subtitle *ngIf="isCurrentUserBlocked" text-center>
+            I'm sorry, you can't send messages to this user</ion-card-subtitle>
+        <ion-card-subtitle *ngIf="isOtherUserBlocked" text-center>
+            You have blocked this user</ion-card-subtitle>
+    </div>
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-textarea [(ngModel)]="msg" class="message-input" placeholder="Type a message here" rows="1"
+                      (keydown.enter)="sendMessage();true"></ion-textarea>
+        <ion-buttons slot="end">
+            <ion-button color="primary" (click)="sendMessage()">
+                <ion-icon slot="icon-only" name="md-send"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

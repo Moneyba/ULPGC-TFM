@@ -1,0 +1,56 @@
+
+ion-slides {
+  height: 100%;
+
+  .slide-container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .title{
+      font-size: 30px;
+    }
+
+    .privacy-policy {
+      font-size: 15px;
+    }
+
+    .accept-button {
+      width: 300px;
+    }
+  }
+
+  .slide-container2 {
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    .phone-title {
+      font-size: 26px;
+      color: #002e63;
+    }
+
+    .phone-text {
+      margin: 10px;
+    }
+
+    .phone-input {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: inherit;
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+
+  }
+
+}
+
+.user-photo ion-avatar {
+  margin: 0 auto;
+  width: 270px;
+  height: 270px;
+}

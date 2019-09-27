@@ -1,0 +1,91 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Ride Plan</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-icon id="icon-more" name="md-more" slot="end" (click)="presentPopover($event)"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <div class="map">
+            <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [streetViewControl]="false"
+                     [zoomControl]="false">
+                <agm-direction *ngIf="direction" [origin]="direction.origin"
+                               [destination]="direction.destination"></agm-direction>
+                <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="!direction"></agm-marker>
+            </agm-map>
+            <ion-fab vertical="top" horizontal="end" slot="fixed">
+                <ion-fab-button>
+                    <ion-icon name="pin"></ion-icon>
+                </ion-fab-button>
+            </ion-fab>
+        </div>
+        <ion-item>
+            <label>Date and time: {{ride?.dateTime | date:'dd MMM h:mm'}}</label>
+        </ion-item>
+        <ion-item>
+            <label>{{ride?.originName}} - {{ride?.destinationName}}</label>
+        </ion-item>
+
+        <ion-list>
+            <ion-list-header>Passengers ({{passengers.length}} / {{ride?.numberOfSeats}})</ion-list-header>
+            <ion-item class="card-driver-container" *ngFor="let user of passengers">
+                <div class="user-info"  (click)="goToUserDetailsPage(user?.id)">
+                    <ion-avatar>
+                        <img [src]="user?.photo">
+                    </ion-avatar>
+                    <ion-label>
+                        {{user?.name}}
+                    </ion-label>
+                </div>
+
+                <div class="request-buttons-container">
+
+                    <ion-chip color="danger" (click)="presentAlertConfirm(user)">
+                        <ion-label>Remove</ion-label>
+                    </ion-chip>
+                </div>
+            </ion-item>
+
+            <ion-item *ngIf="!ride?.seatedUserIds">
+                <ion-label>No passengers</ion-label>
+            </ion-item>
+        </ion-list>
+        <div class="footer" *ngIf="ride?.seatedUserIds">
+            <ion-button (click)="openModal()">Start ride</ion-button>
+        </div>
+    </ion-card>
+
+    <ion-card mode="md" *ngIf="requests">
+        <ion-card-content>
+            <ion-list>
+                <ion-list-header>Requests</ion-list-header>
+                <ion-item class="card-driver-container" *ngFor="let request of requests">
+                    <div class="user-info" (click)="goToUserDetailsPage(request.userId)">
+                        <ion-avatar>
+                            <img [src]="request.user?.photo">
+                        </ion-avatar>
+                        <label>{{request.user?.name}}</label>
+                        <label> <a> Status: </a>{{request.state}}</label>
+                    </div>
+
+                    <div class="request-buttons-container" >
+
+                        <ion-icon (click)="acceptBooking(request)" class="accept-button" name="checkmark"
+                                  color="success" *ngIf="request.state === 'PENDING'"></ion-icon>
+                        <ion-icon name="close" color="danger" (click)="refuseBooking(request)"
+                                  *ngIf="request.state === 'PENDING'"></ion-icon>
+
+                        <ion-chip color="success" (click)="acceptBooking(request)" *ngIf="request.state === 'REFUSED'">
+                            <ion-label>Accept</ion-label>
+                        </ion-chip>
+
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

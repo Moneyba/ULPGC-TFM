@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title text-center>
+            {{ 'HOME.title' | translate:params }}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="search-button-container" [hidden]="showSearchContainer">
+        <ion-button expand="full" color="secondary" (click)="changeSearchBoxState()">
+            <ion-label>{{ 'HOME.searchButton' | translate:params }} </ion-label>
+            <ion-icon name="search"></ion-icon>
+        </ion-button>
+    </div>
+    <div [hidden]="!showSearchContainer" class="search-container">
+        <form [formGroup]="dateTimeForm">
+            <ion-item>
+                <ion-icon name="locate" color="primary"></ion-icon>
+                <input class="search-input" #searchOrigin (input)="clearLocationIfBlank($event.target.value, 'origin')"
+                       placeholder="{{ 'GENERIC.from' | translate:params }}" formControlName="origin">
+            </ion-item>
+            <ion-item>
+                <ion-icon name="pin" color="primary"></ion-icon>
+                <input class="search-input" #searchDestination placeholder="{{ 'GENERIC.to' | translate:params }}"
+                       (input)="clearLocationIfBlank($event.target.value, 'destination')" formControlName="destination">
+            </ion-item>
+
+            <ion-item (click)="openDatePicker($event)">
+                <ion-icon name="calendar" color="primary"></ion-icon>
+                <ion-input formControlName="date" placeholder="{{ 'GENERIC.date' | translate:params }}"></ion-input>
+            </ion-item>
+            <!-- <ion-item (click)="openDatePicker($event)">
+                 <ion-icon name="calendar"></ion-icon>
+                 <ion-label formControlName="date">{{date | date: 'dd MMM yyyy'}}</ion-label>
+             </ion-item>-->
+            <ion-item *ngIf="dateTimeForm.get('date').value">
+                <ion-icon name="clock" color="primary"></ion-icon>
+                <ion-datetime display-format="h:mm A" picker-format="HH:mm" formControlName="time"
+                              placeholder="{{ 'GENERIC.time' | translate:params }}">
+                </ion-datetime>
+            </ion-item>
+        </form>
+        <ion-card class="button-container">
+            <ion-button fill="clear" (click)="changeSearchBoxState()">
+                <!--  <ion-icon name="close-circle"></ion-icon>-->
+                <ion-label>{{ 'GENERIC.cancel' | translate:params }}</ion-label>
+
+            </ion-button>
+
+            <ion-button fill="clear" (click)="filterItems()" id="search-button">
+                <ion-label>{{ 'GENERIC.search' | translate:params }}</ion-label>
+                <ion-icon name="search"></ion-icon>
+            </ion-button>
+        </ion-card>
+    </div>
+    <ion-card mode="md" *ngFor="let ride of filteredRides" (click)="goToDetailsPage(ride)">
+        <ion-card-content class="ride-item">
+            <div class="date-info">
+                <ion-card-subtitle>{{ride.dateTime | date: 'dd MMM h:mm'}}</ion-card-subtitle>
+                <label id="no-seats-text" *ngIf="ride.numberOfSeats == ride.seatedUserIds?.length">no seats available</label>
+            </div>
+
+            <ion-label id="itinerary-label">{{ride.originName}} - {{ride.destinationName}}</ion-label>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button expand="block" [routerLink]="'/ride-form'" routerDirection="forward" color="secondary">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,42 @@
+ion-card {
+
+  agm-map {
+    height: 300px;
+  }
+
+  .card-driver-container {
+    display: flex;
+    justify-content: space-between;
+
+    .user-info {
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      ion-avatar {
+        width: 35px;
+        height: 35px;
+      }
+
+      .user-name {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+    }
+  }
+
+  #no-seats-text {
+    color: red;
+
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+}

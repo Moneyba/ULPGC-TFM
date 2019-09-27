@@ -1,0 +1,39 @@
+:host {
+  .user-photo ion-avatar {
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+  }
+  #name-user {
+    text-align: center;
+  }
+  .rating-value {
+    text-align: center;
+  }
+
+  .rating-container {
+    display: flex;
+    width: 100%;
+
+    ion-avatar {
+      align-items: flex-start;
+      min-width: 64px;
+    }
+
+    .rating-info {
+      margin-left: 10px;
+      width: 100%;
+
+      .user-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .rating-value {
+        display: flex;
+      }
+    }
+  }
+
+}

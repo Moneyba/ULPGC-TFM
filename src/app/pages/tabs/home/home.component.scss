@@ -1,0 +1,77 @@
+:host {
+
+  .search-button-container {
+    padding: 10px 10px 0 10px;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+
+    .search-input {
+      width: 100%;
+    }
+
+    .calendar-label {
+      padding-left: 16px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      background-color: #fe9b2b;
+
+    }
+
+    #search-button{
+      color: white;
+    }
+
+    ion-input {
+      width: 100%;
+      margin-left: 20px;
+      font-family: system-ui;
+      font-size: 16px;
+    }
+
+    input {
+      width: 100%;
+      margin-left: 20px;
+      font-family: system-ui;
+      font-size: 16px;
+    }
+  }
+
+  ion-card {
+    margin: 15px 10px;
+    .date-info{
+      display: flex;
+      justify-content: space-between;
+      ion-card-subtitle {
+        color: #002e65;
+      }
+      #no-seats-text {
+        color: red;
+      }
+    }
+
+
+    .ride-item {
+      border-top: 5px solid #002e65;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #itinerary-label {
+      font-size: 18px;
+      color: black;
+    }
+
+  }
+  .sc-ion-card-md-h {
+    border-radius: 0px !important;
+  }
+}
+
+

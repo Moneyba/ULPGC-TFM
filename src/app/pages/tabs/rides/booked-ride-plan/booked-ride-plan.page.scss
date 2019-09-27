@@ -1,0 +1,53 @@
+:host {
+  .card-driver-container {
+    display: flex;
+  }
+
+  agm-map {
+    height: 300px;
+  }
+
+  .card-driver-container {
+    display: flex;
+    justify-content: space-between;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      ion-avatar {
+        width: 35px;
+        height: 35px;
+      }
+
+      .user-name {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .request-buttons-container {
+    display: flex;
+
+    ion-fab-button {
+      --box-shadow: none;
+      width: 35px;
+      height: 35px;
+      margin: 5px;
+    }
+
+    .accept-button {
+      --background: #0ec254;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+:host {
+
+  .card-driver-container {
+    display: flex;
+  }
+
+  agm-map {
+    height: 300px;
+  }
+
+  .card-driver-container {
+    display: flex;
+    justify-content: space-between;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      ion-avatar {
+        width: 35px;
+        height: 35px;
+      }
+
+      label {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .request-buttons-container {
+    display: flex;
+
+    .accept-button {
+      --background: #0ec254;
+      text-align: center;
+    }
+    ion-icon {
+      font-size: 25px;
+    }
+  }
+
+
+  #icon-more {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+}

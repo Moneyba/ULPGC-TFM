@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Offer A Ride</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="form-content">
+        <form [formGroup]="rideForm">
+            <ion-item>
+                <ion-icon name="locate" color="primary"></ion-icon>
+                <input #searchOrigin (input)="clearLocationIfBlank($event.target.value, 'origin')" formControlName="origin"
+                       placeholder="From">
+            </ion-item>
+            <ion-item>
+                <ion-icon name="pin" color="primary"></ion-icon>
+                <input #searchDestination (input)="clearLocationIfBlank($event.target.value, 'destination')"
+                       formControlName="destination" placeholder="To">
+            </ion-item>
+            <!--  <ion-item>
+                  <ion-label position="floating">Date and Time</ion-label>
+                  <ion-datetime display-format="DD MMM YYYY h:mm A" min="{{today | date:'yyyy-MM-dd'}}" picker-format="DD MMMM YYYY h:mm A"
+                                formControlName="dateTime">
+                  </ion-datetime>
+              </ion-item>-->
+
+            <!--   <ion-item>
+                   <ion-icon name="calendar"></ion-icon>
+                   <ion-datetime display-format="DD MMM YYYY" min="{{today | date:'yyyy-MM-dd'}}" picker-format="DD MMMM YYYY"
+                                 formControlName="date">
+                   </ion-datetime>
+               </ion-item>-->
+            <ion-item (click)="openDatePicker($event)">
+                <ion-icon name="calendar" color="primary"></ion-icon>
+                <ion-input formControlName="date" placeholder="Date"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="clock" color="primary"></ion-icon>
+                <ion-datetime display-format="h:mm A" picker-format="HH:mm" formControlName="time" placeholder="Time">
+                </ion-datetime>
+            </ion-item>
+
+            <ion-item (click)="showBasicPicker()">
+                <ion-icon name="people" color="primary"></ion-icon>
+                <ion-input color="black" formControlName="seatsNumber" placeholder="Number of seats"></ion-input>
+            </ion-item>
+
+        </form>
+    </div>
+
+        <ion-card>
+
+            <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [streetViewControl]="false"
+                     [zoomControl]="false">
+                <agm-direction *ngIf="direction" [origin]="direction.origin"
+                               [destination]="direction.destination"></agm-direction>
+                <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="!direction"></agm-marker>
+            </agm-map>
+
+        </ion-card>
+
+    <ion-card-subtitle *ngIf="distance">
+        <ion-label>Distance: {{distance}}</ion-label>
+        <ion-label>Duration: {{duration}}</ion-label>
+    </ion-card-subtitle>
+
+
+
+
+    <!--    <h5>Address: {{address}}</h5>
+        <div>Latitude: {{latitude}}</div>
+        <div>Longitude: {{longitude}}</div>-->
+
+<footer>
+    <ion-toolbar position="bottom">
+
+    <ion-button expand="full" type="submit" (click)="createRide()" *ngIf="!ride"
+                [disabled]="rideForm.invalid">
+        Done
+    </ion-button>
+    <ion-button expand="full" type="submit" (click)="updateRide()" *ngIf="ride"
+                [disabled]="rideForm.invalid">
+        Save
+    </ion-button>
+    </ion-toolbar>
+</footer>
+
+</ion-content>

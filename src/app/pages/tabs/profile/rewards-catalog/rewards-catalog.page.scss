@@ -1,0 +1,21 @@
+.points-button-container{
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: 20px;
+  ion-card-title{
+    font-size: 35px;
+    #pts {
+      text-transform: lowercase;
+      font-size: 18px;
+    }
+  }
+
+
+
+}
+.points-container {
+  display: flex;
+  flex-direction: column;
+}
+

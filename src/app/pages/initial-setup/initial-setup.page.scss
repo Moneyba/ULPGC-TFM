@@ -1,0 +1,18 @@
+form {
+  height: 100%;
+
+  ion-slides {
+    height: 100%;
+
+    .slide-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.user-photo ion-avatar {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}

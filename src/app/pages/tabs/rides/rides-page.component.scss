@@ -1,0 +1,34 @@
+:host {
+  .segment {
+    display: flex;
+    flex-direction: column;
+
+    .booked-ride {
+      border-top: 5px solid #002e65;
+    }
+
+    .offered-ride {
+      border-top: 5px solid #fe9b2b;
+    }
+
+    .segment-no-items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .offered-ride-title {
+      font-size: 18px;
+      color: #fe9b2b;
+    }
+    .booked-ride-title {
+      font-size: 18px;
+      color: #002e65;
+    }
+  }
+  .sc-ion-card-md-h {
+    border-radius: 0px !important;
+  }
+
+}

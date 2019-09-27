@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>Chats</ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let chat of chats">
+    <ion-item (click)="goToChatPage(chat)">
+      <ion-avatar slot="start">
+        <img [src]="chat.otherUser?.photo">
+      </ion-avatar>
+      <ion-label>
+        <p>{{chat.otherUser?.name}}</p>
+        <h3>{{chat.ride?.originName}} - {{chat.ride?.destinationName}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

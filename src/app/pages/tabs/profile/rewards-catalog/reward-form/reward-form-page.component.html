@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title *ngIf="!reward?.id">New Reward</ion-title>
+    <ion-title *ngIf="reward?.id">Edit Reward</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="rewardForm">
+    <div class="reward-photo" padding-top>
+      <ion-avatar>
+        <img [src]="photo" (click)="uploadNewPhoto()">
+      </ion-avatar>
+    </div>
+    <ion-item>
+      <ion-label>Display Name</ion-label>
+      <ion-input formControlName="name" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Points</ion-label>
+      <ion-input formControlName="points" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Stock</ion-label>
+      <ion-input formControlName="stock" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-input formControlName="description"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" (click)="createReward()"
+                [disabled]="rewardForm.invalid" *ngIf="!reward?.id">
+      Save
+    </ion-button>
+    <ion-button expand="full" type="submit" (click)="editReward()"
+                [disabled]="rewardForm.invalid" *ngIf="reward?.id">
+      Save
+    </ion-button>
+  </form>
+</ion-content>

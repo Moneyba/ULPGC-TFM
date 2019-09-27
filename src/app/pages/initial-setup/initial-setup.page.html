@@ -1,0 +1,37 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen padding>
+  <form [formGroup]="setUpForm">
+  <ion-slides #slides [pager]="true" [options]="{onlyExternal: false}">
+    <ion-slide class="slide-container">
+      <h2>Welcome to <b>ULPGC MaaS</b></h2>
+      <p>Please, introduce your username:</p>
+      <ion-item>
+        <ion-input formControlName="name" required></ion-input>
+      </ion-item>
+      <footer padding>
+        <ion-button (click)="slides.slideNext()" [disabled]="setUpForm.invalid">Continue</ion-button>
+      </footer>
+
+    </ion-slide>
+    <ion-slide class="slide-container">
+      <p>Please, upload a photo :)</p>
+      <div class="user-photo" padding-top>
+        <ion-avatar>
+          <img [src]="/assets/icon/favicon.jpg">
+        </ion-avatar>
+      </div>
+      <footer padding>
+        <ion-button (click)="slides.slidePrev()">Back</ion-button>
+        <ion-button (click)="updateUser()">Continue</ion-button>
+      </footer>
+    </ion-slide>
+  </ion-slides>
+  </form>
+
+</ion-content>
+

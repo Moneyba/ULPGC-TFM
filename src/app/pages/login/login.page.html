@@ -1,0 +1,53 @@
+<ion-content fullscreen padding>
+    <!-- <form [formGroup]="loginForm">
+       <ion-input placeholder="email" formControlName="email" required></ion-input>
+       <ion-input placeholder="password" type="password" formControlName="password" required></ion-input>
+     </form>
+     <ion-button [disabled]="loginForm.invalid" (click)="login()">Login</ion-button>-->
+
+
+    <ion-slides #slides [options]="{onlyExternal: false}">
+        <ion-slide class="slide-container1">
+            <h1 class="title">Welcome to <br><b>ULPGC <i>RideSharing</i></b></h1>
+            <div class="user-photo" padding-top>
+                <ion-avatar>
+                    <img [src]="currentUser?.photo || '/assets/icon/favicon.jpg'">
+                </ion-avatar>
+            </div>
+
+
+            <footer padding>
+                <p class="privacy-policy">Read our
+                    <ion-label color="secondary">Privacy Policy</ion-label>
+                    . Tap "Agree and Continue" to accept
+                    the
+                    <ion-label color="secondary">Terms of Service</ion-label>
+                </p>
+                <ion-button class="accept-button" (click)="slides.slideNext()">Agree and Continue</ion-button>
+            </footer>
+
+        </ion-slide>
+        <ion-slide>
+            <div *ngIf="!phoneSent" class="slide-container2">
+                <h2 class="phone-title">Verify your phone number</h2>
+                <p class="phone-text">ULPGC RideSharing will send a SMS message to verify your phone number.<br>
+                    Enter your country code and phone number.</p>
+
+                <div class="phone-input">
+                    <int-phone-prefix [defaultCountry]="'es'"
+                                      [(ngModel)]="phoneNumber"></int-phone-prefix>
+                    <ion-button margin-top type="submit" color="primary" (click)="logIn()">Next</ion-button>
+                </div>
+            </div>
+
+            <div *ngIf="phoneSent">
+                <ion-input type="text" [(ngModel)]="confirmationCode"></ion-input>
+                <ion-button type="submit" color="primary" (click)="sendCode()">Send code</ion-button>
+            </div>
+        </ion-slide>
+
+    </ion-slides>
+
+
+</ion-content>
+

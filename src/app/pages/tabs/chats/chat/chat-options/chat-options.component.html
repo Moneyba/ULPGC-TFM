@@ -1,0 +1,6 @@
+<ion-list>
+  <ion-list-header>Chat Options</ion-list-header>
+  <ion-item button (click)="blockUser()"  *ngIf="!isOtherUserBlocked">Block User</ion-item>
+  <ion-item button (click)="unblockUser()" *ngIf="isOtherUserBlocked">Unblock User</ion-item>
+  <ion-item button (click)="presentAlertConfirm()">Delete Chat</ion-item>
+</ion-list>

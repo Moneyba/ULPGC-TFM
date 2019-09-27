@@ -1,0 +1,22 @@
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These 
+// styles are for the entire app and not just one component. Additionally, this 
+// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// and used throughout the application.
+
+.scroll-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+input {
+  border: none;
+}
+
+.date-picker-popover .popover-content {
+  width: calc(100% - 10px);
+}
+
+
