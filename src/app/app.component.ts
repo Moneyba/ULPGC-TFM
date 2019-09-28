@@ -101,6 +101,7 @@ export class AppComponent {
             this.splashScreen.hide();
             if (this.platform.is('cordova')) {
                 this.firebaseAuthentication.onAuthStateChanged().subscribe(async user => {
+                    console.log(user);
                     if (user) {
                         this.userService.setLoggedUID(user.uid);
                         this.fcmService.setToken(user.uid);
@@ -119,8 +120,9 @@ export class AppComponent {
                 });
             } else {
                 // browser test mode
-                this.router.navigateByUrl('tabs');
-                this.userService.setLoggedUID('Q0igzjt2jDe18OH8MRTVP2CRG0Z2');
+                this.router.navigateByUrl('initial-setup');
+                this.userService.setLoggedUID('AL769qkPleboVU7stjFPyqw0XBz1');
+
             }
         });
     }

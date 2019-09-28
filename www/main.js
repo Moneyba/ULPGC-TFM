@@ -746,6 +746,7 @@ var AppComponent = /** @class */ (function () {
                 _this.firebaseAuthentication.onAuthStateChanged().subscribe(function (user) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
                     var _this = this;
                     return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                        console.log(user);
                         if (user) {
                             this.userService.setLoggedUID(user.uid);
                             this.fcmService.setToken(user.uid);
@@ -770,7 +771,7 @@ var AppComponent = /** @class */ (function () {
             else {
                 // browser test mode
                 _this.router.navigateByUrl('tabs');
-                _this.userService.setLoggedUID('Q0igzjt2jDe18OH8MRTVP2CRG0Z2');
+                _this.userService.setLoggedUID('AL769qkPleboVU7stjFPyqw0XBz1');
             }
         });
     };

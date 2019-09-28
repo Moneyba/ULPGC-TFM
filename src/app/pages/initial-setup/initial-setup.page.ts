@@ -42,7 +42,7 @@ export class InitialSetupPage implements OnInit {
   public createSetupForm(): void {
     this.setUpForm = this.fb.group({
       name: [this.currentUser ? this.currentUser.name : '', Validators.required],
-      photo: [this.currentUser ? this.currentUser.photo : '/assets/icon/favicon.png']
+      photo: [this.currentUser ? this.currentUser.photo : '/assets/icon/favicon.jpg']
     });
   }
 
@@ -50,7 +50,7 @@ export class InitialSetupPage implements OnInit {
     const user: User = {
       id: this.currentUser.id,
       name: this.setUpForm.get('name').value,
-      photo: this.currentUser.photo,
+      photo: this.setUpForm.get('photo').value,
       averageRating: 0,
       numberOfRatings: 0,
       points: {

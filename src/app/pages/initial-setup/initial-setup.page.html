@@ -22,7 +22,7 @@
       <p>Please, upload a photo :)</p>
       <div class="user-photo" padding-top>
         <ion-avatar>
-          <img [src]="/assets/icon/favicon.jpg">
+          <img [src]="currentUser?.photo || '/assets/icon/favicon.jpg'">
         </ion-avatar>
       </div>
       <footer padding>
