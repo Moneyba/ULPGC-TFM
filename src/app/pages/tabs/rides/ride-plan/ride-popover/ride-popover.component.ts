@@ -51,8 +51,7 @@ export class RidePopoverComponent implements OnInit {
           text: 'No',
           role: 'cancel',
           cssClass: 'secondary',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
+          handler: () => {
           }
         }, {
           text: 'Yes',

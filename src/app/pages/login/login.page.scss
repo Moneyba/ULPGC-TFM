@@ -7,22 +7,16 @@ ion-slides {
     flex-direction: column;
     justify-content: space-around;
 
-    .title{
+    .title {
       font-size: 30px;
     }
 
-    .privacy-policy {
-      font-size: 15px;
-    }
 
-    .accept-button {
-      width: 300px;
-    }
   }
 
   .slide-container2 {
     height: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -41,8 +35,14 @@ ion-slides {
       flex-direction: column;
       justify-content: space-between;
       height: inherit;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       margin-top: 20px;
+    }
+    .code-input {
+      max-height: 30px;
+
+      border: 1px solid #dedede !important;
+
     }
 
   }
@@ -54,3 +54,12 @@ ion-slides {
   width: 270px;
   height: 270px;
 }
+
+.text-policy {
+  font-size: 15px;
+}
+
+.accept-button {
+  width: 95%;
+}
+

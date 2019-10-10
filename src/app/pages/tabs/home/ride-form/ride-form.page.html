@@ -21,19 +21,6 @@
                 <input #searchDestination (input)="clearLocationIfBlank($event.target.value, 'destination')"
                        formControlName="destination" placeholder="To">
             </ion-item>
-            <!--  <ion-item>
-                  <ion-label position="floating">Date and Time</ion-label>
-                  <ion-datetime display-format="DD MMM YYYY h:mm A" min="{{today | date:'yyyy-MM-dd'}}" picker-format="DD MMMM YYYY h:mm A"
-                                formControlName="dateTime">
-                  </ion-datetime>
-              </ion-item>-->
-
-            <!--   <ion-item>
-                   <ion-icon name="calendar"></ion-icon>
-                   <ion-datetime display-format="DD MMM YYYY" min="{{today | date:'yyyy-MM-dd'}}" picker-format="DD MMMM YYYY"
-                                 formControlName="date">
-                   </ion-datetime>
-               </ion-item>-->
             <ion-item (click)="openDatePicker($event)">
                 <ion-icon name="calendar" color="primary"></ion-icon>
                 <ion-input formControlName="date" placeholder="Date"></ion-input>
@@ -67,13 +54,6 @@
         <ion-label>Distance: {{distance}}</ion-label>
         <ion-label>Duration: {{duration}}</ion-label>
     </ion-card-subtitle>
-
-
-
-
-    <!--    <h5>Address: {{address}}</h5>
-        <div>Latitude: {{latitude}}</div>
-        <div>Longitude: {{longitude}}</div>-->
 
 <footer>
     <ion-toolbar position="bottom">

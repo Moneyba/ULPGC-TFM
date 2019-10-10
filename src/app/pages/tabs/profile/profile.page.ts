@@ -19,10 +19,14 @@ export class ProfilePage implements OnInit {
         private router: Router,
         public popoverController: PopoverController
 
-    ) { this.currentUser = this.userService.user.getValue();
+    ) {
     }
 
     public ngOnInit(): void {
+    }
+
+    ionViewWillEnter() {
+        this.currentUser = this.userService.user.getValue();
     }
 
     public goToPublicProfilePage(): void {

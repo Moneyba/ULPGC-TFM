@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
         <ion-title>Ride Plan</ion-title>
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
@@ -50,13 +50,17 @@
         <ion-item>
             <ion-label><a>Status: </a>{{request?.state}} </ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item *ngIf=!request?.ride.isFinished>
             <ion-label (click)="presentAlertConfirm()" fill="clear" color="danger">Cancel Ride</ion-label>
         </ion-item>
 
+        <ion-item *ngIf=request?.ride.isFinished>
+            <ion-label (click)="contact()" fill="clear" color="danger">Any problems during this ride? Contact us</ion-label>
+        </ion-item>
 
-        <div class="footer">
-            <ion-button (click)="openModal()">Start ride</ion-button>
+
+        <div class="footer" *ngIf=!request?.ride.isFinished >
+            <ion-button  class="start-button" (click)="openModal()">Start ride</ion-button>
         </div>
     </ion-card>
 </ion-content>

@@ -31,13 +31,18 @@
       <ion-label>Description</ion-label>
       <ion-input formControlName="description"></ion-input>
     </ion-item>
-    <ion-button expand="full" type="submit" (click)="createReward()"
-                [disabled]="rewardForm.invalid" *ngIf="!reward?.id">
-      Save
-    </ion-button>
-    <ion-button expand="full" type="submit" (click)="editReward()"
-                [disabled]="rewardForm.invalid" *ngIf="reward?.id">
-      Save
-    </ion-button>
+
+
   </form>
+
 </ion-content>
+<ion-footer >
+  <ion-button expand="full" type="submit" (click)="createReward()" margin-bottom
+              [disabled]="rewardForm.invalid" *ngIf="!reward?.id">
+    Save
+  </ion-button>
+  <ion-button expand="full" type="submit" (click)="editReward()" margin-bottom
+              [disabled]="rewardForm.invalid" *ngIf="reward?.id">
+    Save
+  </ion-button>
+</ion-footer>

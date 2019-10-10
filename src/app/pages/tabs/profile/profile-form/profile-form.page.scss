@@ -1,7 +1,24 @@
 :host {
+
   .user-photo ion-avatar {
     margin: 0 auto;
     width: 200px;
     height: 200px;
   }
+
+  .profile-form {
+    margin: 0 20px;
+  }
+
+  .options {
+    margin: 0 20px;
+  }
+
+  .footer {
+    height: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
 }

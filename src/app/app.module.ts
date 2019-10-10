@@ -31,6 +31,7 @@ import {UtilsService} from './core/services/utils.service';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateConfigService } from './core/services/translate-config.service';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 export function LanguageLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -73,6 +74,7 @@ export function LanguageLoader(http: HttpClient) {
         FcmService,
         FirebaseAuthentication,
         Camera,
+        EmailComposer,
         UtilsService,
         TranslateConfigService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}

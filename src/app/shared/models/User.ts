@@ -10,6 +10,7 @@ export class User {
     ratings?: Rating[];
     numberOfRatings?: number;
     points?: RewardPoints;
-    carPlate?: string;
+    carDetails?: string;
     isRated?: boolean;
+    isAdmin?: boolean;
 }

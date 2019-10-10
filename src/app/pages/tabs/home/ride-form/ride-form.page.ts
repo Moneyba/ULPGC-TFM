@@ -218,7 +218,8 @@ export class RideFormPage implements OnInit {
             destination: this.destinationLocation.geometry.location.toJSON(),
             dateTime: dateTime.getTime(),
             numberOfSeats: this.rideForm.get('seatsNumber').value,
-            seatedUserIds: []
+            seatedUserIds: [],
+            isFinished: false
         };
         this.rideService.createRide(ride).then(result => this.router.navigateByUrl('tabs'));
 
@@ -238,7 +239,8 @@ export class RideFormPage implements OnInit {
             destination: this.destinationLocation ? this.destinationLocation.geometry.location.toJSON() : this.ride.destination,
             dateTime: dateTime.getTime(),
             numberOfSeats: this.rideForm.get('seatsNumber').value,
-            seatedUserIds: []
+            seatedUserIds: [],
+            isFinished: false
         };
         this.rideService.updateRide(ride).then(result => this.router.navigateByUrl('tabs/tabs/rides'));
     }

@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[7],{
 
-/***/ "./node_modules/@ionic/core/dist/esm-es5/swiper.bundle-8d61f7c5.js":
+/***/ "./node_modules/@ionic/core/dist/esm-es5/swiper.bundle-ccdaac54.js":
 /*!*************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm-es5/swiper.bundle-8d61f7c5.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm-es5/swiper.bundle-ccdaac54.js ***!
   \*************************************************************************/
 /*! exports provided: Swiper */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -847,7 +847,7 @@ function add() {
     return dom;
 }
 /**
- * Swiper 4.5.0
+ * Swiper 4.5.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
  *
@@ -855,7 +855,7 @@ function add() {
  *
  * Released under the MIT License
  *
- * Released on: February 22, 2019
+ * Released on: September 13, 2019
  */
 var Methods = {
     addClass: addClass,
@@ -897,7 +897,7 @@ var Methods = {
     styles: styles,
 };
 Object.keys(Methods).forEach(function (methodName) {
-    $.fn[methodName] = Methods[methodName];
+    $.fn[methodName] = $.fn[methodName] || Methods[methodName];
 });
 var Utils = {
     deleteProps: function (obj) {
@@ -1268,7 +1268,7 @@ var SwiperClass = /** @class */ (function () {
             module.forEach(function (m) { return Class.installModule(m); });
             return Class;
         }
-        return Class.installModule.apply(Class, [module].concat(params));
+        return Class.installModule.apply(Class, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spreadArrays"])([module], params));
     };
     return SwiperClass;
 }());
@@ -1363,15 +1363,23 @@ function updateSlides() {
             var newSlideOrderIndex = void 0;
             var column = void 0;
             var row = void 0;
-            if (params.slidesPerColumnFill === 'column') {
-                column = Math.floor(i / slidesPerColumn);
-                row = i - (column * slidesPerColumn);
-                if (column > numFullColumns || (column === numFullColumns && row === slidesPerColumn - 1)) {
-                    row += 1;
-                    if (row >= slidesPerColumn) {
-                        row = 0;
-                        column += 1;
+            if ((params.slidesPerColumnFill === 'column')
+                || (params.slidesPerColumnFill === 'row' && params.slidesPerGroup > 1)) {
+                if (params.slidesPerColumnFill === 'column') {
+                    column = Math.floor(i / slidesPerColumn);
+                    row = i - (column * slidesPerColumn);
+                    if (column > numFullColumns || (column === numFullColumns && row === slidesPerColumn - 1)) {
+                        row += 1;
+                        if (row >= slidesPerColumn) {
+                            row = 0;
+                            column += 1;
+                        }
                     }
+                }
+                else {
+                    var groupIndex = Math.floor(i / params.slidesPerGroup);
+                    row = Math.floor(i / params.slidesPerView) - groupIndex * params.slidesPerColumn;
+                    column = i - row * params.slidesPerView - groupIndex * params.slidesPerView;
                 }
                 newSlideOrderIndex = column + ((row * slidesNumberEvenToRows) / slidesPerColumn);
                 slide_1
@@ -1418,7 +1426,7 @@ function updateSlides() {
                     var marginLeft = parseFloat(slideStyles.getPropertyValue('margin-left'));
                     var marginRight = parseFloat(slideStyles.getPropertyValue('margin-right'));
                     var boxSizing = slideStyles.getPropertyValue('box-sizing');
-                    if (boxSizing && boxSizing === 'border-box') {
+                    if (boxSizing && boxSizing === 'border-box' && !Browser.isIE) {
                         slideSize = width + marginLeft + marginRight;
                     }
                     else {
@@ -1432,7 +1440,7 @@ function updateSlides() {
                     var marginTop = parseFloat(slideStyles.getPropertyValue('margin-top'));
                     var marginBottom = parseFloat(slideStyles.getPropertyValue('margin-bottom'));
                     var boxSizing = slideStyles.getPropertyValue('box-sizing');
-                    if (boxSizing && boxSizing === 'border-box') {
+                    if (boxSizing && boxSizing === 'border-box' && !Browser.isIE) {
                         slideSize = height + marginTop + marginBottom;
                     }
                     else {
@@ -1650,8 +1658,8 @@ function updateSlidesProgress(translate) {
         if (params.watchSlidesVisibility) {
             var slideBefore = -(offsetCenter - slide_2.swiperSlideOffset);
             var slideAfter = slideBefore + swiper.slidesSizesGrid[i];
-            var isVisible = (slideBefore >= 0 && slideBefore < swiper.size)
-                || (slideAfter > 0 && slideAfter <= swiper.size)
+            var isVisible = (slideBefore >= 0 && slideBefore < swiper.size - 1)
+                || (slideAfter > 1 && slideAfter <= swiper.size)
                 || (slideBefore <= 0 && slideAfter >= swiper.size);
             if (isVisible) {
                 swiper.visibleSlides.push(slide_2);
@@ -1816,7 +1824,9 @@ function updateActiveIndex(newActiveIndex) {
     if (previousRealIndex !== realIndex) {
         swiper.emit('realIndexChange');
     }
-    swiper.emit('slideChange');
+    if (swiper.initialized || swiper.runCallbacksOnInit) {
+        swiper.emit('slideChange');
+    }
 }
 function updateClickedSlide(e) {
     var swiper = this;
@@ -3126,6 +3136,9 @@ function onResize() {
             swiper.slideTo(swiper.activeIndex, 0, false, true);
         }
     }
+    if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
+        swiper.autoplay.run();
+    }
     // Return locks after resize
     swiper.allowSlidePrev = allowSlidePrev;
     swiper.allowSlideNext = allowSlideNext;
@@ -3528,7 +3541,7 @@ var prototypes = {
 };
 var extendedDefaults = {};
 var Swiper = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](Swiper, _super);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(Swiper, _super);
     function Swiper() {
         var args = [];
         for (var _i = 0; _i < arguments.length; _i++) {
@@ -3800,21 +3813,11 @@ var Swiper = /** @class */ (function (_super) {
         if ((newDirection === currentDirection) || (newDirection !== 'horizontal' && newDirection !== 'vertical')) {
             return swiper;
         }
-        if (currentDirection === 'vertical') {
-            swiper.$el
-                .removeClass(swiper.params.containerModifierClass + "vertical wp8-vertical")
-                .addClass("" + swiper.params.containerModifierClass + newDirection);
-            if ((Browser.isIE || Browser.isEdge) && (Support.pointerEvents || Support.prefixedPointerEvents)) {
-                swiper.$el.addClass(swiper.params.containerModifierClass + "wp8-" + newDirection);
-            }
-        }
-        if (currentDirection === 'horizontal') {
-            swiper.$el
-                .removeClass(swiper.params.containerModifierClass + "horizontal wp8-horizontal")
-                .addClass("" + swiper.params.containerModifierClass + newDirection);
-            if ((Browser.isIE || Browser.isEdge) && (Support.pointerEvents || Support.prefixedPointerEvents)) {
-                swiper.$el.addClass(swiper.params.containerModifierClass + "wp8-" + newDirection);
-            }
+        swiper.$el
+            .removeClass("" + swiper.params.containerModifierClass + currentDirection + " wp8-" + currentDirection)
+            .addClass("" + swiper.params.containerModifierClass + newDirection);
+        if ((Browser.isIE || Browser.isEdge) && (Support.pointerEvents || Support.prefixedPointerEvents)) {
+            swiper.$el.addClass(swiper.params.containerModifierClass + "wp8-" + newDirection);
         }
         swiper.params.direction = newDirection;
         swiper.slides.each(function (slideIndex, slideEl) {
@@ -4758,19 +4761,20 @@ var Scrollbar = {
         });
         scrollbar.$el[swiper.params.watchOverflow && swiper.isLocked ? 'addClass' : 'removeClass'](swiper.params.scrollbar.lockClass);
     },
+    getPointerPosition: function (e) {
+        var swiper = this;
+        if (swiper.isHorizontal()) {
+            return ((e.type === 'touchstart' || e.type === 'touchmove') ? e.targetTouches[0].pageX : e.pageX || e.clientX);
+        }
+        return ((e.type === 'touchstart' || e.type === 'touchmove') ? e.targetTouches[0].pageY : e.pageY || e.clientY);
+    },
     setDragPosition: function (e) {
         var swiper = this;
         var scrollbar = swiper.scrollbar, rtl = swiper.rtlTranslate;
-        var $el = scrollbar.$el, dragSize = scrollbar.dragSize, trackSize = scrollbar.trackSize;
-        var pointerPosition;
-        if (swiper.isHorizontal()) {
-            pointerPosition = ((e.type === 'touchstart' || e.type === 'touchmove') ? e.targetTouches[0].pageX : e.pageX || e.clientX);
-        }
-        else {
-            pointerPosition = ((e.type === 'touchstart' || e.type === 'touchmove') ? e.targetTouches[0].pageY : e.pageY || e.clientY);
-        }
+        var $el = scrollbar.$el, dragSize = scrollbar.dragSize, trackSize = scrollbar.trackSize, dragStartPos = scrollbar.dragStartPos;
         var positionRatio;
-        positionRatio = ((pointerPosition) - $el.offset()[swiper.isHorizontal() ? 'left' : 'top'] - (dragSize / 2)) / (trackSize - dragSize);
+        positionRatio = ((scrollbar.getPointerPosition(e)) - $el.offset()[swiper.isHorizontal() ? 'left' : 'top']
+            - (dragStartPos !== null ? dragStartPos : dragSize / 2)) / (trackSize - dragSize);
         positionRatio = Math.max(Math.min(positionRatio, 1), 0);
         if (rtl) {
             positionRatio = 1 - positionRatio;
@@ -4787,6 +4791,8 @@ var Scrollbar = {
         var scrollbar = swiper.scrollbar, $wrapperEl = swiper.$wrapperEl;
         var $el = scrollbar.$el, $dragEl = scrollbar.$dragEl;
         swiper.scrollbar.isTouched = true;
+        swiper.scrollbar.dragStartPos = (e.target === $dragEl[0] || e.target === $dragEl)
+            ? scrollbar.getPointerPosition(e) - e.target.getBoundingClientRect()[swiper.isHorizontal() ? 'left' : 'top'] : null;
         e.preventDefault();
         e.stopPropagation();
         $wrapperEl.transition(100);
@@ -4930,6 +4936,7 @@ var scrollbar = {
                 enableDraggable: Scrollbar.enableDraggable.bind(swiper),
                 disableDraggable: Scrollbar.disableDraggable.bind(swiper),
                 setDragPosition: Scrollbar.setDragPosition.bind(swiper),
+                getPointerPosition: Scrollbar.getPointerPosition.bind(swiper),
                 onDragStart: Scrollbar.onDragStart.bind(swiper),
                 onDragMove: Scrollbar.onDragMove.bind(swiper),
                 onDragEnd: Scrollbar.onDragEnd.bind(swiper),
@@ -5486,6 +5493,7 @@ var Autoplay = {
         if ($activeSlideEl.attr('data-swiper-autoplay')) {
             delay = $activeSlideEl.attr('data-swiper-autoplay') || swiper.params.autoplay.delay;
         }
+        clearTimeout(swiper.autoplay.timeout);
         swiper.autoplay.timeout = Utils.nextTick(function () {
             if (swiper.params.autoplay.reverseDirection) {
                 if (swiper.params.loop) {

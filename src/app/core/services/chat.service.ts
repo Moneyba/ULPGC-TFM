@@ -33,7 +33,7 @@ export class ChatService {
     }
 
     public deleteChat(chatId: string): Promise<void> {
-        return this.db.object<RewardProduct>(`${this.collectionEndPoint}/${chatId}`).remove();
+        return this.db.object<Chat>(`${this.collectionEndPoint}/${chatId}`).remove();
     }
 
 

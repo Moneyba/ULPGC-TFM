@@ -67,12 +67,10 @@ var map = {
 	],
 	"./ion-backdrop-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm-es5/ion-backdrop-ios.entry.js",
-		"common",
 		23
 	],
 	"./ion-backdrop-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm-es5/ion-backdrop-md.entry.js",
-		"common",
 		24
 	],
 	"./ion-button_2-ios.entry.js": [
@@ -324,12 +322,10 @@ var map = {
 	],
 	"./ion-slide_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm-es5/ion-slide_2-ios.entry.js",
-		"common",
 		74
 	],
 	"./ion-slide_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm-es5/ion-slide_2-md.entry.js",
-		"common",
 		75
 	],
 	"./ion-spinner.entry.js": [
@@ -452,10 +448,13 @@ var map = {
 	],
 	"./pages/initial-setup/initial-setup.module": [
 		"./src/app/pages/initial-setup/initial-setup.module.ts",
+		"default~pages-initial-setup-initial-setup-module~pages-login-login-module",
+		"common",
 		"pages-initial-setup-initial-setup-module"
 	],
 	"./pages/login/login.module": [
 		"./src/app/pages/login/login.module.ts",
+		"default~pages-initial-setup-initial-setup-module~pages-login-login-module",
 		"common",
 		"pages-login-login-module"
 	],
@@ -526,10 +525,6 @@ var map = {
 	"./pages/tabs/tabs.module": [
 		"./src/app/pages/tabs/tabs.module.ts",
 		"pages-tabs-tabs-module"
-	],
-	"./pages/welcome/welcome.module": [
-		"./src/app/pages/welcome/welcome.module.ts",
-		"pages-welcome-welcome-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -583,7 +578,6 @@ var routes = [
     { path: 'ride', loadChildren: './pages/tabs/rides/ride/ride.module#RidePageModule' },
     { path: 'profile-form', loadChildren: './pages/tabs/profile/profile-form/profile-form.module#ProfileFormPageModule' },
     { path: 'initial-setup', loadChildren: './pages/initial-setup/initial-setup.module#InitialSetupPageModule' },
-    { path: 'welcome', loadChildren: './pages/welcome/welcome.module#WelcomePageModule' },
     { path: 'profile', loadChildren: './pages/tabs/profile/profile.module#ProfilePageModule' },
     { path: 'booked-ride-plan', loadChildren: './pages/tabs/rides/booked-ride-plan/booked-ride-plan.module#BookedRidePlanPageModule' },
     { path: 'rewards-catalog', loadChildren: './pages/tabs/profile/rewards-catalog/rewards-catalog.module#RewardsCatalogPageModule' },
@@ -839,6 +833,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
 /* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @ngx-translate/http-loader */ "./node_modules/@ngx-translate/http-loader/fesm5/ngx-translate-http-loader.js");
 /* harmony import */ var _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./core/services/translate-config.service */ "./src/app/core/services/translate-config.service.ts");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+
 
 
 
@@ -912,6 +908,7 @@ var AppModule = /** @class */ (function () {
                 _core_services_fcm_service__WEBPACK_IMPORTED_MODULE_18__["FcmService"],
                 _ionic_native_firebase_authentication_ngx__WEBPACK_IMPORTED_MODULE_21__["FirebaseAuthentication"],
                 _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_25__["Camera"],
+                _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_30__["EmailComposer"],
                 _core_services_utils_service__WEBPACK_IMPORTED_MODULE_26__["UtilsService"],
                 _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_29__["TranslateConfigService"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
@@ -1851,7 +1848,7 @@ var RidePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title text-center>Ride Tracking</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<!--<ion-content>\n  <div #map id=\"map\" [hidden]=\"!user\"></div>\n\n  <div *ngIf=\"user\">\n\n    <ion-item>\n      <ion-label>User ID: {{ user.id }}</ion-label>\n    </ion-item>\n\n    <ion-button expand=\"block\" (click)=\"startTracking()\" *ngIf=\"!isTracking\">\n      <ion-icon name=\"locate\" slot=\"start\"></ion-icon>\n      Start Tracking\n    </ion-button>\n\n    <ion-button expand=\"block\" (click)=\"stopTracking()\" *ngIf=\"isTracking\">\n      <ion-icon name=\"hand\" slot=\"start\"></ion-icon>\n      Stop Tracking\n    </ion-button>\n\n    <ion-list>\n      <ion-item-sliding *ngFor=\"let pos of locations | async\">\n        <ion-item>\n          <ion-label text-wrap>\n            Lat: {{ pos.lat }}\n            Lng: {{ pos.lng }}\n            <p>\n              {{ pos.timestamp | date:'short' }}\n            </p>\n          </ion-label>\n        </ion-item>\n\n        <ion-item-options side=\"start\">\n          <ion-item-option color=\"danger\" (click)=\"deleteLocation(pos)\">\n            <ion-icon name=\"trash\" slot=\"icon-only\"></ion-icon>\n          </ion-item-option>\n        </ion-item-options>\n\n      </ion-item-sliding>\n    </ion-list>\n\n  </div>\n</ion-content>-->\n\n<ion-content padding>\n    <ion-card>\n        <div #map id=\"map\"></div>\n    </ion-card>\n\n    <div *ngIf=\"!isRating\" text-center>\n        <ion-button (click)=\"startTracking()\" *ngIf=\"!isTracking\">\n            <ion-icon name=\"locate\"></ion-icon>\n            Start Tracking\n        </ion-button>\n        <ion-button color=\"danger\" (click)=\"stopTracking()\" *ngIf=\"isTracking\">\n            <ion-icon name=\"hand\"></ion-icon>\n            Stop Tracking\n        </ion-button>\n    </div>\n\n    <div *ngIf=\"isRating\">\n\n        <div *ngIf=\"currentUser.id !== driver.id\">\n            <h2 text-center>Please, rate your driver!</h2>\n            <ion-item (click)=\"presentRatePopover(driver, 0)\" [disabled]=\"driver.isRated\">\n                <ion-avatar>\n                    <img [src]=\"driver?.photo\">\n                </ion-avatar>\n                <ion-label>{{driver?.name}}</ion-label>\n            </ion-item>\n        </div>\n\n\n        <div *ngIf=\"currentUser.id === driver.id\">\n\n            <h2 text-center>Please, rate your passengers!</h2>\n\n            <ion-list *ngFor=\"let user of passengers; let i = index\" [attr.data-index]=\"i\">\n                <ion-item (click)=\"presentRatePopover(user, i)\" [disabled]=\"user.isRated\">\n                    <ion-avatar>\n                        <img [src]=\"user?.photo\">\n                    </ion-avatar>\n                    <ion-label>{{user?.name}}</ion-label>\n                </ion-item>\n            </ion-list>\n        </div>\n\n        <div text-center>\n            <ion-button (click)=\"closeModal()\" [disabled]=\"numberOfUsersNoRated> 0\">Done</ion-button>\n        </div>\n    </div>\n\n</ion-content>\n"
+module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title text-center>Ride Tracking</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<!--<ion-content>\n  <div #map id=\"map\" [hidden]=\"!user\"></div>\n\n  <div *ngIf=\"user\">\n\n    <ion-item>\n      <ion-label>User ID: {{ user.id }}</ion-label>\n    </ion-item>\n\n    <ion-button expand=\"block\" (click)=\"startTracking()\" *ngIf=\"!isTracking\">\n      <ion-icon name=\"locate\" slot=\"start\"></ion-icon>\n      Start Tracking\n    </ion-button>\n\n    <ion-button expand=\"block\" (click)=\"stopTracking()\" *ngIf=\"isTracking\">\n      <ion-icon name=\"hand\" slot=\"start\"></ion-icon>\n      Stop Tracking\n    </ion-button>\n\n    <ion-list>\n      <ion-item-sliding *ngFor=\"let pos of locations | async\">\n        <ion-item>\n          <ion-label text-wrap>\n            Lat: {{ pos.lat }}\n            Lng: {{ pos.lng }}\n            <p>\n              {{ pos.timestamp | date:'short' }}\n            </p>\n          </ion-label>\n        </ion-item>\n\n        <ion-item-options side=\"start\">\n          <ion-item-option color=\"danger\" (click)=\"deleteLocation(pos)\">\n            <ion-icon name=\"trash\" slot=\"icon-only\"></ion-icon>\n          </ion-item-option>\n        </ion-item-options>\n\n      </ion-item-sliding>\n    </ion-list>\n\n  </div>\n</ion-content>-->\n\n<ion-content padding>\n    <ion-card>\n        <div #map id=\"map\"></div>\n    </ion-card>\n\n    <div *ngIf=\"!isRating\" text-center class=\"start-button\">\n        <ion-button (click)=\"startTracking()\" *ngIf=\"!isTracking\">\n            <ion-icon name=\"locate\"></ion-icon>\n            Start Tracking\n        </ion-button>\n        <ion-button color=\"danger\" (click)=\"stopTracking()\" *ngIf=\"isTracking\">\n            <ion-icon name=\"hand\"></ion-icon>\n            Stop Tracking\n        </ion-button>\n    </div>\n\n    <div *ngIf=\"isRating\">\n\n        <div *ngIf=\"currentUser.id !== driver.id\">\n            <h2 text-center>Please, rate your driver!</h2>\n            <ion-item (click)=\"presentRatePopover(driver, 0)\" [disabled]=\"driver.isRated\">\n                <ion-avatar>\n                    <img [src]=\"driver?.photo\">\n                </ion-avatar>\n                <ion-label>{{driver?.name}}</ion-label>\n            </ion-item>\n        </div>\n\n\n        <div *ngIf=\"currentUser.id === driver.id\">\n\n            <h2 text-center>Please, rate your passengers!</h2>\n\n            <ion-list *ngFor=\"let user of passengers; let i = index\" [attr.data-index]=\"i\">\n                <ion-item (click)=\"presentRatePopover(user, i)\" [disabled]=\"user.isRated\">\n                    <ion-avatar>\n                        <img [src]=\"user?.photo\">\n                    </ion-avatar>\n                    <ion-label>{{user?.name}}</ion-label>\n                </ion-item>\n            </ion-list>\n        </div>\n\n        <div text-center class=\"start-button\">\n            <ion-button (click)=\"closeModal()\" [disabled]=\"numberOfUsersNoRated> 0\">Done</ion-button>\n        </div>\n    </div>\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -1862,7 +1859,7 @@ module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <io
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#map {\n  width: 100%;\n  height: 300px; }\n\nion-label {\n  margin-left: 10px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvcmlkZXMvcmlkZS9yaWRlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxhQUFhLEVBQUE7O0FBRWY7RUFDRSxpQkFBaUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3RhYnMvcmlkZXMvcmlkZS9yaWRlLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNtYXAge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAzMDBweDtcbn1cbmlvbi1sYWJlbHtcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG59XG4iXX0= */"
+module.exports = "#map {\n  width: 100%;\n  height: 300px; }\n\nion-label {\n  margin-left: 10px; }\n\n.start-button {\n  height: 49%;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  -webkit-justify-content: flex-end;\n          justify-content: flex-end; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvcmlkZXMvcmlkZS9yaWRlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxhQUFhLEVBQUE7O0FBRWY7RUFDRSxpQkFBaUIsRUFBQTs7QUFHbkI7RUFDRSxXQUFXO0VBQ1gscUJBQWE7RUFBYixhQUFhO0VBQ2IsOEJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0QixpQ0FBeUI7VUFBekIseUJBQXlCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy90YWJzL3JpZGVzL3JpZGUvcmlkZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMzAwcHg7XG59XG5pb24tbGFiZWx7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuXG4uc3RhcnQtYnV0dG9uIHtcbiAgaGVpZ2h0OiA0OSU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG59XG4iXX0= */"
 
 /***/ }),
 

@@ -17,6 +17,7 @@ export class InitialSetupPage implements OnInit {
   public setUpForm: FormGroup;
   public currentUser: User;
   public photoHasChanged = false;
+  public photo: string;
   @ViewChild('slides') slides: Slides;
 
   constructor(
@@ -31,7 +32,7 @@ export class InitialSetupPage implements OnInit {
     //this.currentUser = this.userService.user.getValue();
     this.userService.getLoggedUser().subscribe( user => {
       this.currentUser = user;
-      console.log(this.currentUser);
+      this.photo = this.currentUser ? this.currentUser.photo : '/assets/icon/favicon.jpg';
     });
   }
 
@@ -42,7 +43,7 @@ export class InitialSetupPage implements OnInit {
   public createSetupForm(): void {
     this.setUpForm = this.fb.group({
       name: [this.currentUser ? this.currentUser.name : '', Validators.required],
-      photo: [this.currentUser ? this.currentUser.photo : '/assets/icon/favicon.jpg']
+      photo: [this.photo]
     });
   }
 
@@ -53,6 +54,7 @@ export class InitialSetupPage implements OnInit {
       photo: this.setUpForm.get('photo').value,
       averageRating: 0,
       numberOfRatings: 0,
+      isAdmin: false,
       points: {
         currentPoints: 0,
         blockedPoints: 0,

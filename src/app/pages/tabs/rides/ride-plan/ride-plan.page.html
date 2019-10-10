@@ -4,7 +4,8 @@
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-icon id="icon-more" name="md-more" slot="end" (click)="presentPopover($event)"></ion-icon>
+        <ion-icon  *ngIf="!ride?.isFinished"
+                   id="icon-more" name="md-more" slot="end" (click)="presentPopover($event)"></ion-icon>
     </ion-toolbar>
 </ion-header>
 
@@ -37,12 +38,12 @@
                     <ion-avatar>
                         <img [src]="user?.photo">
                     </ion-avatar>
-                    <ion-label>
+                    <label>
                         {{user?.name}}
-                    </ion-label>
+                    </label>
                 </div>
 
-                <div class="request-buttons-container">
+                <div class="request-buttons-container" *ngIf="!ride?.isFinished">
 
                     <ion-chip color="danger" (click)="presentAlertConfirm(user)">
                         <ion-label>Remove</ion-label>
@@ -54,7 +55,11 @@
                 <ion-label>No passengers</ion-label>
             </ion-item>
         </ion-list>
-        <div class="footer" *ngIf="ride?.seatedUserIds">
+
+        <ion-item *ngIf=ride?.isFinished>
+            <ion-label (click)="contact()" fill="clear" color="danger">Any problems during this ride? Contact us</ion-label>
+        </ion-item>
+        <div class="footer" *ngIf="ride?.seatedUserIds && !ride?.isFinished">
             <ion-button (click)="openModal()">Start ride</ion-button>
         </div>
     </ion-card>
@@ -79,7 +84,8 @@
                         <ion-icon name="close" color="danger" (click)="refuseBooking(request)"
                                   *ngIf="request.state === 'PENDING'"></ion-icon>
 
-                        <ion-chip color="success" (click)="acceptBooking(request)" *ngIf="request.state === 'REFUSED'">
+                        <ion-chip color="success" (click)="acceptBooking(request)"
+                                  *ngIf="request.state === 'REFUSED' && !ride?.isFinished">
                             <ion-label>Accept</ion-label>
                         </ion-chip>
 

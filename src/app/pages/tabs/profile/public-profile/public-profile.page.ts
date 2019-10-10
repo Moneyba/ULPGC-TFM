@@ -19,7 +19,6 @@ export class PublicProfilePage implements OnInit {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.userId = this.router.getCurrentNavigation().extras.state.userId;
-        console.log(this.userId);
         this.getUser();
       }
     });
@@ -46,11 +45,20 @@ export class PublicProfilePage implements OnInit {
 
   private getFromUsers(): void {
     this.ratings = this.user.ratings;
+    this.ratings = this.sortByDate(this.ratings);
     if (this.user.ratings) {
       this.ratings.forEach((rating) => {
-        this.userService.getUser(rating.fromUserId).subscribe(user => rating.fromUserId = user);
+        this.userService.getUser(rating.fromUserId).subscribe(user => rating.fromUser = user);
       });
     }
+  }
+
+  public sortByDate(array: any[]): any[] {
+    return array.sort((a, b) => {
+      return b.dateTime - a.dateTime;
+
+    });
+
   }
 
 }

@@ -118,11 +118,6 @@ export class AppComponent {
                 }, e => {
                     console.error(e);
                 });
-            } else {
-                // browser test mode
-                this.router.navigateByUrl('initial-setup');
-                this.userService.setLoggedUID('AL769qkPleboVU7stjFPyqw0XBz1');
-
             }
         });
     }

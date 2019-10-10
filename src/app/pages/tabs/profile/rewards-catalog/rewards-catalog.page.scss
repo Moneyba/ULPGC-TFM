@@ -10,12 +10,16 @@
       font-size: 18px;
     }
   }
-
-
-
 }
+
 .points-container {
   display: flex;
   flex-direction: column;
+  margin: 0 20px;
+}
+
+.list-rewards{
+  margin-right: 20px;
+  margin-left: 10px;
 }
 

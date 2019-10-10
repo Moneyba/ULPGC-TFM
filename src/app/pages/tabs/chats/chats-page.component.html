@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list *ngFor="let chat of chats">
+  <ion-list *ngFor="let chat of chats" class="list-chat">
     <ion-item (click)="goToChatPage(chat)">
       <ion-avatar slot="start">
         <img [src]="chat.otherUser?.photo">

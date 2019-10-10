@@ -27,6 +27,7 @@ export class RatePopoverComponent implements OnInit {
       private db: AngularFireDatabase
   ) {
     this.user = this.navParams.data.toUser;
+    console.log(this.user);
     this.isToDriver = this.navParams.data.isToDriver;
     this.rating = {
       id: this.db.createPushId(),
@@ -88,6 +89,7 @@ export class RatePopoverComponent implements OnInit {
     if (this.isToDriver) {
       extraPoints = 10;
     }
+    console.log(this.user)
     this.user.points.currentPoints += this.ratingNumber + extraPoints;
     if (!this.user.ratings) {
       this.user.ratings = [];

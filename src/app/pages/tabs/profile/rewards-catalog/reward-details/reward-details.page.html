@@ -14,26 +14,32 @@
                 <img [src]="reward.photo">
             </ion-avatar>
         </div>
-
-
         <div text-center>
             <h2>{{reward.name}}*</h2>
-            <h3>-{{reward.points}} pts</h3>
-        </div>
-        <div>
-            <ion-label>Description: {{reward.description}}</ion-label>
-            <p>*Hasta fin de existencias</p>
+            <ion-label class="reward-points-text">-{{reward.points}} pts</ion-label>
         </div>
 
-        <div text-center>
+        <ion-item lines="none">
+            <ion-label>Description: {{reward.description}}</ion-label>
+
+        </ion-item>
+
+        <p margin="0 10px">*While it lasts</p>
+
+        <div text-center  *ngIf="currentUser?.isAdmin">
             <ion-button (click)="exchange()" [disabled]="currentUser.points.currentPoints < reward.points">
-                Canjear con {{reward.points}} pts
+                Exchange for {{reward.points}} pts
             </ion-button>
         </div>
     </ion-card>
 
+    <div class="exchange-button" *ngIf="!currentUser?.isAdmin">
+        <ion-button (click)="exchange()" [disabled]="currentUser.points.currentPoints < reward.points">
+            Exchange for {{reward.points}} pts
+        </ion-button>
+    </div>
 
-    <ion-list *ngIf="requests">
+    <ion-list *ngIf="requests && currentUser?.isAdmin">
         <ion-list-header>Requests</ion-list-header>
         <ion-item-sliding *ngFor="let request of requests">
             <ion-item>

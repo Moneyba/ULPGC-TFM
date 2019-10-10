@@ -77,7 +77,6 @@ export class HomePage implements OnInit {
     }
 
     public dateFormat(input: string): void {
-        console.log(input);
         const dateToSet = moment(input, 'DD/MM/YYYY').toDate();
         if (moment(input, 'DD/MM/YYYY', true).isValid()) {
             this.dateTimeForm.get('dateTime').setValue(dateToSet);
@@ -133,7 +132,6 @@ export class HomePage implements OnInit {
 
     public getRides(): void {
         this.rideService.getRides().subscribe(rides => {
-            console.log(rides);
             this.rides = rides;
             this.filteredRides = rides;
         });
@@ -142,11 +140,9 @@ export class HomePage implements OnInit {
     public filterItems(): void {
         if (this.originLocation) {
             this.filterByLocation('origin');
-            console.log('despues del filtrado por origen', this.filteredRides);
         }
         if (this.destinationLocation) {
             this.filterByLocation('destination');
-            console.log('despues del filtrado por destino', this.filteredRides);
         }
         if (this.dateTimeForm.get('date').value) {
             this.filterByDate();
@@ -162,7 +158,6 @@ export class HomePage implements OnInit {
         const date = new Date(this.dateTimeForm.get('date').value).toDateString();
 
         const dateTime: Date = new Date(`${date} ${time}`);
-        console.log(dateTime);
         this.filteredRides = this.filteredRides.filter(item => {
             const itemDateTime: Date = new Date(item.dateTime);
             if (dateTime.getDate() === itemDateTime.getDate()) {
@@ -196,7 +191,6 @@ export class HomePage implements OnInit {
                     return false;
                 }
                 const distance = result[0].routes[0].legs[0].distance;
-                console.log(distance.value);
                 if (distance.value < this.maxDistance) {
                     return true;
                 } else {

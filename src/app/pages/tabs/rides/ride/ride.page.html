@@ -1,58 +1,18 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-title text-center>Ride Tracking</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
-
-<!--<ion-content>
-  <div #map id="map" [hidden]="!user"></div>
-
-  <div *ngIf="user">
-
-    <ion-item>
-      <ion-label>User ID: {{ user.id }}</ion-label>
-    </ion-item>
-
-    <ion-button expand="block" (click)="startTracking()" *ngIf="!isTracking">
-      <ion-icon name="locate" slot="start"></ion-icon>
-      Start Tracking
-    </ion-button>
-
-    <ion-button expand="block" (click)="stopTracking()" *ngIf="isTracking">
-      <ion-icon name="hand" slot="start"></ion-icon>
-      Stop Tracking
-    </ion-button>
-
-    <ion-list>
-      <ion-item-sliding *ngFor="let pos of locations | async">
-        <ion-item>
-          <ion-label text-wrap>
-            Lat: {{ pos.lat }}
-            Lng: {{ pos.lng }}
-            <p>
-              {{ pos.timestamp | date:'short' }}
-            </p>
-          </ion-label>
-        </ion-item>
-
-        <ion-item-options side="start">
-          <ion-item-option color="danger" (click)="deleteLocation(pos)">
-            <ion-icon name="trash" slot="icon-only"></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
-
-      </ion-item-sliding>
-    </ion-list>
-
-  </div>
-</ion-content>-->
 
 <ion-content padding>
     <ion-card>
         <div #map id="map"></div>
     </ion-card>
 
-    <div *ngIf="!isRating" text-center>
+    <div *ngIf="!isRating" text-center class="start-button">
         <ion-button (click)="startTracking()" *ngIf="!isTracking">
             <ion-icon name="locate"></ion-icon>
             Start Tracking
@@ -63,7 +23,7 @@
         </ion-button>
     </div>
 
-    <div *ngIf="isRating">
+    <div *ngIf="isRating" class="rating">
 
         <div *ngIf="currentUser.id !== driver.id">
             <h2 text-center>Please, rate your driver!</h2>
@@ -90,7 +50,7 @@
             </ion-list>
         </div>
 
-        <div text-center>
+        <div text-center class="done-button">
             <ion-button (click)="closeModal()" [disabled]="numberOfUsersNoRated> 0">Done</ion-button>
         </div>
     </div>

@@ -9,7 +9,7 @@
 <ion-content>
   <div class="points-button-container">
     <ion-button text-center fill=clear (click)="changePointsBoxState()">
-      <ion-card-title>{{currentUser.points.currentPoints}}<span id="pts"> pts</span></ion-card-title>
+      <ion-card-title>{{currentUser.points.currentPoints - currentUser.points.blockedPoints}}<span id="pts"> pts</span></ion-card-title>
 
         <ion-icon name="arrow-dropdown" *ngIf="!showSearchContainer"></ion-icon>
         <ion-icon name="arrow-dropup" *ngIf="showSearchContainer"></ion-icon>
@@ -18,27 +18,27 @@
   </div>
   <div [hidden]="!showSearchContainer" class="points-container">
     <ion-item>
-      <ion-label>Ganados: {{currentUser.points.currentPoints + currentUser.points.exchangedPoints}} pts</ion-label>
+      <ion-label>Earned: {{currentUser.points.currentPoints + currentUser.points.exchangedPoints}} pts</ion-label>
     </ion-item>
     <ion-item>
-      <ion-label>Canjeados: {{currentUser.points.exchangedPoints}} pts</ion-label>
+      <ion-label>Used: {{currentUser.points.exchangedPoints}} pts</ion-label>
     </ion-item>
     <ion-item>
-      <ion-label>Bloqueados: {{currentUser.points.blockedPoints}} pts</ion-label>
+      <ion-label>On hold: {{currentUser.points.blockedPoints}} pts</ion-label>
     </ion-item>
   </div>
-  <ion-list *ngFor="let reward of rewards">
+  <ion-list *ngFor="let reward of rewards" class="list-rewards">
     <ion-item-sliding>
-      <ion-item (click)="goToRewardDetailsPage(reward)" class="chat-item">
+      <ion-item (click)="goToRewardDetailsPage (reward)" class="chat-item">
         <ion-avatar slot="start">
           <img [src]="reward.photo">
         </ion-avatar>
         <ion-label>
           <h3>{{reward.name}}</h3>
-          <p>Canjear con {{reward.points}} pts</p>
+          <p>Exchange for {{reward.points}} pts</p>
         </ion-label>
       </ion-item>
-      <ion-item-options side="end">
+      <ion-item-options *ngIf="currentUser?.isAdmin"  side="end">
         <ion-item-option color="success" (click)="editReward(reward)">
           <ion-icon slot="icon-only" name="create"></ion-icon>
         </ion-item-option>
@@ -48,8 +48,8 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button expand="block" [routerLink]="'/reward-form'" routerDirection="forward" color="secondary">
+  <ion-fab *ngIf="currentUser?.isAdmin" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button expand="block" color="secondary" (click)="addReward()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>

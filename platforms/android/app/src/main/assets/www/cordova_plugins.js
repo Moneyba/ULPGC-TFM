@@ -340,11 +340,11 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-datepicker.DatePicker",
-      "file": "plugins/cordova-plugin-datepicker/www/android/DatePicker.js",
-      "pluginId": "cordova-plugin-datepicker",
+      "id": "cordova-plugin-email-composer.EmailComposer",
+      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
+      "pluginId": "cordova-plugin-email-composer",
       "clobbers": [
-        "datePicker"
+        "cordova.plugins.email"
       ]
     }
   ];
@@ -365,6 +365,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-firebase-authentication": "3.0.0",
     "cordova-plugin-firebasex": "4.0.0",
     "cordova-plugin-camera": "4.1.0",
-    "cordova-plugin-datepicker": "0.9.3"
+    "cordova-plugin-email-composer": "0.9.2"
   };
 });

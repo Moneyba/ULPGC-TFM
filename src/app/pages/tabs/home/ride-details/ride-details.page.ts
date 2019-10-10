@@ -79,7 +79,6 @@ export class RideDetailsPage implements OnInit {
     }
 
     private getUser(): void {
-        console.log(this.ride);
         this.userService.getUser(this.ride.userId).subscribe(user =>
             this.user = user);
     }

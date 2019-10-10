@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
 
-/***/ "./node_modules/@ionic/core/dist/esm-es5/hardware-back-button-08f20350.js":
+/***/ "./node_modules/@ionic/core/dist/esm-es5/hardware-back-button-5afe3cb0.js":
 /*!********************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm-es5/hardware-back-button-08f20350.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm-es5/hardware-back-button-5afe3cb0.js ***!
   \********************************************************************************/
 /*! exports provided: startHardwareBackButton */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11,7 +11,6 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startHardwareBackButton", function() { return startHardwareBackButton; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-var _this = undefined;
 
 var startHardwareBackButton = function () {
     var doc = document;
@@ -45,9 +44,9 @@ var startHardwareBackButton = function () {
         }
     });
 };
-var executeAction = function (handler) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+var executeAction = function (handler) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(void 0, void 0, void 0, function () {
     var result, e_1;
-    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 3, , 4]);

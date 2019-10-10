@@ -1,37 +1,24 @@
 
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Welcome</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content fullscreen padding>
+<ion-content fullscreen>
   <form [formGroup]="setUpForm">
-  <ion-slides #slides [pager]="true" [options]="{onlyExternal: false}">
-    <ion-slide class="slide-container">
-      <h2>Welcome to <b>ULPGC MaaS</b></h2>
-      <p>Please, introduce your username:</p>
-      <ion-item>
-        <ion-input formControlName="name" required></ion-input>
-      </ion-item>
-      <footer padding>
-        <ion-button (click)="slides.slideNext()" [disabled]="setUpForm.invalid">Continue</ion-button>
-      </footer>
+    <h2 class="title">Profile info</h2>
 
-    </ion-slide>
-    <ion-slide class="slide-container">
-      <p>Please, upload a photo :)</p>
-      <div class="user-photo" padding-top>
-        <ion-avatar>
-          <img [src]="currentUser?.photo || '/assets/icon/favicon.jpg'">
-        </ion-avatar>
-      </div>
-      <footer padding>
-        <ion-button (click)="slides.slidePrev()">Back</ion-button>
-        <ion-button (click)="updateUser()">Continue</ion-button>
-      </footer>
-    </ion-slide>
-  </ion-slides>
+        <p class="text-description">Please introduce your name and an optional photo:</p>
+        <div class="user-photo">
+          <ion-avatar>
+            <img [src]="photo" (click)="uploadNewPhoto()">
+          </ion-avatar>
+        </div>
+        <ion-item>
+          <ion-input formControlName="name" required placeholder="Type your name here"></ion-input>
+        </ion-item>
+
+
+
   </form>
+  <footer padding>
+    <ion-button (click)="updateUser()" [disabled]="setUpForm.invalid">Next</ion-button>
+  </footer>
 
 </ion-content>
 

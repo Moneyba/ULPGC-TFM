@@ -1,5 +1,9 @@
 ion-card {
   padding: 10px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .reward-photo ion-avatar {
     margin: 0 auto;
@@ -7,7 +11,18 @@ ion-card {
     height: 200px;
   }
 
+  .reward-points-text {
+    font-size: 20px;
+  }
+
 }
 .request-button {
   font-size: 20px;
+}
+
+.exchange-button {
+  height: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }

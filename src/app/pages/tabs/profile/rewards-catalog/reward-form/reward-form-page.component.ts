@@ -27,25 +27,25 @@ export class RewardFormPage implements OnInit {
                 private rewardService: RewardService,
                 private route: ActivatedRoute,
                 private router: Router) {
-        this.route.queryParams.subscribe(params => {
+       this.route.queryParams.subscribe(params => {
             if (this.router.getCurrentNavigation().extras.state) {
                 this.reward = this.router.getCurrentNavigation().extras.state.reward;
-                console.log(this.reward);
-                this.createRewardForm();
+                this.photo = this.reward ? this.reward.photo : '/assets/icon/favicon.jpg';
             }
         });
     }
 
     ngOnInit() {
+        this.createRewardForm();
     }
 
     public createRewardForm(): void {
         this.rewardForm = this.fb.group({
-            name: [this.reward.name ? this.reward.name : null, Validators.required],
-            photo: [this.reward.photo ? this.reward.photo : this.photo],
-            points: [this.reward.points ? this.reward.points : null],
-            stock: [this.reward.stock ? this.reward.stock : null],
-            description: [this.reward.description ? this.reward.description : null]
+            name: [this.reward ? this.reward.name : null, Validators.required],
+            photo: [this.photo],
+            points: [this.reward ? this.reward.points : null],
+            stock: [this.reward ? this.reward.stock : null],
+            description: [this.reward ? this.reward.description : null]
         });
     }
 

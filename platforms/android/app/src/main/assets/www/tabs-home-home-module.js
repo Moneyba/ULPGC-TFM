@@ -207,7 +207,6 @@ var HomePage = /** @class */ (function () {
                 return false;
             }
             var distance = result[0].routes[0].legs[0].distance;
-            console.log(distance.value);
             if (distance.value < _this.maxDistance) {
                 return true;
             }

@@ -15,6 +15,7 @@ import {Rating} from '../../../../shared/models/Rating';
 import {RatePopoverComponent} from './rate-popover/rate-popover.component';
 import {DatePickerComponent} from '../../home/date-picker/date-picker.component';
 import * as moment from '../../home/ride-form/ride-form.page';
+import {RideService} from '../../../../core/services/ride.service';
 
 
 declare var google;
@@ -50,6 +51,7 @@ export class RidePage implements OnInit {
 
     constructor(
         private userService: UserService,
+        private rideService: RideService,
         private plt: Platform,
         private geolocation: Geolocation,
         private trackingService: TrackingService,
@@ -166,8 +168,9 @@ export class RidePage implements OnInit {
     }
 
     async closeModal() {
-        const onClosedData = 'You rated';
-        this.modalController.dismiss(onClosedData);
+        this.ride.isFinished = true;
+        this.rideService.updateRide(this.ride);
+        this.modalController.dismiss();
     }
 /*
     private getPassengers(): void {

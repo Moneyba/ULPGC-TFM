@@ -5,3 +5,20 @@
 ion-label{
   margin-left: 10px;
 }
+
+.start-button {
+  height: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.done-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.rating {
+  height: 49%;
+}

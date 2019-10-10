@@ -62,6 +62,10 @@
     "cordova-plugin-camera": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.angularfirebase.tfm"
+    },
+    "cordova-plugin-email-composer": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.angularfirebase.tfm"
     }
   },
   "dependent_plugins": {

@@ -18,12 +18,9 @@ export class RidesPage {
     private currentUser: User;
     public requests: Request[];
     public rides: Ride[];
-
-    public today: number;
-
-
     public currentRides = [];
     public oldRides = [];
+    public today: number;
 
     constructor(private rideService: RideService,
                 private requestService: RequestService,
@@ -33,7 +30,7 @@ export class RidesPage {
 
     ionViewWillEnter() {
         this.currentUser = this.userService.user.getValue();
-        this.today = new Date().getTime();
+        this.today = new Date().getTime() + 60 * 60 * 1000;
         this.currentRides = [];
         this.getRides();
 
@@ -48,7 +45,6 @@ export class RidesPage {
         this.currentRides = [];
         this.oldRides = [];
         this.rideService.getRidesByUserId(this.currentUser.id).subscribe(rides => {
-            console.log(rides);
             rides.forEach((ride: Ride) => {
                 if (ride.dateTime >= this.today) {
                     this.currentRides.push(ride);
@@ -63,11 +59,9 @@ export class RidesPage {
 
     public getRequests(): void {
         this.requestService.getRequestsByUserId(this.currentUser.id).subscribe(requests => {
-            console.log(requests);
             requests.forEach((request: Request) => {
                 if (request.ride.dateTime >= this.today) {
                     this.currentRides.push(request);
-                    console.log(this.currentRides);
                 } else {
                     this.oldRides.push(request);
                 }

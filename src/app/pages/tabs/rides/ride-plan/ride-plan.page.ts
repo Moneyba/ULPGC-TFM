@@ -13,6 +13,7 @@ import {RidePopoverComponent} from './ride-popover/ride-popover.component';
 import DirectionsRequest = google.maps.DirectionsRequest;
 import DirectionsService = google.maps.DirectionsService;
 import {MapsAPILoader} from '@agm/core';
+import {EmailComposer} from '@ionic-native/email-composer/ngx';
 
 @Component({
     selector: 'app-ride-plan',
@@ -21,6 +22,7 @@ import {MapsAPILoader} from '@agm/core';
 })
 export class RidePlanPage implements OnInit {
     public ride: Ride = null;
+    private rideId: string;
     public request: Request = null;
     public rideTimeDate;
     public driver: User;
@@ -49,13 +51,14 @@ export class RidePlanPage implements OnInit {
                 private requestService: RequestService,
                 public popoverController: PopoverController,
                 private mapsAPILoader: MapsAPILoader,
-                private alertController: AlertController) {
+                private alertController: AlertController,
+                private emailComposer: EmailComposer) {
         this.currentUser = this.userService.user.getValue();
         this.route.queryParams.subscribe(params => {
 
             if (this.router.getCurrentNavigation().extras.state) {
-                const rideId = this.router.getCurrentNavigation().extras.state.rideId;
-                this.getRide(rideId);
+                this.rideId = this.router.getCurrentNavigation().extras.state.rideId;
+                this.getRide(this.rideId);
 
             }
         });
@@ -65,6 +68,12 @@ export class RidePlanPage implements OnInit {
 
     ngOnInit() {
 
+    }
+
+    ionViewWillEnter() {
+        if (this.rideId) {
+            this.getRide(this.rideId);
+        }
     }
 
 
@@ -233,6 +242,14 @@ export class RidePlanPage implements OnInit {
 
         });
         return await popover.present();
+    }
+
+    private contact(): void {
+        const email = {
+            to: 'moneybahr@gmail.com',
+            isHtml: true
+        };
+        this.emailComposer.open(email);
     }
 
 }

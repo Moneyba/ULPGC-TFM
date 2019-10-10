@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[90],{
 
-/***/ "./node_modules/@ionic/core/dist/esm-es5/md.transition-bf76a31e.js":
+/***/ "./node_modules/@ionic/core/dist/esm-es5/md.transition-f444ed6d.js":
 /*!*************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm-es5/md.transition-bf76a31e.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm-es5/md.transition-f444ed6d.js ***!
   \*************************************************************************/
 /*! exports provided: mdTransitionAnimation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10,7 +10,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mdTransitionAnimation", function() { return mdTransitionAnimation; });
-/* harmony import */ var _animation_d0becaea_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./animation-d0becaea.js */ "./node_modules/@ionic/core/dist/esm-es5/animation-d0becaea.js");
+/* harmony import */ var _helpers_e0fdb9d0_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers-e0fdb9d0.js */ "./node_modules/@ionic/core/dist/esm-es5/helpers-e0fdb9d0.js");
+/* harmony import */ var _animation_86ecfd53_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./animation-86ecfd53.js */ "./node_modules/@ionic/core/dist/esm-es5/animation-86ecfd53.js");
+
 
 var mdTransitionAnimation = function (_, opts) {
     var OFF_BOTTOM = '40px';
@@ -20,7 +22,7 @@ var mdTransitionAnimation = function (_, opts) {
     var leavingEl = opts.leavingEl;
     var ionPageElement = getIonPageElement(enteringEl);
     var enteringToolbarEle = ionPageElement.querySelector('ion-toolbar');
-    var rootTransition = Object(_animation_d0becaea_js__WEBPACK_IMPORTED_MODULE_0__["c"])();
+    var rootTransition = Object(_animation_86ecfd53_js__WEBPACK_IMPORTED_MODULE_1__["c"])();
     rootTransition
         .addElement(ionPageElement)
         .fill('both')
@@ -40,7 +42,7 @@ var mdTransitionAnimation = function (_, opts) {
     }
     // Animate toolbar if it's there
     if (enteringToolbarEle) {
-        var enteringToolBar = Object(_animation_d0becaea_js__WEBPACK_IMPORTED_MODULE_0__["c"])();
+        var enteringToolBar = Object(_animation_86ecfd53_js__WEBPACK_IMPORTED_MODULE_1__["c"])();
         enteringToolBar.addElement(enteringToolbarEle);
         rootTransition.addAnimation(enteringToolBar);
     }
@@ -50,7 +52,7 @@ var mdTransitionAnimation = function (_, opts) {
         rootTransition
             .duration(opts.duration || 200)
             .easing('cubic-bezier(0.47,0,0.745,0.715)');
-        var leavingPage = Object(_animation_d0becaea_js__WEBPACK_IMPORTED_MODULE_0__["c"])();
+        var leavingPage = Object(_animation_86ecfd53_js__WEBPACK_IMPORTED_MODULE_1__["c"])();
         leavingPage
             .addElement(getIonPageElement(leavingEl))
             .fromTo('transform', "translateY(" + CENTER + ")", "translateY(" + OFF_BOTTOM + ")")

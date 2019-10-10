@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: 'ride', loadChildren: './pages/tabs/rides/ride/ride.module#RidePageModule' },
   { path: 'profile-form', loadChildren: './pages/tabs/profile/profile-form/profile-form.module#ProfileFormPageModule' },
   { path: 'initial-setup', loadChildren: './pages/initial-setup/initial-setup.module#InitialSetupPageModule' },
-  { path: 'welcome', loadChildren: './pages/welcome/welcome.module#WelcomePageModule' },
   { path: 'profile', loadChildren: './pages/tabs/profile/profile.module#ProfilePageModule' },
   { path: 'booked-ride-plan', loadChildren: './pages/tabs/rides/booked-ride-plan/booked-ride-plan.module#BookedRidePlanPageModule' },
   { path: 'rewards-catalog', loadChildren: './pages/tabs/profile/rewards-catalog/rewards-catalog.module#RewardsCatalogPageModule' },

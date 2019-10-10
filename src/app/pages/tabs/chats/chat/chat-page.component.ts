@@ -44,6 +44,7 @@ export class ChatPage implements OnInit {
             if (this.router.getCurrentNavigation().extras.state) {
                 this.chatId = this.router.getCurrentNavigation().extras.state.chatId;
                 this.getChat(this.chatId);
+                console.log(this.chatId);
             }
         });
 

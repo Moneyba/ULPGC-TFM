@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {AuthService} from '../../core/services/auth.service';
@@ -6,6 +6,7 @@ import {FcmService} from '../../core/services/fcm.service';
 import {Platform} from '@ionic/angular';
 import {FirebaseAuthentication} from '@ionic-native/firebase-authentication/ngx';
 import {LoadingService} from '../../core/services/loading.service';
+import {Slides} from 'ionic-angular';
 
 @Component({
     selector: 'app-login',
@@ -15,10 +16,14 @@ import {LoadingService} from '../../core/services/loading.service';
 export class LoginPage implements OnInit {
     private loginForm: FormGroup;
 
+
     public phoneNumber: string;
     public phoneSent: boolean;
     public verificationID: string;
     public confirmationCode: any;
+
+
+    @ViewChild(Slides) slides: Slides;
 
     public constructor(private formBuilder: FormBuilder,
                        private authService: AuthService,
@@ -32,6 +37,7 @@ export class LoginPage implements OnInit {
 
     ngOnInit() {
         this.createLoginForm();
+
     }
 
     ionViewWillEnter() {
@@ -39,6 +45,7 @@ export class LoginPage implements OnInit {
         this.phoneSent = false;
         this.verificationID = null;
         this.confirmationCode = null;
+
     }
 
     private createLoginForm(): void {

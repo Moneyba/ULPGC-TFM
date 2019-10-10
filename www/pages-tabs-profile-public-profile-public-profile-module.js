@@ -58,7 +58,7 @@ var PublicProfilePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>User Details</ion-title>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"user-photo\" padding-top>\n    <ion-avatar>\n      <img [src]=\"user?.photo || '/assets/icon/favicon.png'\">\n    </ion-avatar>\n    <ion-card-title id=\"name-user\">{{user?.name}}</ion-card-title>\n    <div class=\"rating-value\">\n      <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n      <label id=\"user-rating\">{{user?.averageRating}}/5 ({{user?.numberOfRatings}})</label>\n    </div>\n  </div>\n\n    <ion-item *ngIf=\"user?.carPlate\">\n      <ion-icon name=\"car\"></ion-icon>\n      <ion-label>\n        <h2>{{user?.carPlate}}</h2>\n      </ion-label>\n    </ion-item>\n  <ion-list *ngFor=\"let rating of ratings\">\n    <ion-item>\n      <ion-avatar slot=\"start\" (click)=\"goToUserDetailsPage(user.id)\">\n        <img alt=\"userPhoto\" [src]=\"rating.fromUser?.photo\">\n      </ion-avatar>\n      <div class=\"user-info\">\n        <ion-label>\n          <h2>{{rating.fromUser?.name}}</h2>\n        </ion-label>\n        <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n        <label> {{rating.rating}}/5</label>\n        <ion-label>{{rating?.comment}} hey</ion-label>\n      </div>\n      <ion-card-subtitle slot=\"end\">{{rating.dateTime | date:'dd MMM h:mm'}} </ion-card-subtitle>\n\n    </ion-item>\n  </ion-list>\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title>User Details</ion-title>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"user-photo\" padding-top>\n    <ion-avatar>\n      <img [src]=\"user?.photo || '/assets/icon/favicon.jpg'\">\n    </ion-avatar>\n    <ion-card-title id=\"name-user\">{{user?.name}}</ion-card-title>\n    <div class=\"rating-value\">\n      <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n      <label id=\"user-rating\">{{user?.averageRating}}/5 ({{user?.numberOfRatings}})</label>\n    </div>\n  </div>\n\n    <ion-item *ngIf=\"user?.carPlate\">\n      <ion-icon name=\"car\"></ion-icon>\n      <ion-label>\n        <h2>{{user?.carPlate}}</h2>\n      </ion-label>\n    </ion-item>\n  <ion-list *ngFor=\"let rating of ratings\">\n    <ion-item>\n      <ion-avatar slot=\"start\" (click)=\"goToUserDetailsPage(user.id)\">\n        <img alt=\"userPhoto\" [src]=\"rating.fromUser?.photo \">\n      </ion-avatar>\n      <div class=\"user-info\">\n        <ion-label>\n          <h2>{{rating.fromUser?.name}}</h2>\n        </ion-label>\n        <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n        <label> {{rating.rating}}/5</label>\n        <ion-label>{{rating?.comment}}</ion-label>\n      </div>\n      <ion-card-subtitle slot=\"end\">{{rating.dateTime | date:'dd MMM h:mm'}} </ion-card-subtitle>\n\n    </ion-item>\n  </ion-list>\n</ion-content>\n"
 
 /***/ }),
 
@@ -127,7 +127,8 @@ var PublicProfilePage = /** @class */ (function () {
         this.ratings = this.user.ratings;
         if (this.user.ratings) {
             this.ratings.forEach(function (rating) {
-                _this.userService.getUser(rating.fromUserId).subscribe(function (user) { return rating.fromUserId = user; });
+                console.log(rating.comment);
+                _this.userService.getUser(rating.fromUserId).subscribe(function (user) { return rating.fromUser = user; });
             });
         }
     };

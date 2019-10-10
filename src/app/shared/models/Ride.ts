@@ -10,4 +10,5 @@ export class Ride {
     userId: string;
     numberOfSeats: number;
     seatedUserIds: string[];
+    isFinished?: boolean;
 }

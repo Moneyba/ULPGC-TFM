@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
 
-/***/ "./node_modules/@ionic/core/dist/esm-es5/input-shims-7b87c414.js":
+/***/ "./node_modules/@ionic/core/dist/esm-es5/input-shims-7a8a317c.js":
 /*!***********************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm-es5/input-shims-7b87c414.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm-es5/input-shims-7a8a317c.js ***!
   \***********************************************************************/
 /*! exports provided: startInputShims */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10,7 +10,7 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startInputShims", function() { return startInputShims; });
-/* harmony import */ var _helpers_c90aaa66_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers-c90aaa66.js */ "./node_modules/@ionic/core/dist/esm-es5/helpers-c90aaa66.js");
+/* harmony import */ var _helpers_e0fdb9d0_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers-e0fdb9d0.js */ "./node_modules/@ionic/core/dist/esm-es5/helpers-e0fdb9d0.js");
 
 var cloneMap = new WeakMap();
 var relocateInput = function (componentEl, inputEl, shouldRelocate, inputRelativeY) {
@@ -170,7 +170,7 @@ var calcScrollData = function (inputRect, contentRect, keyboardHeight, platformH
 var enableScrollAssist = function (componentEl, inputEl, contentEl, keyboardHeight) {
     var coord;
     var touchStart = function (ev) {
-        coord = Object(_helpers_c90aaa66_js__WEBPACK_IMPORTED_MODULE_0__["p"])(ev);
+        coord = Object(_helpers_e0fdb9d0_js__WEBPACK_IMPORTED_MODULE_0__["p"])(ev);
     };
     var touchEnd = function (ev) {
         // input cover touchend/mouseup
@@ -178,7 +178,7 @@ var enableScrollAssist = function (componentEl, inputEl, contentEl, keyboardHeig
             return;
         }
         // get where the touchend/mouseup ended
-        var endCoord = Object(_helpers_c90aaa66_js__WEBPACK_IMPORTED_MODULE_0__["p"])(ev);
+        var endCoord = Object(_helpers_e0fdb9d0_js__WEBPACK_IMPORTED_MODULE_0__["p"])(ev);
         // focus this input if the pointer hasn't moved XX pixels
         // and the input doesn't already have focus
         if (!hasPointerMoved(6, coord, endCoord) && !isFocused(inputEl)) {

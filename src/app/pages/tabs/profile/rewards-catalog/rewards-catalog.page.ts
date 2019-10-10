@@ -3,7 +3,6 @@ import {User} from '../../../../shared/models/User';
 import {ActivatedRoute, NavigationExtras, Router} from '@angular/router';
 import {RewardProduct} from '../../../../shared/models/RewardProduct';
 import {RewardService} from '../../../../core/services/reward.service';
-import {Ride} from '../../../../shared/models/Ride';
 import {AlertController} from '@ionic/angular';
 
 @Component({
@@ -50,6 +49,10 @@ export class RewardsCatalogPage implements OnInit {
       }
     };
     this.router.navigate(['reward-details'], navigationExtras);
+  }
+
+  public addReward(): void {
+    this.router.navigateByUrl('reward-form');
   }
 
   public editReward(reward: RewardProduct): void {

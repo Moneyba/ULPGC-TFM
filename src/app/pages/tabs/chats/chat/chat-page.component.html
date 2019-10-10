@@ -14,7 +14,7 @@
 
     <div class="message-area" *ngIf="chat">
         <div class="message" *ngFor="let message of messages" [ngClass]="getClasses(message)">
-            <ion-avatar *ngIf="message.fromUser != currentUser.id" (click)="goToDriverDetailsPage()">
+            <ion-avatar *ngIf="message.fromUserId != currentUser.id" (click)="goToDriverDetailsPage()">
                 <img src="{{otherUser?.photo}}"></ion-avatar>
             <p>{{message.content}}</p>
             <span>{{message.date}}</span>

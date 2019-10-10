@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-list>\n  <ion-list-header>Account options</ion-list-header>\n  <ion-item button (click)=\"gotoProfileFormPage()\">Edit Profile</ion-item>\n  <ion-item button (click)=\"logout()\">Logout</ion-item>\n</ion-list>\n"
+module.exports = "<ion-list>\n  <ion-list-header>Account options</ion-list-header>\n  <ion-item button (click)=\"gotoProfileFormPage()\">Edit Profile</ion-item>\n  <ion-item button (click)=\"contact()\">Contact us</ion-item>\n  <ion-item button (click)=\"logout()\">Logout</ion-item>\n</ion-list>\n"
 
 /***/ }),
 
@@ -37,20 +37,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_firebase_authentication_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/firebase-authentication/ngx */ "./node_modules/@ionic-native/firebase-authentication/ngx/index.js");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+
 
 
 
 
 
 var ProfilePopoverComponent = /** @class */ (function () {
-    function ProfilePopoverComponent(router, navParams, popoverController, firebaseAuthentication) {
+    function ProfilePopoverComponent(router, navParams, popoverController, emailComposer, firebaseAuthentication) {
         this.router = router;
         this.navParams = navParams;
         this.popoverController = popoverController;
+        this.emailComposer = emailComposer;
         this.firebaseAuthentication = firebaseAuthentication;
         this.currentUser = this.navParams.data.user;
     }
-    ProfilePopoverComponent.prototype.ngOnInit = function () { };
+    ProfilePopoverComponent.prototype.ngOnInit = function () {
+    };
     ProfilePopoverComponent.prototype.gotoProfileFormPage = function () {
         var navigationExtras = {
             state: {
@@ -65,6 +69,13 @@ var ProfilePopoverComponent = /** @class */ (function () {
         this.firebaseAuthentication.signOut();
         this.router.navigateByUrl('login');
     };
+    ProfilePopoverComponent.prototype.contact = function () {
+        var email = {
+            to: 'moneybahr@gmail.com',
+            isHtml: true
+        };
+        this.emailComposer.open(email);
+    };
     ProfilePopoverComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-profile-popover',
@@ -74,6 +85,7 @@ var ProfilePopoverComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavParams"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["PopoverController"],
+            _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_5__["EmailComposer"],
             _ionic_native_firebase_authentication_ngx__WEBPACK_IMPORTED_MODULE_4__["FirebaseAuthentication"]])
     ], ProfilePopoverComponent);
     return ProfilePopoverComponent;
@@ -144,7 +156,7 @@ var ProfilePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title text-center>Profile</ion-title>\n    <ion-icon id=\"icon-more\" name=\"md-more\" slot=\"end\" (click)=\"presentPopover($event)\"></ion-icon>\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div class=\"user-photo\" padding-top>\n    <ion-avatar>\n      <img [src]=\"currentUser?.photo || '/assets/icon/favicon.jpg'\">\n    </ion-avatar>\n  </div>\n\n  <ion-list>\n    <ion-item>\n      <ion-icon name=\"person\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Display Name</p>\n        <h2>{{currentUser?.name}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\"call\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Mobile Phone Number</p>\n        <h2>{{currentUser?.phoneNumber}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item (click)=\"goToPublicProfilePage()\">\n      <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Rating</p>\n        <h2 *ngIf=\"currentUser?.averageRating\">{{currentUser?.averageRating}}/5 - {{currentUser?.numberOfRatings}} ratings</h2>\n        <h2 *ngIf=\"!currentUser?.averageRating\">No ratings yet</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item (click)=\"gotoRewardsCatalogPage()\">\n      <ion-icon name=\"gift\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Earned Points</p>\n        <h2>{{currentUser?.points?.currentPoints}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item *ngIf=\"currentUser?.carPlate\">\n      <ion-icon name=\"car\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Car Plate</p>\n        <h2>{{currentUser?.carPlate}}</h2>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n    <!--<ion-button (click)=\"gotoSetup()\">Setup</ion-button>-->\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title text-center>Profile</ion-title>\n    <ion-icon id=\"icon-more\" name=\"md-more\" slot=\"end\" (click)=\"presentPopover($event)\"></ion-icon>\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div class=\"user-photo\" padding-top>\n    <ion-avatar>\n      <img [src]=\"currentUser?.photo || '/assets/icon/favicon.jpg'\">\n    </ion-avatar>\n  </div>\n\n  <ion-list>\n    <ion-item>\n      <ion-icon name=\"person\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Display Name</p>\n        <h2>{{currentUser?.name}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\"call\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Mobile Phone Number</p>\n        <h2>{{currentUser?.phoneNumber}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item (click)=\"goToPublicProfilePage()\">\n      <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Rating</p>\n        <h2 *ngIf=\"currentUser?.averageRating\">{{currentUser?.averageRating}}/5 - {{currentUser?.numberOfRatings}} ratings</h2>\n        <h2 *ngIf=\"!currentUser?.averageRating\">No ratings yet</h2>\n      </ion-label>\n      <ion-icon name=\"ios-arrow-forward\" slot=\"end\"></ion-icon>\n    </ion-item>\n    <ion-item (click)=\"gotoRewardsCatalogPage()\">\n      <ion-icon name=\"gift\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Earned Points</p>\n        <h2>{{currentUser?.points?.currentPoints}}</h2>\n      </ion-label>\n      <ion-icon name=\"ios-arrow-forward\" slot=\"end\"></ion-icon>\n    </ion-item>\n    <ion-item *ngIf=\"currentUser?.carPlate\">\n      <ion-icon name=\"car\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Car Plate</p>\n        <h2>{{currentUser?.carPlate}}</h2>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n    <!--<ion-button (click)=\"gotoSetup()\">Setup</ion-button>-->\n</ion-content>\n"
 
 /***/ }),
 
@@ -155,7 +167,7 @@ module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-titl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host .user-photo ion-avatar {\n  margin: 0 auto;\n  width: 120px;\n  height: 120px; }\n\n:host ion-list {\n  margin-top: 24px; }\n\n:host ion-list p {\n    font-size: 12px;\n    font-weight: 400;\n    padding-bottom: 4px; }\n\n:host ion-list h2 {\n    font-weight: 400;\n    opacity: .5; }\n\n:host #icon-more {\n  font-size: 20px;\n  margin-right: 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvcHJvZmlsZS9wcm9maWxlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLGNBQWM7RUFDZCxZQUFZO0VBQ1osYUFBYSxFQUFBOztBQUpqQjtFQVFJLGdCQUFnQixFQUFBOztBQVJwQjtJQVVNLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsbUJBQW1CLEVBQUE7O0FBWnpCO0lBZU0sZ0JBQWdCO0lBQ2hCLFdBQVcsRUFBQTs7QUFoQmpCO0VBcUJJLGVBQWU7RUFDZixpQkFBaUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3RhYnMvcHJvZmlsZS9wcm9maWxlLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgLnVzZXItcGhvdG8gaW9uLWF2YXRhciB7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgd2lkdGg6IDEyMHB4O1xuICAgIGhlaWdodDogMTIwcHg7XG4gIH1cblxuICBpb24tbGlzdCB7XG4gICAgbWFyZ2luLXRvcDogMjRweDtcbiAgICBwIHtcbiAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgICBwYWRkaW5nLWJvdHRvbTogNHB4O1xuICAgIH07XG4gICAgaDIge1xuICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICAgIG9wYWNpdHk6IC41O1xuICAgIH1cbiAgfVxuXG4gICNpY29uLW1vcmV7XG4gICAgZm9udC1zaXplOiAyMHB4O1xuICAgIG1hcmdpbi1yaWdodDogNXB4O1xuICB9XG59XG4iXX0= */"
+module.exports = ":host .user-photo ion-avatar {\n  margin: 0 auto;\n  width: 120px;\n  height: 120px; }\n\n:host ion-list {\n  margin-top: 24px;\n  margin-right: 20px; }\n\n:host ion-list p {\n    font-size: 12px;\n    font-weight: 400;\n    padding-bottom: 4px; }\n\n:host ion-list h2 {\n    font-weight: 400;\n    opacity: .5; }\n\n:host #icon-more {\n  font-size: 20px;\n  margin-right: 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvcHJvZmlsZS9wcm9maWxlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLGNBQWM7RUFDZCxZQUFZO0VBQ1osYUFBYSxFQUFBOztBQUpqQjtFQVFJLGdCQUFnQjtFQUNoQixrQkFBa0IsRUFBQTs7QUFUdEI7SUFXTSxlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLG1CQUFtQixFQUFBOztBQWJ6QjtJQWdCTSxnQkFBZ0I7SUFDaEIsV0FBVyxFQUFBOztBQWpCakI7RUFzQkksZUFBZTtFQUNmLGlCQUFpQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdGFicy9wcm9maWxlL3Byb2ZpbGUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICAudXNlci1waG90byBpb24tYXZhdGFyIHtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICB3aWR0aDogMTIwcHg7XG4gICAgaGVpZ2h0OiAxMjBweDtcbiAgfVxuXG4gIGlvbi1saXN0IHtcbiAgICBtYXJnaW4tdG9wOiAyNHB4O1xuICAgIG1hcmdpbi1yaWdodDogMjBweDtcbiAgICBwIHtcbiAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgICBwYWRkaW5nLWJvdHRvbTogNHB4O1xuICAgIH07XG4gICAgaDIge1xuICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICAgIG9wYWNpdHk6IC41O1xuICAgIH1cbiAgfVxuXG4gICNpY29uLW1vcmV7XG4gICAgZm9udC1zaXplOiAyMHB4O1xuICAgIG1hcmdpbi1yaWdodDogNXB4O1xuICB9XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -189,6 +201,10 @@ var ProfilePage = /** @class */ (function () {
         this.currentUser = this.userService.user.getValue();
     }
     ProfilePage.prototype.ngOnInit = function () {
+        console.log(this.currentUser);
+    };
+    ProfilePage.prototype.ionViewWillEnter = function () {
+        this.currentUser = this.userService.user.getValue();
     };
     ProfilePage.prototype.goToPublicProfilePage = function () {
         var navigationExtras = {

@@ -1,4 +1,5 @@
 ion-card {
+  height: 95%;
 
   agm-map {
     height: 300px;
@@ -34,9 +35,14 @@ ion-card {
   }
 
   .footer {
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 10px;
+    justify-content: flex-end;
+
+    ion-button {
+      width: 100%;
+    }
   }
 }

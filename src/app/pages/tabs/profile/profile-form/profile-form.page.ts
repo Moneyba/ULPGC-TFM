@@ -51,7 +51,7 @@ export class ProfileFormPage implements OnInit {
       name: [this.currentUser.name, Validators.required],
       phoneNumber: [this.currentUser.phoneNumber],
       photo: [this.photo],
-      carPlate: [this.currentUser.carPlate ? this.currentUser.carPlate : null]
+      carDetails: [this.currentUser.carDetails ? this.currentUser.carDetails : null]
 
     });
   }
@@ -62,7 +62,7 @@ export class ProfileFormPage implements OnInit {
       id: this.currentUser.id,
       name: this.profileForm.get('name').value,
       photo: this.profileForm.get('photo').value,
-      carPlate: this.profileForm.get('carPlate').value
+      carDetails: this.profileForm.get('carDetails').value
     };
     this.userService.updateUser(user).then(() => {
       this.router.navigate(['tabs/tabs/profile']);
@@ -100,7 +100,6 @@ export class ProfileFormPage implements OnInit {
           role: 'cancel',
           cssClass: 'secondary',
           handler: (blah) => {
-            console.log('Confirm Cancel: blah');
           }
         }, {
           text: 'Yes',

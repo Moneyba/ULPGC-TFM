@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title *ngIf=\"!reward?.id\">New Reward</ion-title>\n    <ion-title *ngIf=\"reward?.id\">Edit Reward</ion-title>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <form [formGroup]=\"rewardForm\">\n    <div class=\"reward-photo\" padding-top>\n      <ion-avatar>\n        <img [src]=\"photo\" (click)=\"uploadNewPhoto()\">\n      </ion-avatar>\n    </div>\n    <ion-item>\n      <ion-label>Display Name</ion-label>\n      <ion-input formControlName=\"name\" required></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Points</ion-label>\n      <ion-input formControlName=\"points\" type=\"number\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Stock</ion-label>\n      <ion-input formControlName=\"stock\" type=\"number\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Description</ion-label>\n      <ion-input formControlName=\"description\"></ion-input>\n    </ion-item>\n    <ion-button expand=\"full\" type=\"submit\" (click)=\"createReward()\"\n                [disabled]=\"rewardForm.invalid\" *ngIf=\"!reward?.id\">\n      Save\n    </ion-button>\n    <ion-button expand=\"full\" type=\"submit\" (click)=\"editReward()\"\n                [disabled]=\"rewardForm.invalid\" *ngIf=\"reward?.id\">\n      Save\n    </ion-button>\n  </form>\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title *ngIf=\"!reward?.id\">New Reward</ion-title>\n    <ion-title *ngIf=\"reward?.id\">Edit Reward</ion-title>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <form [formGroup]=\"rewardForm\">\n    <div class=\"reward-photo\" padding-top>\n      <ion-avatar>\n        <img [src]=\"photo\" (click)=\"uploadNewPhoto()\">\n      </ion-avatar>\n    </div>\n    <ion-item>\n      <ion-label>Display Name</ion-label>\n      <ion-input formControlName=\"name\" required></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Points</ion-label>\n      <ion-input formControlName=\"points\" type=\"number\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Stock</ion-label>\n      <ion-input formControlName=\"stock\" type=\"number\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Description</ion-label>\n      <ion-input formControlName=\"description\"></ion-input>\n    </ion-item>\n\n\n  </form>\n\n</ion-content>\n<ion-footer >\n  <ion-button expand=\"full\" type=\"submit\" (click)=\"createReward()\" margin-bottom\n              [disabled]=\"rewardForm.invalid\" *ngIf=\"!reward?.id\">\n    Save\n  </ion-button>\n  <ion-button expand=\"full\" type=\"submit\" (click)=\"editReward()\" margin-bottom\n              [disabled]=\"rewardForm.invalid\" *ngIf=\"reward?.id\">\n    Save\n  </ion-button>\n</ion-footer>\n"
 
 /***/ }),
 
@@ -61,22 +61,23 @@ var RewardFormPage = /** @class */ (function () {
         this.photoHasChanged = false;
         this.photo = '/assets/icon/favicon.jpg';
         this.route.queryParams.subscribe(function (params) {
+            console.log(params);
             if (_this.router.getCurrentNavigation().extras.state) {
                 _this.reward = _this.router.getCurrentNavigation().extras.state.reward;
-                console.log(_this.reward);
-                _this.createRewardForm();
+                _this.photo = _this.reward ? _this.reward.photo : '/assets/icon/favicon.jpg';
             }
         });
     }
     RewardFormPage.prototype.ngOnInit = function () {
+        this.createRewardForm();
     };
     RewardFormPage.prototype.createRewardForm = function () {
         this.rewardForm = this.fb.group({
-            name: [this.reward.name ? this.reward.name : null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            photo: [this.reward.photo ? this.reward.photo : this.photo],
-            points: [this.reward.points ? this.reward.points : null],
-            stock: [this.reward.stock ? this.reward.stock : null],
-            description: [this.reward.description ? this.reward.description : null]
+            name: [this.reward ? this.reward.name : null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            photo: [this.photo],
+            points: [this.reward ? this.reward.points : null],
+            stock: [this.reward ? this.reward.stock : null],
+            description: [this.reward ? this.reward.description : null]
         });
     };
     RewardFormPage.prototype.createReward = function () {

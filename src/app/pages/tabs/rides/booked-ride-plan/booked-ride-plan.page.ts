@@ -12,6 +12,7 @@ import {RequestService} from '../../../../core/services/request.service';
 import {Chat} from '../../../../shared/models/Chat';
 import {ChatService} from '../../../../core/services/chat.service';
 import {AngularFireDatabase} from '@angular/fire/database';
+import {EmailComposer} from '@ionic-native/email-composer/ngx';
 
 @Component({
   selector: 'app-booked-ride-plan',
@@ -20,6 +21,7 @@ import {AngularFireDatabase} from '@angular/fire/database';
 })
 export class BookedRidePlanPage implements OnInit {
   public request: Request;
+  private requestId: string;
   public driver: User;
   public availableSeats: number;
 
@@ -31,6 +33,7 @@ export class BookedRidePlanPage implements OnInit {
   private directionsService = new DirectionsService();
   public duration;
   public distance;
+  public today: number;
 
 
   constructor(private route: ActivatedRoute,
@@ -41,25 +44,29 @@ export class BookedRidePlanPage implements OnInit {
               private mapsAPILoader: MapsAPILoader,
               private chatService: ChatService,
               private db: AngularFireDatabase,
-              private alertController: AlertController) {
+              private alertController: AlertController,
+              private emailComposer: EmailComposer) {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
-        const requestId = this.router.getCurrentNavigation().extras.state.requestId;
-        console.log(requestId);
-        this.getRequest(requestId);
+        this.requestId = this.router.getCurrentNavigation().extras.state.requestId;
+        this.getRequest();
       }
     });
-
-
   }
 
   ngOnInit() {
+    this.today = new Date().getTime();
   }
 
-  private getRequest(requestId: string): void {
-    this.requestService.getRequest(requestId).subscribe(request => {
+  ionViewWillEnter() {
+    if (this.requestId) {
+      this.getRequest();
+    }
+  }
+
+  private getRequest(): void {
+    this.requestService.getRequest(this.requestId).subscribe(request => {
       this.request = request;
-      console.log(this.request);
       this.getDriver();
       this.getAvaliableSeats();
       this.mapsAPILoader.load().then(() => {
@@ -162,8 +169,7 @@ export class BookedRidePlanPage implements OnInit {
           text: 'No',
           role: 'cancel',
           cssClass: 'secondary',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
+          handler: () => {
           }
         }, {
           text: 'Yes',
@@ -175,6 +181,14 @@ export class BookedRidePlanPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  private contact(): void {
+    const email = {
+      to: 'moneybahr@gmail.com',
+      isHtml: true
+    };
+    this.emailComposer.open(email);
   }
 
 }

@@ -60,13 +60,11 @@ export class RewardDetailsPage implements OnInit {
     this.rewardRequestService.getRequestsByRewardId(this.reward.id).subscribe(requests => {
           this.requests = requests;
           requests.forEach((request, index) => this.getUser(request.userId, index));
-          console.log(requests);
         }
     );
   }
 
   public getUser(userId, index): void {
-    console.log(userId);
     this.userService.getUser(userId).subscribe(user => this.requests[index].user = user);
   }
 
@@ -83,6 +81,7 @@ export class RewardDetailsPage implements OnInit {
     if (this.reward.stock > 0) {
       request.state = State.accepted;
       this.reward.stock--;
+      user.points.currentPoints -= this.reward.points;
       user.points.exchangedPoints += this.reward.points;
       user.points.blockedPoints -= this.reward.points;
       this.rewardRequestService.updateRequest(request);

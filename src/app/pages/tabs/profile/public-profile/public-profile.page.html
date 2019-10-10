@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>User Details</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -10,7 +10,7 @@
 <ion-content>
   <div class="user-photo" padding-top>
     <ion-avatar>
-      <img [src]="user?.photo || '/assets/icon/favicon.png'">
+      <img [src]="user?.photo || '/assets/icon/favicon.jpg'">
     </ion-avatar>
     <ion-card-title id="name-user">{{user?.name}}</ion-card-title>
     <div class="rating-value">
@@ -19,16 +19,18 @@
     </div>
   </div>
 
-    <ion-item *ngIf="user?.carPlate">
+    <ion-item *ngIf="user?.carDetails">
       <ion-icon name="car"></ion-icon>
-      <ion-label>
-        <h2>{{user?.carPlate}}</h2>
+      <ion-label class="car-details">
+        <h2>{{user?.carDetails}}</h2>
       </ion-label>
     </ion-item>
-  <ion-list *ngFor="let rating of ratings">
+  <ion-title text-center>Ratings</ion-title>
+  <ion-list *ngFor="let rating of ratings" class="list-ratings">
+
     <ion-item>
       <ion-avatar slot="start" (click)="goToUserDetailsPage(user.id)">
-        <img alt="userPhoto" [src]="rating.fromUser?.photo">
+        <img alt="userPhoto" [src]="rating.fromUser?.photo ">
       </ion-avatar>
       <div class="user-info">
         <ion-label>
@@ -36,7 +38,7 @@
         </ion-label>
         <ion-icon name="star" slot="start"></ion-icon>
         <label> {{rating.rating}}/5</label>
-        <ion-label>{{rating?.comment}} hey</ion-label>
+        <ion-label>{{rating?.comment}}</ion-label>
       </div>
       <ion-card-subtitle slot="end">{{rating.dateTime | date:'dd MMM h:mm'}} </ion-card-subtitle>
 
