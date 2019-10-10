@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title *ngIf="!reward?.id">New Reward</ion-title>
-    <ion-title *ngIf="reward?.id">Edit Reward</ion-title>
+    <ion-title *ngIf="!reward?.id">{{ 'REWARDS.newReward' | translate:params }}</ion-title>
+    <ion-title *ngIf="reward?.id">{{ 'REWARDS.editReward' | translate:params }}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -16,11 +16,11 @@
       </ion-avatar>
     </div>
     <ion-item>
-      <ion-label>Display Name</ion-label>
+      <ion-label>{{ 'REWARDS.name' | translate:params }}</ion-label>
       <ion-input formControlName="name" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Points</ion-label>
+      <ion-label>{{ 'REWARDS.points' | translate:params }}</ion-label>
       <ion-input formControlName="points" type="number"></ion-input>
     </ion-item>
     <ion-item>
@@ -28,7 +28,7 @@
       <ion-input formControlName="stock" type="number"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Description</ion-label>
+      <ion-label>{{ 'REWARDS.desccription' | translate:params }}</ion-label>
       <ion-input formControlName="description"></ion-input>
     </ion-item>
 
@@ -39,10 +39,10 @@
 <ion-footer >
   <ion-button expand="full" type="submit" (click)="createReward()" margin-bottom
               [disabled]="rewardForm.invalid" *ngIf="!reward?.id">
-    Save
+    {{ 'GENERIC.save' | translate:params }}
   </ion-button>
   <ion-button expand="full" type="submit" (click)="editReward()" margin-bottom
               [disabled]="rewardForm.invalid" *ngIf="reward?.id">
-    Save
+    {{ 'GENERIC.save' | translate:params }}
   </ion-button>
 </ion-footer>

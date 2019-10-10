@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Rewards</ion-title>
+    <ion-title>{{ 'REWARDS.rewards' | translate:params }}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -18,13 +18,13 @@
   </div>
   <div [hidden]="!showSearchContainer" class="points-container">
     <ion-item>
-      <ion-label>Earned: {{currentUser.points.currentPoints + currentUser.points.exchangedPoints}} pts</ion-label>
+      <ion-label>{{ 'REWARDS.earned' | translate:params }}: {{currentUser.points.currentPoints + currentUser.points.exchangedPoints}} pts</ion-label>
     </ion-item>
     <ion-item>
-      <ion-label>Used: {{currentUser.points.exchangedPoints}} pts</ion-label>
+      <ion-label>{{ 'REWARDS.used' | translate:params }}: {{currentUser.points.exchangedPoints}} pts</ion-label>
     </ion-item>
     <ion-item>
-      <ion-label>On hold: {{currentUser.points.blockedPoints}} pts</ion-label>
+      <ion-label>{{ 'REWARDS.onHold' | translate:params }}: {{currentUser.points.blockedPoints}} pts</ion-label>
     </ion-item>
   </div>
   <ion-list *ngFor="let reward of rewards" class="list-rewards">
@@ -35,7 +35,7 @@
         </ion-avatar>
         <ion-label>
           <h3>{{reward.name}}</h3>
-          <p>Exchange for {{reward.points}} pts</p>
+          <p>{{ 'REWARDS.exchange' | translate:params }} {{reward.points}} pts</p>
         </ion-label>
       </ion-item>
       <ion-item-options *ngIf="currentUser?.isAdmin"  side="end">

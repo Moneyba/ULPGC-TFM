@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title text-center>Profile</ion-title>
+    <ion-title text-center>{{ 'PROFILE.profile' | translate:params }}</ion-title>
     <ion-icon id="icon-more" name="md-more" slot="end" (click)="presentPopover($event)"></ion-icon>
   </ion-toolbar>
 
@@ -18,42 +18,41 @@
     <ion-item>
       <ion-icon name="person" slot="start"></ion-icon>
       <ion-label>
-        <p>Display Name</p>
+        <p>{{ 'PROFILE.displayName' | translate:params }}</p>
         <h2>{{currentUser?.name}}</h2>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-icon name="call" slot="start"></ion-icon>
       <ion-label>
-        <p>Mobile Phone Number</p>
+        <p>{{ 'PROFILE.phoneNumber' | translate:params }}</p>
         <h2>{{currentUser?.phoneNumber}}</h2>
       </ion-label>
     </ion-item>
     <ion-item *ngIf="currentUser?.carPlate">
       <ion-icon name="car" slot="start"></ion-icon>
       <ion-label>
-        <p>Car Details</p>
+        <p>{{ 'PROFILE.carDetails' | translate:params }}</p>
         <h2>{{currentUser?.carDetails}}</h2>
       </ion-label>
     </ion-item>
     <ion-item (click)="goToPublicProfilePage()">
       <ion-icon name="star" slot="start"></ion-icon>
       <ion-label>
-        <p>Rating</p>
+        <p>{{ 'PROFILE.rating' | translate:params }}</p>
         <h2 *ngIf="currentUser?.averageRating">{{currentUser?.averageRating}}/5 - {{currentUser?.numberOfRatings}} ratings</h2>
-        <h2 *ngIf="!currentUser?.averageRating">No ratings yet</h2>
+        <h2 *ngIf="!currentUser?.averageRating">{{ 'PROFILE.noRatings' | translate:params }}</h2>
       </ion-label>
       <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
     </ion-item>
     <ion-item (click)="gotoRewardsCatalogPage()">
       <ion-icon name="gift" slot="start"></ion-icon>
       <ion-label>
-        <p>Earned Points</p>
+        <p>{{ 'PROFILE.earnedPoints' | translate:params }}</p>
         <h2>{{currentUser?.points?.currentPoints - currentUser?.points.blockedPoints}}</h2>
       </ion-label>
       <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
     </ion-item>
 
   </ion-list>
-    <!--<ion-button (click)="gotoSetup()">Setup</ion-button>-->
 </ion-content>

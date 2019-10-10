@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>User Details</ion-title>
+    <ion-title>{{ 'PROFILE.userDetails' | translate:params }}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -25,7 +25,7 @@
         <h2>{{user?.carDetails}}</h2>
       </ion-label>
     </ion-item>
-  <ion-title text-center>Ratings</ion-title>
+  <ion-title text-center>{{ 'PROFILE.ratings' | translate:params }}</ion-title>
   <ion-list *ngFor="let rating of ratings" class="list-ratings">
 
     <ion-item>

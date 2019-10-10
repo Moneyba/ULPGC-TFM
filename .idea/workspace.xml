@@ -2,524 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73ae292b-a890-4d64-b457-c593f043d2d0" name="Default Changelist" comment="Fix login">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/android.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/0.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/0.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/1.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/1.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/10.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/10.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/10.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/10.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/11.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/11.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/11.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/11.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/12.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/12.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/12.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/12.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/13.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/13.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/13.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/13.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/14.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/14.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/14.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/14.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/15.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/15.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/15.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/15.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/16.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/16.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/16.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/16.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/17.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/17.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/17.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/17.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/18.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/18.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/18.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/18.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/19.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/19.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/19.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/19.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/2.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/2.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/20.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/20.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/20.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/20.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/21.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/21.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/21.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/21.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/22.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/22.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/22.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/22.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/23.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/23.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/23.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/23.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/24.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/24.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/24.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/24.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/25.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/25.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/25.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/25.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/26.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/26.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/26.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/26.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/27.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/27.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/27.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/27.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/28.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/28.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/28.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/28.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/29.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/29.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/29.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/29.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/3.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/3.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/30.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/30.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/30.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/30.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/31.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/31.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/31.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/31.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/32.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/32.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/32.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/32.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/33.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/33.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/33.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/33.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/34.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/34.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/34.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/34.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/35.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/35.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/35.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/35.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/36.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/36.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/36.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/36.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/37.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/37.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/37.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/37.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/38.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/38.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/38.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/38.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/39.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/39.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/39.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/39.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/4.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/4.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/40.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/40.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/40.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/40.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/41.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/41.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/41.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/41.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/42.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/42.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/42.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/42.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/43.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/43.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/43.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/43.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/44.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/44.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/44.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/44.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/45.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/45.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/45.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/45.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/46.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/46.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/46.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/46.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/47.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/47.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/47.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/47.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/48.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/48.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/48.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/48.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/49.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/49.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/49.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/49.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/5.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/50.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/50.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/50.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/50.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/51.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/51.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/51.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/51.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/52.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/52.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/52.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/52.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/53.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/53.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/53.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/53.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/54.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/54.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/54.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/54.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/55.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/55.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/55.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/55.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/56.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/56.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/56.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/56.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/57.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/57.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/57.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/57.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/58.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/58.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/58.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/58.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/59.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/59.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/59.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/59.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/6.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/6.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/60.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/60.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/60.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/60.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/61.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/61.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/61.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/61.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/62.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/62.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/62.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/62.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/63.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/63.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/63.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/63.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/64.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/64.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/64.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/64.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/65.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/65.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/65.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/65.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/66.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/66.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/66.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/66.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/67.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/67.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/67.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/67.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/68.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/68.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/68.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/68.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/69.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/69.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/69.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/69.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/7.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/7.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/70.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/70.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/70.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/70.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/71.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/71.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/71.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/71.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/72.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/72.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/72.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/72.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/73.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/73.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/73.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/73.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/74.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/74.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/74.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/74.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/75.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/75.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/75.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/75.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/76.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/76.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/76.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/76.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/77.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/77.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/77.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/77.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/78.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/78.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/78.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/78.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/79.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/79.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/79.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/79.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/8.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/80.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/80.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/80.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/80.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/81.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/81.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/81.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/81.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/82.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/82.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/82.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/82.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/83.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/83.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/83.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/83.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/84.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/84.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/84.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/84.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/85.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/85.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/85.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/85.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/86.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/86.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/86.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/86.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/87.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/87.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/87.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/87.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/88.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/88.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/88.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/88.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/89.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/89.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/89.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/89.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/9.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/9.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/9.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/9.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/90.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/90.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/90.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/90.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/91.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/91.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/91.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/91.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/93.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/93.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/93.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/93.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/assets/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/assets/i18n/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/assets/i18n/es.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/cordova_plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-initial-setup-initial-setup-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-initial-setup-initial-setup-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-initial-setup-initial-setup-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-initial-setup-initial-setup-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-login-login-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-login-login-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-login-login-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-login-login-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-chats-chat-chat-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-chats-chat-chat-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-chats-chat-chat-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-chats-chat-chat-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-home-ride-details-ride-details-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-home-ride-details-ride-details-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-home-ride-details-ride-details-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-home-ride-details-ride-details-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-public-profile-public-profile-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-public-profile-public-profile-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-public-profile-public-profile-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-public-profile-public-profile-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-rewards-catalog-reward-form-reward-form-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-rewards-catalog-reward-form-reward-form-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-rewards-catalog-reward-form-reward-form-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-rewards-catalog-reward-form-reward-form-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-rewards-catalog-rewards-catalog-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-rewards-catalog-rewards-catalog-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-rewards-catalog-rewards-catalog-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-profile-rewards-catalog-rewards-catalog-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-rides-booked-ride-plan-booked-ride-plan-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-rides-booked-ride-plan-booked-ride-plan-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-rides-booked-ride-plan-booked-ride-plan-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-rides-booked-ride-plan-booked-ride-plan-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-rides-ride-plan-ride-plan-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-rides-ride-plan-ride-plan-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-rides-ride-plan-ride-plan-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-tabs-rides-ride-plan-ride-plan-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/styles.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/styles.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-home-home-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-home-home-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-home-home-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-home-home-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-profile-profile-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-profile-profile-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-profile-profile-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-profile-profile-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/vendor.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/android.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/fetch.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fetch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/chat.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/chat.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-options/chat-options.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-options/chat-options.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/home/ride-details/ride-details.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/home/ride-details/ride-details.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/home/ride-details/ride-details.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/home/ride-details/ride-details.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/home/ride-form/ride-form.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/home/ride-form/ride-form.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/home/ride-form/ride-form.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/home/ride-form/ride-form.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-popover/ride-popover.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-popover/ride-popover.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/rate-popover/rate-popover.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/rate-popover/rate-popover.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs/rides/rides-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs/rides/rides-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/welcome/welcome.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/welcome/welcome.page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/welcome/welcome.page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/welcome/welcome.page.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/welcome/welcome.page.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/models/Ride.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/models/Ride.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/models/User.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/i18n/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/es.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/0.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/0.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/1.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/1.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/10.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/10.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/10.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/10.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/11.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/11.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/11.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/11.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/12.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/12.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/12.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/12.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/13.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/13.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/13.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/13.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/14.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/14.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/14.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/14.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/15.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/15.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/15.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/15.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/16.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/16.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/16.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/16.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/17.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/17.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/17.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/17.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/18.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/18.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/18.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/18.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/19.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/19.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/19.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/19.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/2.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/2.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/20.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/20.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/20.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/20.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/21.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/21.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/21.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/21.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/22.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/22.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/22.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/22.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/23.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/23.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/23.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/23.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/24.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/24.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/24.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/24.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/25.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/25.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/25.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/25.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/26.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/26.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/26.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/26.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/27.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/27.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/27.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/27.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/28.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/28.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/28.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/28.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/29.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/29.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/29.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/29.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/3.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/3.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/30.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/30.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/30.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/30.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/31.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/31.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/31.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/31.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/32.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/32.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/32.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/32.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/33.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/33.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/33.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/33.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/34.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/34.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/34.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/34.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/35.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/35.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/35.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/35.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/36.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/36.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/36.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/36.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/37.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/37.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/37.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/37.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/38.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/38.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/38.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/38.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/39.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/39.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/39.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/39.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/4.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/4.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/40.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/40.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/40.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/40.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/41.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/41.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/41.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/41.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/42.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/42.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/42.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/42.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/43.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/43.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/43.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/43.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/44.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/44.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/44.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/44.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/45.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/45.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/45.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/45.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/46.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/46.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/46.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/46.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/47.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/47.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/47.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/47.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/48.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/48.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/48.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/48.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/49.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/49.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/49.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/49.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/5.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/50.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/50.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/50.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/50.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/51.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/51.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/51.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/51.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/52.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/52.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/52.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/52.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/53.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/53.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/53.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/53.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/54.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/54.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/54.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/54.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/55.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/55.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/55.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/55.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/56.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/56.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/56.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/56.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/57.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/57.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/57.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/57.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/58.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/58.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/58.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/58.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/59.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/59.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/59.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/59.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/6.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/6.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/60.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/60.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/60.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/60.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/61.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/61.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/61.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/61.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/62.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/62.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/62.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/62.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/63.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/63.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/63.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/63.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/64.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/64.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/64.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/64.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/65.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/65.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/65.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/65.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/66.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/66.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/66.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/66.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/67.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/67.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/67.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/67.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/68.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/68.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/68.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/68.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/69.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/69.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/69.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/69.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/7.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/7.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/70.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/70.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/70.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/70.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/71.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/71.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/71.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/71.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/72.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/72.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/72.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/72.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/73.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/73.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/73.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/73.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/74.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/74.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/74.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/74.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/75.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/75.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/75.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/75.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/76.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/76.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/76.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/76.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/77.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/77.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/77.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/77.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/78.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/78.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/78.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/78.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/79.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/79.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/79.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/79.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/8.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/80.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/80.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/80.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/80.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/81.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/81.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/81.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/81.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/82.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/82.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/82.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/82.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/83.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/83.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/83.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/83.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/84.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/84.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/84.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/84.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/85.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/85.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/85.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/85.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/86.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/86.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/86.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/86.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/87.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/87.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/87.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/87.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/88.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/88.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/88.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/88.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/89.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/89.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/89.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/89.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/9.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/9.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/9.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/9.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/90.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/90.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/90.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/90.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/91.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/91.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/91.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/91.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/93.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/93.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/93.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/93.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/assets/i18n/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/i18n/es.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/common.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/common.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/cordova_plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-initial-setup-initial-setup-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-initial-setup-initial-setup-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-initial-setup-initial-setup-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-initial-setup-initial-setup-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-login-login-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-login-login-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-login-login-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-login-login-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-chats-chat-chat-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-chats-chat-chat-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-chats-chat-chat-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-chats-chat-chat-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-home-ride-details-ride-details-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-home-ride-details-ride-details-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-home-ride-details-ride-details-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-home-ride-details-ride-details-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-profile-public-profile-public-profile-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-profile-public-profile-public-profile-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-profile-public-profile-public-profile-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-profile-public-profile-public-profile-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-profile-rewards-catalog-reward-form-reward-form-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-profile-rewards-catalog-reward-form-reward-form-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-profile-rewards-catalog-reward-form-reward-form-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-profile-rewards-catalog-reward-form-reward-form-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-profile-rewards-catalog-rewards-catalog-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-profile-rewards-catalog-rewards-catalog-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-profile-rewards-catalog-rewards-catalog-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-profile-rewards-catalog-rewards-catalog-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-rides-booked-ride-plan-booked-ride-plan-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-rides-booked-ride-plan-booked-ride-plan-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-rides-booked-ride-plan-booked-ride-plan-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-rides-booked-ride-plan-booked-ride-plan-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-rides-ride-plan-ride-plan-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-rides-ride-plan-ride-plan-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/pages-tabs-rides-ride-plan-ride-plan-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-tabs-rides-ride-plan-ride-plan-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/styles.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/styles.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/tabs-home-home-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-home-home-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/tabs-home-home-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-home-home-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/tabs-profile-profile-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-profile-profile-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/tabs-profile-profile-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-profile-profile-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/vendor.js.map" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -535,113 +34,175 @@
     <favorites_list name="tfm" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="109" column="54" lean-forward="true" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-popover/ride-popover.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="171" column="26" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#100#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+                  <folding>
+                    <element signature="e#0#48#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/home/home.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="19" column="23" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="23" />
+                  <folding>
+                    <element signature="e#0#43#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/assets/i18n/es.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="603">
+                  <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="236">
+                  <caret line="33" column="20" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#50#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/assets/i18n/en.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="235">
+                  <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="50" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="573">
+                  <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="607">
+                  <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="273">
+                  <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -652,8 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>form</find>
-      <find>slides</find>
       <find>bo</find>
       <find>HOME</find>
       <find>ULPGC</find>
@@ -682,6 +241,8 @@
       <find>maps</find>
       <find>map</find>
       <find>console.</find>
+      <find>translate</find>
+      <find>transl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -690,19 +251,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/home/ride-details/ride-details.page.html" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/home/ride-details/ride-details.page.scss" />
-        <option value="$PROJECT_DIR$/src/assets/i18n/en.json" />
-        <option value="$PROJECT_DIR$/src/assets/i18n/es.json" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.scss" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.scss" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-page.component.html" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.html" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.html" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.scss" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.scss" />
@@ -716,21 +266,15 @@
         <option value="$PROJECT_DIR$/src/app/core/services/chat.service.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-options/chat-options.component.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-page.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.html" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.scss" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.html" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.scss" />
         <option value="$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.scss" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.html" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.html" />
-        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.html" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.scss" />
         <option value="$PROJECT_DIR$/src/app/shared/models/User.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/home/ride-form/ride-form.page.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.ts" />
@@ -741,6 +285,23 @@
         <option value="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-popover/ride-popover.component.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/login/login.page.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.html" />
+        <option value="$PROJECT_DIR$/src/assets/i18n/en.json" />
+        <option value="$PROJECT_DIR$/src/assets/i18n/es.json" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/profile.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.html" />
+        <option value="$PROJECT_DIR$/src/app/app.component.ts" />
       </list>
     </option>
   </component>
@@ -776,81 +337,6 @@
             <path>
               <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="login" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="tabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="tabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="home" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="tabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="home" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ride-form" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="tabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="rides" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="tabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="rides" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ride" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="shared" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tfm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="typings" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -876,18 +362,18 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/environments" />
+      <recent name="$PROJECT_DIR$/src/app/pages/tabs/chats/chat" />
+      <recent name="$PROJECT_DIR$/src/app/core/services" />
+      <recent name="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog" />
+      <recent name="$PROJECT_DIR$/src/app/pages/tabs/profile" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/shared/models" />
       <recent name="$PROJECT_DIR$/src/app/pages/tabs/home/date-picker" />
       <recent name="$PROJECT_DIR$/platforms/android" />
       <recent name="$PROJECT_DIR$/src/app/pages/tabs/home/ride-details/ride/rating-modal" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/pages/tabs/chats/chat" />
-      <recent name="$PROJECT_DIR$/src/app/core/services" />
-      <recent name="$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog" />
-      <recent name="$PROJECT_DIR$/src/app/pages/tabs/profile" />
-      <recent name="$PROJECT_DIR$/src/app/pages/tabs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -959,7 +445,7 @@
       <workItem from="1570199414305" duration="21072000" />
       <workItem from="1570353191697" duration="2634000" />
       <workItem from="1570474753503" duration="2368000" />
-      <workItem from="1570721753347" duration="667000" />
+      <workItem from="1570721753347" duration="4352000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1562104493789</created>
@@ -1059,11 +545,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563763542437</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fix login">
+      <created>1570722547170</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570722547170</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="444973000" />
+    <option name="totallyTimeSpent" value="448658000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1091,10 +584,10 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32738853" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="8" weight="0.32866243" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" visible="true" weight="0.34140128" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" weight="0.34140128" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017618" side_tool="true" weight="0.3923567" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3299363" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1139,121 +632,10 @@
     <MESSAGE value="Add rating popover" />
     <MESSAGE value="Fix passengers rating" />
     <MESSAGE value="Add rewards catalog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add rewards catalog" />
+    <MESSAGE value="Fix login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix login" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="170" column="11" selection-start-line="170" selection-start-column="11" selection-end-line="170" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="62" column="49" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/chats/chats-page.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride/rate-popover/rate-popover.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride/ride.page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-popover/ride-popover.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride/rate-popover/rate-popover.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-plan.page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -1295,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-page.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/tabs.page.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1314,34 +689,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1382,27 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="11" column="91" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="63" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/shared/models/User.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1426,13 +756,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -1524,13 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="109" column="54" lean-forward="true" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/ride-plan/ride-popover/ride-popover.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -1540,11 +856,195 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/rides/booked-ride-plan/booked-ride-plan.page.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="303">
           <caret line="171" column="26" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/chats/chat/chat-page.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/initial-setup/initial-setup.page.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form-page.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/i18n/en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="50" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-form/profile-form.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/home/home.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/public-profile/public-profile.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/profile-popover/profile-popover.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-form/reward-form.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/reward-details/reward-details.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/i18n/es.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/tabs/profile/rewards-catalog/rewards-catalog.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
         </state>
       </provider>
     </entry>

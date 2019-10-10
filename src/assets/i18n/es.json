@@ -11,6 +11,42 @@
     "time": "Hora",
     "cancel": "Cancelar",
     "search": "Buscar",
-    "dateTime": "Fecha y Hora:"
+    "dateTime": "Fecha y Hora:",
+
+    "save": "Guardar"
+  },
+
+  "PROFILE":{
+    "displayName": "Nombre: ",
+    "phoneNumber": "Número de Teléfono: ",
+    "carDetails": "Detalles Coche: ",
+    "selectLanguage": "Selccionar Idioma",
+    "cancelAccount": "Cancelar Cuenta",
+    "rating": "Valoración",
+    "ratings": "Valoraciones",
+    "noRatings": "Sin valoraciones todavía",
+    "earnedPoints": "Puntos Ganados",
+
+    "userDetails": "Detalles Usuario",
+    "profile": "Perfil",
+
+    "options": "Opciones Cuenta",
+    "editProfile": "Editar Perfil",
+    "contact": "Contacta con nosotros"
+  },
+  "REWARDS": {
+    "rewards": "Recompensas",
+    "earned": "Ganados",
+    "used": "Usados",
+    "onHold": "Retenidos",
+    "exchange": "Canjea por",
+    "newReward": "Nueva Recompensa",
+    "editReward": "Editar Recompensa",
+    "name": "Nombre",
+    "points": "Puntos",
+    "description": "Descripción",
+    "rewardDetails": "Detalles Recompensa",
+    "requests": "Solicitudes"
   }
+
 }

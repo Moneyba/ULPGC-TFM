@@ -1,6 +1,6 @@
 <ion-list>
-  <ion-list-header>Account options</ion-list-header>
-  <ion-item button (click)="gotoProfileFormPage()">Edit Profile</ion-item>
-  <ion-item button (click)="contact()">Contact us</ion-item>
+  <ion-list-header>{{ 'PROFILE.options' | translate:params }}</ion-list-header>
+  <ion-item button (click)="gotoProfileFormPage()">{{ 'PROFILE.editProfile' | translate:params }}</ion-item>
+  <ion-item button (click)="contact()">{{ 'PROFILE.contact' | translate:params }}</ion-item>
   <ion-item button (click)="logout()">Logout</ion-item>
 </ion-list>

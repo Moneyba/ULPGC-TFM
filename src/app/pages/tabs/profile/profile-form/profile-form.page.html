@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar color="primary">
-        <ion-title>Profile</ion-title>
+        <ion-title>{{ 'PROFILE.profile' | translate:params }}</ion-title>
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
@@ -16,24 +16,24 @@
         </div>
         <ion-item>
             <ion-icon name="person" slot="start"></ion-icon>
-            <ion-label>Display Name: </ion-label>
+            <ion-label>{{ 'PROFILE.displayName' | translate:params }}</ion-label>
             <ion-input formControlName="name" required></ion-input>
         </ion-item>
         <ion-item>
             <ion-icon name="call" slot="start"></ion-icon>
-            <ion-label>Phone Number: </ion-label>
+            <ion-label>{{ 'PROFILE.phoneNumber' | translate:params }}</ion-label>
             <ion-input formControlName="phoneNumber" disabled></ion-input>
         </ion-item>
         <ion-item>
             <ion-icon name="car" slot="start"></ion-icon>
-            <ion-label>Car Details: </ion-label>
+            <ion-label>{{ 'PROFILE.carDetails' | translate:params }}</ion-label>
             <ion-input formControlName="carDetails" placeHolder="Model, color..."></ion-input>
         </ion-item>
     </form>
     <div class="options">
         <ion-item>
             <ion-icon name="options" slot="start"></ion-icon>
-            <ion-label>Select Language</ion-label>
+            <ion-label>{{ 'PROFILE.selectLanguage' | translate:params }}</ion-label>
             <ion-select placeholder="Select One" [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
                 <ion-select-option value="en">English</ion-select-option>
                 <ion-select-option value="es">Spanish</ion-select-option>
@@ -43,12 +43,12 @@
 
         <ion-item lines="none">
             <ion-icon name="alert" slot="start" color="danger"></ion-icon>
-            <ion-label color="danger" (click)="presentAlertConfirm()">Cancel Account</ion-label>
+            <ion-label color="danger" (click)="presentAlertConfirm()">{{ 'PROFILE.cancelAccount' | translate:params }}</ion-label>
         </ion-item>
     </div>
     <footer class="footer">
         <ion-button expand="full" type="submit" (click)="updateUser()"
-                    [disabled]="profileForm.invalid">Save
+                    [disabled]="profileForm.invalid">{{ 'GENERIC.save' | translate:params }}
         </ion-button>
     </footer>
 

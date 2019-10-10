@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar color="primary">
-        <ion-title>Reward Details</ion-title>
+        <ion-title>{{ 'REWARDS.rewardDetails' | translate:params }}</ion-title>
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
@@ -20,7 +20,7 @@
         </div>
 
         <ion-item lines="none">
-            <ion-label>Description: {{reward.description}}</ion-label>
+            <ion-label>{{ 'REWARDS.description' | translate:params }}: {{reward.description}}</ion-label>
 
         </ion-item>
 
@@ -28,19 +28,19 @@
 
         <div text-center  *ngIf="currentUser?.isAdmin">
             <ion-button (click)="exchange()" [disabled]="currentUser.points.currentPoints < reward.points">
-                Exchange for {{reward.points}} pts
+                {{ 'REWARDS.exchange' | translate:params }} {{reward.points}} pts
             </ion-button>
         </div>
     </ion-card>
 
     <div class="exchange-button" *ngIf="!currentUser?.isAdmin">
         <ion-button (click)="exchange()" [disabled]="currentUser.points.currentPoints < reward.points">
-            Exchange for {{reward.points}} pts
+            {{ 'REWARDS.exchange' | translate:params }} {{reward.points}} pts
         </ion-button>
     </div>
 
     <ion-list *ngIf="requests && currentUser?.isAdmin">
-        <ion-list-header>Requests</ion-list-header>
+        <ion-list-header>{{ 'REWARDS.requests' | translate:params }}</ion-list-header>
         <ion-item-sliding *ngFor="let request of requests">
             <ion-item>
                 <ion-avatar slot="start" (click)="goToUserDetailsPage(request.userId)">
