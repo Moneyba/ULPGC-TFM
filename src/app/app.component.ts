@@ -101,7 +101,6 @@ export class AppComponent {
             this.splashScreen.hide();
             if (this.platform.is('cordova')) {
                 this.firebaseAuthentication.onAuthStateChanged().subscribe(async user => {
-                    console.log(user);
                     if (user) {
                         this.userService.setLoggedUID(user.uid);
                         this.fcmService.setToken(user.uid);
@@ -119,6 +118,7 @@ export class AppComponent {
                     console.error(e);
                 });
             }
+
         });
     }
 
