@@ -67,7 +67,7 @@ var BookedRidePlanPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title>Ride Plan</ion-title>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card>\n        <div class=\"map\">\n            <agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" [zoom]=\"zoom\" [streetViewControl]=\"false\"\n                     [zoomControl]=\"false\">\n                <agm-direction *ngIf=\"direction\" [origin]=\"direction.origin\"\n                               [destination]=\"direction?.destination\"></agm-direction>\n                <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"!direction\"></agm-marker>\n            </agm-map>\n            <ion-fab vertical=\"top\" horizontal=\"end\" slot=\"fixed\">\n                <ion-fab-button>\n                    <ion-icon name=\"pin\"></ion-icon>\n                </ion-fab-button>\n            </ion-fab>\n        </div>\n        <ion-item class=\"card-driver-container\">\n            <div class=\"user-info\" (click)=\"goToDriverDetailsPage()\">\n                <ion-avatar>\n                    <img [src]=\"driver?.photo\">\n                </ion-avatar>\n                <div class=\"user-name\">\n                    <label>{{driver?.name}}</label>\n                    <div>\n                        <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n                        <label>{{driver?.averageRating}}/5 ({{driver?.numberOfRatings}})</label>\n                    </div>\n                </div>\n            </div>\n\n            <ion-button (click)=\"contactTheDriver()\">Contact</ion-button>\n        </ion-item>\n        <ion-item>\n            <label>Date and time: {{request?.ride.dateTime | date:'dd MMM h:mm'}}</label>\n        </ion-item>\n        <ion-item>\n            <label>{{request?.ride.originName}} - {{request?.ride.destinationName}}</label>\n        </ion-item>\n        <ion-item>\n            <ion-label><a>Available seats: </a>{{request?.ride.numberOfSeats}}</ion-label>\n        </ion-item>\n        <ion-item>\n            <ion-label><a>Status: </a>{{request?.state}} </ion-label>\n        </ion-item>\n        <ion-item>\n            <ion-label (click)=\"presentAlertConfirm()\" fill=\"clear\" color=\"danger\">Cancel Ride</ion-label>\n        </ion-item>\n\n\n        <div class=\"footer\">\n            <ion-button  class=\"start-button\" (click)=\"openModal()\">Start ride</ion-button>\n        </div>\n    </ion-card>\n</ion-content>\n"
+module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title>Ride Plan</ion-title>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card>\n        <div class=\"map\">\n            <agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" [zoom]=\"zoom\" [streetViewControl]=\"false\"\n                     [zoomControl]=\"false\">\n                <agm-direction *ngIf=\"direction\" [origin]=\"direction.origin\"\n                               [destination]=\"direction?.destination\"></agm-direction>\n                <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"!direction\"></agm-marker>\n            </agm-map>\n            <ion-fab vertical=\"top\" horizontal=\"end\" slot=\"fixed\">\n                <ion-fab-button>\n                    <ion-icon name=\"pin\"></ion-icon>\n                </ion-fab-button>\n            </ion-fab>\n        </div>\n        <ion-item class=\"card-driver-container\">\n            <div class=\"user-info\" (click)=\"goToDriverDetailsPage()\">\n                <ion-avatar>\n                    <img [src]=\"driver?.photo\">\n                </ion-avatar>\n                <div class=\"user-name\">\n                    <label>{{driver?.name}}</label>\n                    <div>\n                        <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n                        <label>{{driver?.averageRating}}/5 ({{driver?.numberOfRatings}})</label>\n                    </div>\n                </div>\n            </div>\n\n            <ion-button (click)=\"contactTheDriver()\">Contact</ion-button>\n        </ion-item>\n        <ion-item>\n            <label>Date and time: {{request?.ride.dateTime | date:'dd MMM h:mm'}}</label>\n        </ion-item>\n        <ion-item>\n            <label>{{request?.ride.originName}} - {{request?.ride.destinationName}}</label>\n        </ion-item>\n        <ion-item>\n            <ion-label><a>Available seats: </a>{{request?.ride.numberOfSeats}}</ion-label>\n        </ion-item>\n        <ion-item>\n            <ion-label><a>Status: </a>{{request?.state}} </ion-label>\n        </ion-item>\n        <ion-item *ngIf=!request?.ride.isFinished>\n            <ion-label (click)=\"presentAlertConfirm()\" fill=\"clear\" color=\"danger\">Cancel Ride</ion-label>\n        </ion-item>\n\n        <ion-item *ngIf=request?.ride.isFinished>\n            <ion-label (click)=\"contact()\" fill=\"clear\" color=\"danger\">Any problems during this ride? Contact us</ion-label>\n        </ion-item>\n\n\n        <div class=\"footer\" *ngIf=!request?.ride.isFinished >\n            <ion-button  class=\"start-button\" (click)=\"openModal()\">Start ride</ion-button>\n        </div>\n    </ion-card>\n</ion-content>\n"
 
 /***/ }),
 
@@ -102,6 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_services_request_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../core/services/request.service */ "./src/app/core/services/request.service.ts");
 /* harmony import */ var _core_services_chat_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../core/services/chat.service */ "./src/app/core/services/chat.service.ts");
 /* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
 
 
 
@@ -113,8 +114,9 @@ var DirectionsService = google.maps.DirectionsService;
 
 
 
+
 var BookedRidePlanPage = /** @class */ (function () {
-    function BookedRidePlanPage(route, router, modalController, userService, requestService, mapsAPILoader, chatService, db, alertController) {
+    function BookedRidePlanPage(route, router, modalController, userService, requestService, mapsAPILoader, chatService, db, alertController, emailComposer) {
         var _this = this;
         this.route = route;
         this.router = router;
@@ -125,22 +127,27 @@ var BookedRidePlanPage = /** @class */ (function () {
         this.chatService = chatService;
         this.db = db;
         this.alertController = alertController;
+        this.emailComposer = emailComposer;
         this.directionsService = new DirectionsService();
         this.route.queryParams.subscribe(function (params) {
             if (_this.router.getCurrentNavigation().extras.state) {
-                var requestId = _this.router.getCurrentNavigation().extras.state.requestId;
-                console.log(requestId);
-                _this.getRequest(requestId);
+                _this.requestId = _this.router.getCurrentNavigation().extras.state.requestId;
+                _this.getRequest();
             }
         });
     }
     BookedRidePlanPage.prototype.ngOnInit = function () {
+        this.today = new Date().getTime();
     };
-    BookedRidePlanPage.prototype.getRequest = function (requestId) {
+    BookedRidePlanPage.prototype.ionViewWillEnter = function () {
+        if (this.requestId) {
+            this.getRequest();
+        }
+    };
+    BookedRidePlanPage.prototype.getRequest = function () {
         var _this = this;
-        this.requestService.getRequest(requestId).subscribe(function (request) {
+        this.requestService.getRequest(this.requestId).subscribe(function (request) {
             _this.request = request;
-            console.log(_this.request);
             _this.getDriver();
             _this.getAvaliableSeats();
             _this.mapsAPILoader.load().then(function () {
@@ -250,8 +257,7 @@ var BookedRidePlanPage = /** @class */ (function () {
                                     text: 'No',
                                     role: 'cancel',
                                     cssClass: 'secondary',
-                                    handler: function (blah) {
-                                        console.log('Confirm Cancel: blah');
+                                    handler: function () {
                                     }
                                 }, {
                                     text: 'Yes',
@@ -271,6 +277,13 @@ var BookedRidePlanPage = /** @class */ (function () {
             });
         });
     };
+    BookedRidePlanPage.prototype.contact = function () {
+        var email = {
+            to: 'moneybahr@gmail.com',
+            isHtml: true
+        };
+        this.emailComposer.open(email);
+    };
     BookedRidePlanPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-booked-ride-plan',
@@ -285,7 +298,8 @@ var BookedRidePlanPage = /** @class */ (function () {
             _agm_core__WEBPACK_IMPORTED_MODULE_6__["MapsAPILoader"],
             _core_services_chat_service__WEBPACK_IMPORTED_MODULE_8__["ChatService"],
             _angular_fire_database__WEBPACK_IMPORTED_MODULE_9__["AngularFireDatabase"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"]])
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"],
+            _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_10__["EmailComposer"]])
     ], BookedRidePlanPage);
     return BookedRidePlanPage;
 }());

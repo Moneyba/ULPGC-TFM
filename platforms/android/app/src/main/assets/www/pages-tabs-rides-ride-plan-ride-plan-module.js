@@ -1,59 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-tabs-rides-ride-plan-ride-plan-module"],{
 
-/***/ "./src/app/core/services/ride.service.ts":
-/*!***********************************************!*\
-  !*** ./src/app/core/services/ride.service.ts ***!
-  \***********************************************/
-/*! exports provided: RideService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RideService", function() { return RideService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-
-
-
-var RideService = /** @class */ (function () {
-    function RideService(db) {
-        this.db = db;
-        this.collectionEndPoint = 'rides';
-    }
-    RideService.prototype.createRide = function (ride) {
-        ride.id = this.db.createPushId();
-        return this.db.object(this.collectionEndPoint + "/" + ride.id).set(ride);
-    };
-    RideService.prototype.updateRide = function (ride) {
-        return this.db.object(this.collectionEndPoint + "/" + ride.id).update(ride);
-    };
-    RideService.prototype.deleteRide = function (rideId) {
-        return this.db.object(this.collectionEndPoint + "/" + rideId).remove();
-    };
-    RideService.prototype.getRides = function () {
-        return this.db.list(this.collectionEndPoint, function (ref) { return ref.orderByChild('dateTime')
-            .startAt(new Date().getTime()); }).valueChanges();
-    };
-    RideService.prototype.getRidesByUserId = function (userId) {
-        return this.db.list(this.collectionEndPoint, function (ref) { return ref.orderByChild('userId').equalTo(userId); }).valueChanges();
-    };
-    RideService.prototype.getRide = function (rideId) {
-        return this.db.object(this.collectionEndPoint + "/" + rideId).valueChanges();
-    };
-    RideService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"]])
-    ], RideService);
-    return RideService;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/pages/tabs/rides/ride-plan/ride-plan.module.ts":
 /*!****************************************************************!*\
   !*** ./src/app/pages/tabs/rides/ride-plan/ride-plan.module.ts ***!
@@ -124,7 +70,7 @@ var RidePlanPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title>Ride Plan</ion-title>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-icon id=\"icon-more\" name=\"md-more\" slot=\"end\" (click)=\"presentPopover($event)\"></ion-icon>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card>\n        <div class=\"map\">\n            <agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" [zoom]=\"zoom\" [streetViewControl]=\"false\"\n                     [zoomControl]=\"false\">\n                <agm-direction *ngIf=\"direction\" [origin]=\"direction.origin\"\n                               [destination]=\"direction.destination\"></agm-direction>\n                <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"!direction\"></agm-marker>\n            </agm-map>\n            <ion-fab vertical=\"top\" horizontal=\"end\" slot=\"fixed\">\n                <ion-fab-button>\n                    <ion-icon name=\"pin\"></ion-icon>\n                </ion-fab-button>\n            </ion-fab>\n        </div>\n        <ion-item>\n            <label>Date and time: {{ride?.dateTime | date:'dd MMM h:mm'}}</label>\n        </ion-item>\n        <ion-item>\n            <label>{{ride?.originName}} - {{ride?.destinationName}}</label>\n        </ion-item>\n\n        <ion-list>\n            <ion-list-header>Passengers ({{passengers.length}} / {{ride?.numberOfSeats}})</ion-list-header>\n            <ion-item class=\"card-driver-container\" *ngFor=\"let user of passengers\">\n                <div class=\"user-info\"  (click)=\"goToUserDetailsPage(user?.id)\">\n                    <ion-avatar>\n                        <img [src]=\"user?.photo\">\n                    </ion-avatar>\n                    <label>\n                        {{user?.name}}\n                    </label>\n                </div>\n\n                <div class=\"request-buttons-container\">\n\n                    <ion-chip color=\"danger\" (click)=\"presentAlertConfirm(user)\">\n                        <ion-label>Remove</ion-label>\n                    </ion-chip>\n                </div>\n            </ion-item>\n\n            <ion-item *ngIf=\"!ride?.seatedUserIds\">\n                <ion-label>No passengers</ion-label>\n            </ion-item>\n        </ion-list>\n        <div class=\"footer\" *ngIf=\"ride?.seatedUserIds\">\n            <ion-button (click)=\"openModal()\">Start ride</ion-button>\n        </div>\n    </ion-card>\n\n    <ion-card mode=\"md\" *ngIf=\"requests\">\n        <ion-card-content>\n            <ion-list>\n                <ion-list-header>Requests</ion-list-header>\n                <ion-item class=\"card-driver-container\" *ngFor=\"let request of requests\">\n                    <div class=\"user-info\" (click)=\"goToUserDetailsPage(request.userId)\">\n                        <ion-avatar>\n                            <img [src]=\"request.user?.photo\">\n                        </ion-avatar>\n                        <label>{{request.user?.name}}</label>\n                        <label> <a> Status: </a>{{request.state}}</label>\n                    </div>\n\n                    <div class=\"request-buttons-container\" >\n\n                        <ion-icon (click)=\"acceptBooking(request)\" class=\"accept-button\" name=\"checkmark\"\n                                  color=\"success\" *ngIf=\"request.state === 'PENDING'\"></ion-icon>\n                        <ion-icon name=\"close\" color=\"danger\" (click)=\"refuseBooking(request)\"\n                                  *ngIf=\"request.state === 'PENDING'\"></ion-icon>\n\n                        <ion-chip color=\"success\" (click)=\"acceptBooking(request)\" *ngIf=\"request.state === 'REFUSED'\">\n                            <ion-label>Accept</ion-label>\n                        </ion-chip>\n\n                    </div>\n                </ion-item>\n            </ion-list>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n"
+module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title>Ride Plan</ion-title>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-icon  *ngIf=\"!ride?.isFinished\"\n                   id=\"icon-more\" name=\"md-more\" slot=\"end\" (click)=\"presentPopover($event)\"></ion-icon>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card>\n        <div class=\"map\">\n            <agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" [zoom]=\"zoom\" [streetViewControl]=\"false\"\n                     [zoomControl]=\"false\">\n                <agm-direction *ngIf=\"direction\" [origin]=\"direction.origin\"\n                               [destination]=\"direction.destination\"></agm-direction>\n                <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"!direction\"></agm-marker>\n            </agm-map>\n            <ion-fab vertical=\"top\" horizontal=\"end\" slot=\"fixed\">\n                <ion-fab-button>\n                    <ion-icon name=\"pin\"></ion-icon>\n                </ion-fab-button>\n            </ion-fab>\n        </div>\n        <ion-item>\n            <label>Date and time: {{ride?.dateTime | date:'dd MMM h:mm'}}</label>\n        </ion-item>\n        <ion-item>\n            <label>{{ride?.originName}} - {{ride?.destinationName}}</label>\n        </ion-item>\n\n        <ion-list>\n            <ion-list-header>Passengers ({{passengers.length}} / {{ride?.numberOfSeats}})</ion-list-header>\n            <ion-item class=\"card-driver-container\" *ngFor=\"let user of passengers\">\n                <div class=\"user-info\"  (click)=\"goToUserDetailsPage(user?.id)\">\n                    <ion-avatar>\n                        <img [src]=\"user?.photo\">\n                    </ion-avatar>\n                    <label>\n                        {{user?.name}}\n                    </label>\n                </div>\n\n                <div class=\"request-buttons-container\" *ngIf=\"!ride?.isFinished\">\n\n                    <ion-chip color=\"danger\" (click)=\"presentAlertConfirm(user)\">\n                        <ion-label>Remove</ion-label>\n                    </ion-chip>\n                </div>\n            </ion-item>\n\n            <ion-item *ngIf=\"!ride?.seatedUserIds\">\n                <ion-label>No passengers</ion-label>\n            </ion-item>\n        </ion-list>\n\n        <ion-item *ngIf=ride?.isFinished>\n            <ion-label (click)=\"contact()\" fill=\"clear\" color=\"danger\">Any problems during this ride? Contact us</ion-label>\n        </ion-item>\n        <div class=\"footer\" *ngIf=\"ride?.seatedUserIds && !ride?.isFinished\">\n            <ion-button (click)=\"openModal()\">Start ride</ion-button>\n        </div>\n    </ion-card>\n\n    <ion-card mode=\"md\" *ngIf=\"requests\">\n        <ion-card-content>\n            <ion-list>\n                <ion-list-header>Requests</ion-list-header>\n                <ion-item class=\"card-driver-container\" *ngFor=\"let request of requests\">\n                    <div class=\"user-info\" (click)=\"goToUserDetailsPage(request.userId)\">\n                        <ion-avatar>\n                            <img [src]=\"request.user?.photo\">\n                        </ion-avatar>\n                        <label>{{request.user?.name}}</label>\n                        <label> <a> Status: </a>{{request.state}}</label>\n                    </div>\n\n                    <div class=\"request-buttons-container\" >\n\n                        <ion-icon (click)=\"acceptBooking(request)\" class=\"accept-button\" name=\"checkmark\"\n                                  color=\"success\" *ngIf=\"request.state === 'PENDING'\"></ion-icon>\n                        <ion-icon name=\"close\" color=\"danger\" (click)=\"refuseBooking(request)\"\n                                  *ngIf=\"request.state === 'PENDING'\"></ion-icon>\n\n                        <ion-chip color=\"success\" (click)=\"acceptBooking(request)\"\n                                  *ngIf=\"request.state === 'REFUSED' && !ride?.isFinished\">\n                            <ion-label>Accept</ion-label>\n                        </ion-chip>\n\n                    </div>\n                </ion-item>\n            </ion-list>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n"
 
 /***/ }),
 
@@ -160,6 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_services_user_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../core/services/user.service */ "./src/app/core/services/user.service.ts");
 /* harmony import */ var _ride_popover_ride_popover_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ride-popover/ride-popover.component */ "./src/app/pages/tabs/rides/ride-plan/ride-popover/ride-popover.component.ts");
 /* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/fesm5/agm-core.js");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
 
 
 
@@ -172,8 +119,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var DirectionsService = google.maps.DirectionsService;
 
+
 var RidePlanPage = /** @class */ (function () {
-    function RidePlanPage(route, router, rideService, requestSerivce, modalController, userService, requestService, popoverController, mapsAPILoader, alertController) {
+    function RidePlanPage(route, router, rideService, requestSerivce, modalController, userService, requestService, popoverController, mapsAPILoader, alertController, emailComposer) {
         var _this = this;
         this.route = route;
         this.router = router;
@@ -185,6 +133,7 @@ var RidePlanPage = /** @class */ (function () {
         this.popoverController = popoverController;
         this.mapsAPILoader = mapsAPILoader;
         this.alertController = alertController;
+        this.emailComposer = emailComposer;
         this.ride = null;
         this.request = null;
         this.passengers = [];
@@ -193,12 +142,17 @@ var RidePlanPage = /** @class */ (function () {
         this.currentUser = this.userService.user.getValue();
         this.route.queryParams.subscribe(function (params) {
             if (_this.router.getCurrentNavigation().extras.state) {
-                var rideId = _this.router.getCurrentNavigation().extras.state.rideId;
-                _this.getRide(rideId);
+                _this.rideId = _this.router.getCurrentNavigation().extras.state.rideId;
+                _this.getRide(_this.rideId);
             }
         });
     }
     RidePlanPage.prototype.ngOnInit = function () {
+    };
+    RidePlanPage.prototype.ionViewWillEnter = function () {
+        if (this.rideId) {
+            this.getRide(this.rideId);
+        }
     };
     RidePlanPage.prototype.getDirection = function () {
         var _this = this;
@@ -381,6 +335,13 @@ var RidePlanPage = /** @class */ (function () {
             });
         });
     };
+    RidePlanPage.prototype.contact = function () {
+        var email = {
+            to: 'moneybahr@gmail.com',
+            isHtml: true
+        };
+        this.emailComposer.open(email);
+    };
     RidePlanPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-ride-plan',
@@ -396,7 +357,8 @@ var RidePlanPage = /** @class */ (function () {
             _core_services_request_service__WEBPACK_IMPORTED_MODULE_4__["RequestService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["PopoverController"],
             _agm_core__WEBPACK_IMPORTED_MODULE_10__["MapsAPILoader"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["AlertController"]])
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["AlertController"],
+            _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_11__["EmailComposer"]])
     ], RidePlanPage);
     return RidePlanPage;
 }());
@@ -488,8 +450,7 @@ var RidePopoverComponent = /** @class */ (function () {
                                     text: 'No',
                                     role: 'cancel',
                                     cssClass: 'secondary',
-                                    handler: function (blah) {
-                                        console.log('Confirm Cancel: blah');
+                                    handler: function () {
                                     }
                                 }, {
                                     text: 'Yes',

@@ -28,12 +28,15 @@
       <ion-input formControlName="stock" type="number"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>{{ 'REWARDS.desccription' | translate:params }}</ion-label>
+      <ion-label>{{ 'REWARDS.description' | translate:params }}</ion-label>
       <ion-input formControlName="description"></ion-input>
     </ion-item>
 
 
   </form>
+  <div class="spinner-container" *ngIf="isSpinning">
+    <ion-spinner name="lines"></ion-spinner>
+  </div>
 
 </ion-content>
 <ion-footer >

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-import {Platform, ToastController} from '@ionic/angular';
+import {NavController, Platform, ToastController} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {FcmService} from './core/services/fcm.service';
@@ -23,7 +23,8 @@ export class AppComponent {
         private userService: UserService,
         private router: Router,
         private toastController: ToastController,
-        private translateConfigService: TranslateConfigService
+        private translateConfigService: TranslateConfigService,
+        private navController: NavController
     ) {
         this.initializeApp();
     }
@@ -108,7 +109,7 @@ export class AppComponent {
                             if (!loggedUser.name) {
                                 this.router.navigateByUrl('initial-setup');
                             } else {
-                                this.router.navigateByUrl('tabs');
+                                this.navController.navigateRoot(['tabs']);
                             }
                         });
                     } else {
@@ -117,6 +118,11 @@ export class AppComponent {
                 }, e => {
                     console.error(e);
                 });
+            } else {
+                // browser test mode
+                this.router.navigateByUrl('tabs');
+                this.userService.setLoggedUID('1');
+
             }
 
         });

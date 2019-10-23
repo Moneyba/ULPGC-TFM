@@ -2,7 +2,8 @@ ion-content {
   height: 100%;
 
   form {
-    height: 70%;
+    height: 90%;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -38,8 +39,13 @@ ion-item {
 }
 
 footer {
-  height: 27%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.spinner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

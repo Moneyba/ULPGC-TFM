@@ -62,7 +62,7 @@ var LoginPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-content fullscreen padding>\n    <!-- <form [formGroup]=\"loginForm\">\n       <ion-input placeholder=\"email\" formControlName=\"email\" required></ion-input>\n       <ion-input placeholder=\"password\" type=\"password\" formControlName=\"password\" required></ion-input>\n     </form>\n     <ion-button [disabled]=\"loginForm.invalid\" (click)=\"login()\">Login</ion-button>-->\n\n\n    <ion-slides #slides [options]=\"{onlyExternal: false}\" >\n        <ion-slide class=\"slide-container1\">\n            <h1 class=\"title\">Welcome to <br><b>ULPGC <i>RideSharing</i></b></h1>\n            <div class=\"user-photo\" padding-top>\n                <ion-avatar>\n                    <img [src]=\"currentUser?.photo || '/assets/icon/favicon.jpg'\">\n                </ion-avatar>\n            </div>\n\n\n            <footer>\n                <p class=\"text-policy\">Read our\n                    <ion-label color=\"secondary\">Privacy Policy</ion-label>\n                    . Tap \"Agree and Continue\" to accept\n                    the\n                    <ion-label color=\"secondary\">Terms of Service</ion-label>\n                </p>\n                <ion-button class=\"accept-button\" (click)=\"slides.slideNext()\">Agree and Continue</ion-button>\n            </footer>\n\n        </ion-slide>\n        <ion-slide >\n            <div *ngIf=\"!phoneSent\" class=\"slide-container2\">\n                <h2 class=\"phone-title\">Verify your phone number</h2>\n                <p class=\"phone-text\">ULPGC RideSharing will send a SMS message to verify your phone number.<br>\n                    Enter your country code and phone number.</p>\n\n                <div class=\"phone-input\">\n                    <int-phone-prefix [defaultCountry]=\"'es'\"\n                                      [(ngModel)]=\"phoneNumber\"></int-phone-prefix>\n                    <div>\n                        <p class=\"text-policy\"> You must be <ion-label color=\"secondary\">at least 16 years old</ion-label> to register.</p>\n                        <ion-button class=\"accept-button\" type=\"submit\" color=\"primary\" (click)=\"logIn()\">Next</ion-button>\n                    </div>\n                </div>\n            </div>\n\n            <div *ngIf=\"phoneSent\" class=\"slide-container2\">\n                <h2 class=\"phone-title\">Verify your phone number</h2>\n                <p class=\"phone-text\">Waiting to automatically detect an SMS sent to your phone number</p>\n\n                <div class=\"phone-input\">\n                    <ion-input class=\"code-input\" type=\"number\" [(ngModel)]=\"confirmationCode\"\n                               placeholder=\"Enter the code here\"></ion-input>\n\n                    <ion-button type=\"submit\" color=\"primary\" (click)=\"sendCode()\">Next</ion-button>\n                </div>\n            </div>\n        </ion-slide>\n\n    </ion-slides>\n\n\n</ion-content>\n\n\n"
+module.exports = "<ion-content fullscreen padding>\n\n    <ion-slides #slides [options]=\"{onlyExternal: false}\" >\n        <ion-slide class=\"slide-container1\">\n            <h1 class=\"title\">Welcome to <br><b>ULPGC <i>RideSharing</i></b></h1>\n            <div class=\"user-photo\" padding-top>\n                <ion-avatar>\n                    <img [src]=\"currentUser?.photo || '/assets/icon/favicon.jpg'\">\n                </ion-avatar>\n            </div>\n\n\n            <footer>\n                <p class=\"text-policy\">Read our\n                    <ion-label color=\"secondary\">Privacy Policy</ion-label>\n                    . Tap \"Agree and Continue\" to accept\n                    the\n                    <ion-label color=\"secondary\">Terms of Service</ion-label>\n                </p>\n                <ion-button class=\"accept-button\" (click)=\"slides.slideNext()\">Agree and Continue</ion-button>\n            </footer>\n\n        </ion-slide>\n        <ion-slide >\n\n            <div *ngIf=\"!phoneSent\" class=\"slide-container2\">\n                <h2 class=\"phone-title\">Verify your phone number</h2>\n                <p class=\"phone-text\">ULPGC RideSharing will send a SMS message to verify your phone number.<br>\n                    Enter your country code and phone number.</p>\n\n                <div class=\"phone-input\">\n                    <int-phone-prefix [defaultCountry]=\"'es'\"\n                                      [(ngModel)]=\"phoneNumber\"></int-phone-prefix>\n\n                    <div>\n                        <ion-spinner name=\"lines\" *ngIf=\"isSpinner\"></ion-spinner>\n                    </div>\n                    <div>\n                        <p class=\"text-policy\"> You must be <ion-label color=\"secondary\">at least 16 years old</ion-label> to register.</p>\n                        <ion-button class=\"accept-button\" type=\"submit\" color=\"primary\" (click)=\"logIn()\">Next</ion-button>\n                    </div>\n                </div>\n            </div>\n\n            <div *ngIf=\"phoneSent\" class=\"slide-container2\">\n                <h2 class=\"phone-title\">Verify your phone number</h2>\n                <p class=\"phone-text\">Waiting to automatically detect an SMS sent to your phone number</p>\n\n                <div class=\"phone-input\">\n                    <ion-input class=\"code-input\" type=\"number\" [(ngModel)]=\"confirmationCode\"\n                               placeholder=\"Enter the code here\"></ion-input>\n\n                    <ion-button type=\"submit\" color=\"primary\" (click)=\"sendCode()\">Next</ion-button>\n                </div>\n            </div>\n        </ion-slide>\n\n    </ion-slides>\n\n\n</ion-content>\n\n\n"
 
 /***/ }),
 
@@ -73,7 +73,7 @@ module.exports = "<ion-content fullscreen padding>\n    <!-- <form [formGroup]=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-slides {\n  height: 100%; }\n  ion-slides .slide-container1 {\n    display: -webkit-flex;\n    display: flex;\n    -webkit-flex-direction: column;\n            flex-direction: column;\n    -webkit-justify-content: space-around;\n            justify-content: space-around; }\n  ion-slides .slide-container1 .title {\n      font-size: 30px; }\n  ion-slides .slide-container2 {\n    height: 100%;\n    margin-top: 30px;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-flex-direction: column;\n            flex-direction: column;\n    -webkit-justify-content: start;\n            justify-content: start; }\n  ion-slides .slide-container2 .phone-title {\n      font-size: 26px;\n      color: #002e63; }\n  ion-slides .slide-container2 .phone-text {\n      margin: 10px; }\n  ion-slides .slide-container2 .phone-input {\n      display: -webkit-flex;\n      display: flex;\n      -webkit-flex-direction: column;\n              flex-direction: column;\n      -webkit-justify-content: space-between;\n              justify-content: space-between;\n      height: inherit;\n      margin-bottom: 50px;\n      margin-top: 20px; }\n  ion-slides .slide-container2 .code-input {\n      max-height: 30px;\n      border: 1px solid #dedede !important; }\n  .user-photo ion-avatar {\n  margin: 0 auto;\n  width: 270px;\n  height: 270px; }\n  .text-policy {\n  font-size: 15px; }\n  .accept-button {\n  width: 95%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL2xvZ2luL2xvZ2luLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNFLFlBQVksRUFBQTtFQURkO0lBSUkscUJBQWE7SUFBYixhQUFhO0lBQ2IsOEJBQXNCO1lBQXRCLHNCQUFzQjtJQUN0QixxQ0FBNkI7WUFBN0IsNkJBQTZCLEVBQUE7RUFOakM7TUFTTSxlQUFlLEVBQUE7RUFUckI7SUFnQkksWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixxQkFBYTtJQUFiLGFBQWE7SUFDYiw4QkFBc0I7WUFBdEIsc0JBQXNCO0lBQ3RCLDhCQUFzQjtZQUF0QixzQkFBc0IsRUFBQTtFQXBCMUI7TUF1Qk0sZUFBZTtNQUNmLGNBQWMsRUFBQTtFQXhCcEI7TUE0Qk0sWUFBWSxFQUFBO0VBNUJsQjtNQWdDTSxxQkFBYTtNQUFiLGFBQWE7TUFDYiw4QkFBc0I7Y0FBdEIsc0JBQXNCO01BQ3RCLHNDQUE4QjtjQUE5Qiw4QkFBOEI7TUFDOUIsZUFBZTtNQUNmLG1CQUFtQjtNQUNuQixnQkFBZ0IsRUFBQTtFQXJDdEI7TUF3Q00sZ0JBQWdCO01BRWhCLG9DQUFvQyxFQUFBO0VBUTFDO0VBQ0UsY0FBYztFQUNkLFlBQVk7RUFDWixhQUFhLEVBQUE7RUFHZjtFQUNFLGVBQWUsRUFBQTtFQUdqQjtFQUNFLFVBQVUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2xvZ2luL2xvZ2luLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuaW9uLXNsaWRlcyB7XG4gIGhlaWdodDogMTAwJTtcblxuICAuc2xpZGUtY29udGFpbmVyMSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuXG4gICAgLnRpdGxlIHtcbiAgICAgIGZvbnQtc2l6ZTogMzBweDtcbiAgICB9XG5cblxuICB9XG5cbiAgLnNsaWRlLWNvbnRhaW5lcjIge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHN0YXJ0O1xuXG4gICAgLnBob25lLXRpdGxlIHtcbiAgICAgIGZvbnQtc2l6ZTogMjZweDtcbiAgICAgIGNvbG9yOiAjMDAyZTYzO1xuICAgIH1cblxuICAgIC5waG9uZS10ZXh0IHtcbiAgICAgIG1hcmdpbjogMTBweDtcbiAgICB9XG5cbiAgICAucGhvbmUtaW5wdXQge1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgICBoZWlnaHQ6IGluaGVyaXQ7XG4gICAgICBtYXJnaW4tYm90dG9tOiA1MHB4O1xuICAgICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICB9XG4gICAgLmNvZGUtaW5wdXQge1xuICAgICAgbWF4LWhlaWdodDogMzBweDtcblxuICAgICAgYm9yZGVyOiAxcHggc29saWQgI2RlZGVkZSAhaW1wb3J0YW50O1xuXG4gICAgfVxuXG4gIH1cblxufVxuXG4udXNlci1waG90byBpb24tYXZhdGFyIHtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIHdpZHRoOiAyNzBweDtcbiAgaGVpZ2h0OiAyNzBweDtcbn1cblxuLnRleHQtcG9saWN5IHtcbiAgZm9udC1zaXplOiAxNXB4O1xufVxuXG4uYWNjZXB0LWJ1dHRvbiB7XG4gIHdpZHRoOiA5NSU7XG59XG5cbiJdfQ== */"
+module.exports = "ion-slides {\n  height: 100%; }\n  ion-slides .slide-container1 {\n    display: -webkit-flex;\n    display: flex;\n    -webkit-flex-direction: column;\n            flex-direction: column;\n    -webkit-justify-content: space-around;\n            justify-content: space-around; }\n  ion-slides .slide-container1 .title {\n      font-size: 30px; }\n  ion-slides .slide-container2 {\n    height: 100%;\n    margin-top: 30px;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-flex-direction: column;\n            flex-direction: column;\n    -webkit-justify-content: start;\n            justify-content: start; }\n  ion-slides .slide-container2 .phone-title {\n      font-size: 26px;\n      color: #002e63; }\n  ion-slides .slide-container2 .phone-text {\n      margin: 10px; }\n  ion-slides .slide-container2 .phone-input {\n      display: -webkit-flex;\n      display: flex;\n      -webkit-flex-direction: column;\n              flex-direction: column;\n      -webkit-justify-content: space-between;\n              justify-content: space-between;\n      height: inherit;\n      margin-bottom: 50px;\n      margin-top: 20px; }\n  ion-slides .slide-container2 .code-input {\n      max-height: 30px;\n      border: 1px solid #dedede !important; }\n  .user-photo ion-avatar {\n  margin: 0 auto;\n  width: 270px;\n  height: 270px; }\n  .text-policy {\n  font-size: 15px; }\n  .accept-button {\n  width: 95%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL2xvZ2luL2xvZ2luLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNFLFlBQVksRUFBQTtFQURkO0lBSUkscUJBQWE7SUFBYixhQUFhO0lBQ2IsOEJBQXNCO1lBQXRCLHNCQUFzQjtJQUN0QixxQ0FBNkI7WUFBN0IsNkJBQTZCLEVBQUE7RUFOakM7TUFTTSxlQUFlLEVBQUE7RUFUckI7SUFnQkksWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixxQkFBYTtJQUFiLGFBQWE7SUFDYiw4QkFBc0I7WUFBdEIsc0JBQXNCO0lBQ3RCLDhCQUFzQjtZQUF0QixzQkFBc0IsRUFBQTtFQXBCMUI7TUF1Qk0sZUFBZTtNQUNmLGNBQWMsRUFBQTtFQXhCcEI7TUE0Qk0sWUFBWSxFQUFBO0VBNUJsQjtNQWdDTSxxQkFBYTtNQUFiLGFBQWE7TUFDYiw4QkFBc0I7Y0FBdEIsc0JBQXNCO01BQ3RCLHNDQUE4QjtjQUE5Qiw4QkFBOEI7TUFDOUIsZUFBZTtNQUNmLG1CQUFtQjtNQUNuQixnQkFBZ0IsRUFBQTtFQXJDdEI7TUF3Q00sZ0JBQWdCO01BRWhCLG9DQUFvQyxFQUFBO0VBUTFDO0VBQ0UsY0FBYztFQUNkLFlBQVk7RUFDWixhQUFhLEVBQUE7RUFHZjtFQUNFLGVBQWUsRUFBQTtFQUdqQjtFQUNFLFVBQVUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2xvZ2luL2xvZ2luLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuaW9uLXNsaWRlcyB7XG4gIGhlaWdodDogMTAwJTtcblxuICAuc2xpZGUtY29udGFpbmVyMSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuXG4gICAgLnRpdGxlIHtcbiAgICAgIGZvbnQtc2l6ZTogMzBweDtcbiAgICB9XG5cblxuICB9XG5cbiAgLnNsaWRlLWNvbnRhaW5lcjIge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHN0YXJ0O1xuXG4gICAgLnBob25lLXRpdGxlIHtcbiAgICAgIGZvbnQtc2l6ZTogMjZweDtcbiAgICAgIGNvbG9yOiAjMDAyZTYzO1xuICAgIH1cblxuICAgIC5waG9uZS10ZXh0IHtcbiAgICAgIG1hcmdpbjogMTBweDtcbiAgICB9XG5cbiAgICAucGhvbmUtaW5wdXQge1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgICBoZWlnaHQ6IGluaGVyaXQ7XG4gICAgICBtYXJnaW4tYm90dG9tOiA1MHB4O1xuICAgICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICB9XG4gICAgLmNvZGUtaW5wdXQge1xuICAgICAgbWF4LWhlaWdodDogMzBweDtcblxuICAgICAgYm9yZGVyOiAxcHggc29saWQgI2RlZGVkZSAhaW1wb3J0YW50O1xuXG4gICAgfVxuXG4gIH1cblxufVxuXG4udXNlci1waG90byBpb24tYXZhdGFyIHtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIHdpZHRoOiAyNzBweDtcbiAgaGVpZ2h0OiAyNzBweDtcbn1cblxuLnRleHQtcG9saWN5IHtcbiAgZm9udC1zaXplOiAxNXB4O1xufVxuXG4uYWNjZXB0LWJ1dHRvbiB7XG4gIHdpZHRoOiA5NSU7XG59XG5cblxuXG4iXX0= */"
 
 /***/ }),
 
@@ -95,9 +95,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_services_fcm_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../core/services/fcm.service */ "./src/app/core/services/fcm.service.ts");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_firebase_authentication_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/firebase-authentication/ngx */ "./node_modules/@ionic-native/firebase-authentication/ngx/index.js");
-/* harmony import */ var _core_services_loading_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../core/services/loading.service */ "./src/app/core/services/loading.service.ts");
-/* harmony import */ var ionic_angular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ionic-angular */ "./node_modules/ionic-angular/index.js");
-
+/* harmony import */ var ionic_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ionic-angular */ "./node_modules/ionic-angular/index.js");
 
 
 
@@ -108,14 +106,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var LoginPage = /** @class */ (function () {
-    function LoginPage(formBuilder, authService, router, fcmService, platform, fireAuth, loadingService) {
+    function LoginPage(formBuilder, authService, router, fcmService, platform, fireAuth) {
         this.formBuilder = formBuilder;
         this.authService = authService;
         this.router = router;
         this.fcmService = fcmService;
         this.platform = platform;
         this.fireAuth = fireAuth;
-        this.loadingService = loadingService;
+        this.isSpinner = false;
     }
     LoginPage.prototype.ngOnInit = function () {
         this.createLoginForm();
@@ -139,11 +137,11 @@ var LoginPage = /** @class */ (function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_c) {
                 switch (_c.label) {
                     case 0:
-                        this.loadingService.presentLoading();
+                        this.isSpinner = true;
                         if (!(this.phoneNumber && this.phoneNumber.length > 0 && this.phoneNumber.includes('+'))) return [3 /*break*/, 9];
                         return [4 /*yield*/, this.authService.checkPhone(this.phoneNumber).catch(function (e) {
                                 console.error(e);
-                                _this.loadingService.dissmissLoading();
+                                _this.isSpinner = false;
                             })];
                     case 1:
                         phoneExists = _c.sent();
@@ -154,7 +152,7 @@ var LoginPage = /** @class */ (function () {
                         return [4 /*yield*/, this.fireAuth.verifyPhoneNumber(this.phoneNumber, 120000).catch(function (e) {
                                 console.error(e);
                                 // alert(JSON.stringify(e));
-                                _this.loadingService.dissmissLoading();
+                                _this.isSpinner = false;
                             })];
                     case 2:
                         _a.verificationID = _c.sent();
@@ -164,7 +162,7 @@ var LoginPage = /** @class */ (function () {
                         return [4 /*yield*/, this.fireAuth.verifyPhoneNumber(this.phoneNumber, 120000).catch(function (e) {
                                 console.error(e);
                                 // alert(JSON.stringify(e));
-                                _this.loadingService.dissmissLoading();
+                                _this.isSpinner = false;
                             })];
                     case 4:
                         verificationId = (_c.sent()).verificationId;
@@ -176,7 +174,7 @@ var LoginPage = /** @class */ (function () {
                         return [4 /*yield*/, this.fireAuth.verifyPhoneNumber(this.phoneNumber, 120000)];
                     case 6:
                         _b.verificationID = _c.sent();
-                        this.loadingService.dissmissLoading();
+                        this.isSpinner = false;
                         this.phoneSent = true;
                         console.log('si');
                         return [3 /*break*/, 8];
@@ -193,8 +191,7 @@ var LoginPage = /** @class */ (function () {
                                         return [4 /*yield*/, this.fireAuth.verifyPhoneNumber(this.phoneNumber, 120000)];
                                     case 1:
                                         _a.verificationID = _b.sent();
-                                        console.log('usuario creado y verificado');
-                                        this.loadingService.dissmissLoading();
+                                        this.isSpinner = false;
                                         this.phoneSent = true;
                                         return [2 /*return*/];
                                 }
@@ -215,9 +212,7 @@ var LoginPage = /** @class */ (function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        this.loadingService.presentLoading();
-                        console.log(this.verificationID);
-                        console.log(this.confirmationCode);
+                        this.isSpinner = true;
                         return [4 /*yield*/, this.fireAuth.signInWithVerificationId(this.verificationID, this.confirmationCode)];
                     case 1:
                         _a.sent();
@@ -225,15 +220,15 @@ var LoginPage = /** @class */ (function () {
                         //     console.error(e);
                         //     this.utils.dissmissLoading();
                         // });
-                        this.loadingService.dissmissLoading();
+                        this.isSpinner = false;
                         return [2 /*return*/];
                 }
             });
         });
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(ionic_angular__WEBPACK_IMPORTED_MODULE_9__["Slides"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", ionic_angular__WEBPACK_IMPORTED_MODULE_9__["Slides"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(ionic_angular__WEBPACK_IMPORTED_MODULE_8__["Slides"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", ionic_angular__WEBPACK_IMPORTED_MODULE_8__["Slides"])
     ], LoginPage.prototype, "slides", void 0);
     LoginPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -246,8 +241,7 @@ var LoginPage = /** @class */ (function () {
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _core_services_fcm_service__WEBPACK_IMPORTED_MODULE_5__["FcmService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["Platform"],
-            _ionic_native_firebase_authentication_ngx__WEBPACK_IMPORTED_MODULE_7__["FirebaseAuthentication"],
-            _core_services_loading_service__WEBPACK_IMPORTED_MODULE_8__["LoadingService"]])
+            _ionic_native_firebase_authentication_ngx__WEBPACK_IMPORTED_MODULE_7__["FirebaseAuthentication"]])
     ], LoginPage);
     return LoginPage;
 }());

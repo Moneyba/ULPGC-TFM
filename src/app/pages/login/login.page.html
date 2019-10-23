@@ -22,6 +22,7 @@
 
         </ion-slide>
         <ion-slide >
+
             <div *ngIf="!phoneSent" class="slide-container2">
                 <h2 class="phone-title">Verify your phone number</h2>
                 <p class="phone-text">ULPGC RideSharing will send a SMS message to verify your phone number.<br>
@@ -30,6 +31,10 @@
                 <div class="phone-input">
                     <int-phone-prefix [defaultCountry]="'es'"
                                       [(ngModel)]="phoneNumber"></int-phone-prefix>
+
+                    <div>
+                        <ion-spinner name="lines" *ngIf="isSpinner"></ion-spinner>
+                    </div>
                     <div>
                         <p class="text-policy"> You must be <ion-label color="secondary">at least 16 years old</ion-label> to register.</p>
                         <ion-button class="accept-button" type="submit" color="primary" (click)="logIn()">Next</ion-button>

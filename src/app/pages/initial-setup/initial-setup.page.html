@@ -8,10 +8,14 @@
           <ion-avatar>
             <img [src]="photo" (click)="uploadNewPhoto()">
           </ion-avatar>
+
         </div>
         <ion-item>
           <ion-input formControlName="name" required placeholder="Type your name here"></ion-input>
         </ion-item>
+      <div class="spinner-container" *ngIf="isSpinning">
+          <ion-spinner name="lines"></ion-spinner>
+      </div>
 
 
 

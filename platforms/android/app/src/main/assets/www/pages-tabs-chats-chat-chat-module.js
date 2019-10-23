@@ -1,59 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-tabs-chats-chat-chat-module"],{
 
-/***/ "./src/app/core/services/ride.service.ts":
-/*!***********************************************!*\
-  !*** ./src/app/core/services/ride.service.ts ***!
-  \***********************************************/
-/*! exports provided: RideService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RideService", function() { return RideService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-
-
-
-var RideService = /** @class */ (function () {
-    function RideService(db) {
-        this.db = db;
-        this.collectionEndPoint = 'rides';
-    }
-    RideService.prototype.createRide = function (ride) {
-        ride.id = this.db.createPushId();
-        return this.db.object(this.collectionEndPoint + "/" + ride.id).set(ride);
-    };
-    RideService.prototype.updateRide = function (ride) {
-        return this.db.object(this.collectionEndPoint + "/" + ride.id).update(ride);
-    };
-    RideService.prototype.deleteRide = function (rideId) {
-        return this.db.object(this.collectionEndPoint + "/" + rideId).remove();
-    };
-    RideService.prototype.getRides = function () {
-        return this.db.list(this.collectionEndPoint, function (ref) { return ref.orderByChild('dateTime')
-            .startAt(new Date().getTime()); }).valueChanges();
-    };
-    RideService.prototype.getRidesByUserId = function (userId) {
-        return this.db.list(this.collectionEndPoint, function (ref) { return ref.orderByChild('userId').equalTo(userId); }).valueChanges();
-    };
-    RideService.prototype.getRide = function (rideId) {
-        return this.db.object(this.collectionEndPoint + "/" + rideId).valueChanges();
-    };
-    RideService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"]])
-    ], RideService);
-    return RideService;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/pages/tabs/chats/chat/chat-options/chat-options.component.html":
 /*!********************************************************************************!*\
   !*** ./src/app/pages/tabs/chats/chat/chat-options/chat-options.component.html ***!
@@ -130,9 +76,9 @@ var ChatOptionsComponent = /** @class */ (function () {
                                 }, {
                                     text: 'Yes',
                                     handler: function () {
-                                        _this.popoverController.dismiss();
-                                        _this.chatService.deleteChat(_this.chatId);
-                                        _this.router.navigateByUrl('tabs/tabs/chats');
+                                        _this.popoverController.dismiss().then(function () {
+                                            _this.chatService.deleteChat(_this.chatId).then(function () { return _this.router.navigateByUrl('tabs/tabs/chats'); });
+                                        });
                                     }
                                 }
                             ]
@@ -240,6 +186,7 @@ var ChatPage = /** @class */ (function () {
             if (_this.router.getCurrentNavigation().extras.state) {
                 _this.chatId = _this.router.getCurrentNavigation().extras.state.chatId;
                 _this.getChat(_this.chatId);
+                console.log(_this.chatId);
             }
         });
     }

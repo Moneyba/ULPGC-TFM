@@ -56,7 +56,7 @@
                                  [disabled]="request.state == 'ACCEPTED'">
                     <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
                 </ion-item-option>
-                <ion-item-option color="danger" (click)="refuseRequest(request)"
+                <ion-item-option color="danger" (click)="refuseRequest(request, request.user)"
                                  [disabled]="request.state == 'REFUSED'">
                     <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
                 </ion-item-option>

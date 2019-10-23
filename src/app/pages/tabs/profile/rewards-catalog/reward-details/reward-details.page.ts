@@ -39,7 +39,7 @@ export class RewardDetailsPage implements OnInit {
 
   public exchange(): void {
     this.currentUser.points.currentPoints -= this.reward.points;
-    this.currentUser.points.blockedPoints = this.reward.points;
+    this.currentUser.points.blockedPoints += this.reward.points;
     this.createRequest();
     this.userService.updateUser(this.currentUser);
   }
@@ -91,9 +91,12 @@ export class RewardDetailsPage implements OnInit {
     }
   }
 
-  public refuseRequest(request: RewardRequest): void {
+  public refuseRequest(request: RewardRequest, user: User): void {
     request.state = State.refused;
+    user.points.currentPoints += this.reward.points;
+    user.points.blockedPoints -= this.reward.points;
     this.rewardRequestService.updateRequest(request);
+    this.userService.updateUser(user).then(() => this.getRequests());
   }
 
 }

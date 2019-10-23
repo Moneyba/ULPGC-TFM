@@ -1,4 +1,4 @@
-import {Component, ElementRef, NgZone, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, NgZone, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {RideService} from '../../../core/services/ride.service';
 import {Ride} from '../../../shared/models/Ride';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -6,14 +6,13 @@ import {NavigationExtras, Router} from '@angular/router';
 import {bindCallback} from 'rxjs';
 import {map} from 'rxjs/operators';
 import * as moment from 'moment';
-import {PopoverController} from '@ionic/angular';
+import {Platform, PopoverController} from '@ionic/angular';
 import {DatePickerComponent} from './date-picker/date-picker.component';
 import Autocomplete = google.maps.places.Autocomplete;
 import PlaceResult = google.maps.places.PlaceResult;
 import LatLngLiteral = google.maps.LatLngLiteral;
 import DirectionsService = google.maps.DirectionsService;
 import DirectionsRequest = google.maps.DirectionsRequest;
-import {TranslateConfigService} from '../../../core/services/translate-config.service';
 
 
 @Component({
@@ -43,6 +42,7 @@ export class HomePage implements OnInit {
     private maxDistance = 5000;
 
     public showSearchContainer = false;
+
     constructor(private rideService: RideService,
                 private fb: FormBuilder,
                 private router: Router,
@@ -187,9 +187,10 @@ export class HomePage implements OnInit {
 
         return bindCallback(this.directionsService.route)(direction).pipe(
             map((result => {
-                if (result[1].toString() === 'ZERO_RESULTS') {
+                if (result[0].toString() === 'ZERO_RESULTS') {
                     return false;
                 }
+                console.log(result);
                 const distance = result[0].routes[0].legs[0].distance;
                 if (distance.value < this.maxDistance) {
                     return true;

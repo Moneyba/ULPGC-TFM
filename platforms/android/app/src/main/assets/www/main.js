@@ -418,6 +418,29 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
+/***/ "./node_modules/ionic-angular/util lazy recursive":
+/*!***************************************************************!*\
+  !*** ./node_modules/ionic-angular/util lazy namespace object ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncaught exception popping up in devtools
+	return Promise.resolve().then(function() {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = "./node_modules/ionic-angular/util lazy recursive";
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -448,13 +471,10 @@ var map = {
 	],
 	"./pages/initial-setup/initial-setup.module": [
 		"./src/app/pages/initial-setup/initial-setup.module.ts",
-		"default~pages-initial-setup-initial-setup-module~pages-login-login-module",
-		"common",
 		"pages-initial-setup-initial-setup-module"
 	],
 	"./pages/login/login.module": [
 		"./src/app/pages/login/login.module.ts",
-		"default~pages-initial-setup-initial-setup-module~pages-login-login-module",
 		"common",
 		"pages-login-login-module"
 	],
@@ -566,7 +586,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', redirectTo: 'tabs', pathMatch: 'full' },
     { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
     { path: 'chats/:price', loadChildren: './pages/tabs/chats/chats.module#ChatsPageModule' },
     { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
@@ -645,7 +665,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(platform, splashScreen, statusBar, firebaseAuthentication, fcmService, userService, router, toastController, translateConfigService) {
+    function AppComponent(platform, splashScreen, statusBar, firebaseAuthentication, fcmService, userService, router, toastController, translateConfigService, navController) {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
@@ -655,6 +675,7 @@ var AppComponent = /** @class */ (function () {
         this.router = router;
         this.toastController = toastController;
         this.translateConfigService = translateConfigService;
+        this.navController = navController;
         this.initializeApp();
     }
     AppComponent.prototype.initializeApp = function () {
@@ -740,7 +761,6 @@ var AppComponent = /** @class */ (function () {
                 _this.firebaseAuthentication.onAuthStateChanged().subscribe(function (user) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
                     var _this = this;
                     return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                        console.log(user);
                         if (user) {
                             this.userService.setLoggedUID(user.uid);
                             this.fcmService.setToken(user.uid);
@@ -749,7 +769,7 @@ var AppComponent = /** @class */ (function () {
                                     _this.router.navigateByUrl('initial-setup');
                                 }
                                 else {
-                                    _this.router.navigateByUrl('tabs');
+                                    _this.navController.navigateRoot(['tabs']);
                                 }
                             });
                         }
@@ -765,7 +785,7 @@ var AppComponent = /** @class */ (function () {
             else {
                 // browser test mode
                 _this.router.navigateByUrl('tabs');
-                _this.userService.setLoggedUID('AL769qkPleboVU7stjFPyqw0XBz1');
+                _this.userService.setLoggedUID('1');
             }
         });
     };
@@ -782,7 +802,8 @@ var AppComponent = /** @class */ (function () {
             _core_services_user_service__WEBPACK_IMPORTED_MODULE_8__["UserService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_7__["Router"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
-            _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_9__["TranslateConfigService"]])
+            _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_9__["TranslateConfigService"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -834,6 +855,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @ngx-translate/http-loader */ "./node_modules/@ngx-translate/http-loader/fesm5/ngx-translate-http-loader.js");
 /* harmony import */ var _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./core/services/translate-config.service */ "./src/app/core/services/translate-config.service.ts");
 /* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+/* harmony import */ var ionic_angular__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ionic-angular */ "./node_modules/ionic-angular/index.js");
+
 
 
 
@@ -911,6 +934,7 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_30__["EmailComposer"],
                 _core_services_utils_service__WEBPACK_IMPORTED_MODULE_26__["UtilsService"],
                 _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_29__["TranslateConfigService"],
+                ionic_angular__WEBPACK_IMPORTED_MODULE_31__["Platform"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
@@ -1004,74 +1028,6 @@ var FcmService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/core/services/loading.service.ts":
-/*!**************************************************!*\
-  !*** ./src/app/core/services/loading.service.ts ***!
-  \**************************************************/
-/*! exports provided: LoadingService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadingService", function() { return LoadingService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-
-
-
-var LoadingService = /** @class */ (function () {
-    function LoadingService(loadingController) {
-        this.loadingController = loadingController;
-        this.isLoading = false;
-    }
-    LoadingService.prototype.presentLoading = function () {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var _this = this;
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        this.isLoading = true;
-                        return [4 /*yield*/, this.loadingController.create({
-                                duration: 5000,
-                            }).then(function (a) {
-                                a.present().then(function () {
-                                    console.log('presented');
-                                    if (!_this.isLoading) {
-                                        a.dismiss().then(function () { return console.log('abort presenting'); });
-                                    }
-                                });
-                            })];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    LoadingService.prototype.dissmissLoading = function () {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        this.isLoading = false;
-                        return [4 /*yield*/, this.loadingController.dismiss().then(function () { return console.log('dismissed'); })];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    LoadingService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"]])
-    ], LoadingService);
-    return LoadingService;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/core/services/local-storage.service.ts":
 /*!********************************************************!*\
   !*** ./src/app/core/services/local-storage.service.ts ***!
@@ -1102,6 +1058,60 @@ var LocalStorageService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], LocalStorageService);
     return LocalStorageService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/services/ride.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/core/services/ride.service.ts ***!
+  \***********************************************/
+/*! exports provided: RideService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RideService", function() { return RideService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+
+
+
+var RideService = /** @class */ (function () {
+    function RideService(db) {
+        this.db = db;
+        this.collectionEndPoint = 'rides';
+    }
+    RideService.prototype.createRide = function (ride) {
+        ride.id = this.db.createPushId();
+        return this.db.object(this.collectionEndPoint + "/" + ride.id).set(ride);
+    };
+    RideService.prototype.updateRide = function (ride) {
+        return this.db.object(this.collectionEndPoint + "/" + ride.id).update(ride);
+    };
+    RideService.prototype.deleteRide = function (rideId) {
+        return this.db.object(this.collectionEndPoint + "/" + rideId).remove();
+    };
+    RideService.prototype.getRides = function () {
+        return this.db.list(this.collectionEndPoint, function (ref) { return ref.orderByChild('dateTime')
+            .startAt(new Date().getTime()); }).valueChanges();
+    };
+    RideService.prototype.getRidesByUserId = function (userId) {
+        return this.db.list(this.collectionEndPoint, function (ref) { return ref.orderByChild('userId').equalTo(userId); }).valueChanges();
+    };
+    RideService.prototype.getRide = function (rideId) {
+        return this.db.object(this.collectionEndPoint + "/" + rideId).valueChanges();
+    };
+    RideService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"]])
+    ], RideService);
+    return RideService;
 }());
 
 
@@ -1449,7 +1459,7 @@ var ProfileFormPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title>Profile</ion-title>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <form [formGroup]=\"profileForm\">\n    <div class=\"user-photo\" padding-top>\n      <ion-avatar>\n        <img [src]=\"photo\" (click)=\"uploadNewPhoto()\">\n      </ion-avatar>\n    </div>\n    <ion-item>\n      <ion-icon name=\"person\" slot=\"start\"></ion-icon>\n      <ion-label>Display Name</ion-label>\n      <ion-input formControlName=\"name\" required></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\"call\" slot=\"start\"></ion-icon>\n      <ion-label>Phone Number</ion-label>\n      <ion-input formControlName=\"phoneNumber\" disabled></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\"car\" slot=\"start\"></ion-icon>\n      <ion-label>Car Plate</ion-label>\n      <ion-input formControlName=\"carPlate\"></ion-input>\n    </ion-item>\n  </form>\n  <ion-item>\n    <ion-label>Select Language</ion-label>\n    <ion-select placeholder=\"Select One\" [(ngModel)]=\"selectedLanguage\" (ionChange)=\"languageChanged()\">\n      <ion-select-option value=\"en\">English</ion-select-option>\n      <ion-select-option value=\"es\">Spanish</ion-select-option>\n\n    </ion-select>\n  </ion-item>\n\n  <ion-item>\n    <ion-icon name=\"alert\" slot=\"start\" color=\"danger\"></ion-icon>\n    <ion-label color=\"danger\" (click)=\"presentAlertConfirm()\">Cancel Account</ion-label>\n  </ion-item>\n\n  <ion-button expand=\"full\" type=\"submit\" (click)=\"updateUser()\"\n              [disabled]=\"profileForm.invalid\">Save</ion-button>\n\n</ion-content>\n"
+module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title>{{ 'PROFILE.profile' | translate:params }}</ion-title>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <form [formGroup]=\"profileForm\" class=\"profile-form\">\n        <div class=\"user-photo\" padding-top>\n            <ion-avatar>\n                <img [src]=\"photo\" (click)=\"uploadNewPhoto()\">\n            </ion-avatar>\n        </div>\n        <ion-item>\n            <ion-icon name=\"person\" slot=\"start\"></ion-icon>\n            <ion-label>{{ 'PROFILE.displayName' | translate:params }}</ion-label>\n            <ion-input formControlName=\"name\" required></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-icon name=\"call\" slot=\"start\"></ion-icon>\n            <ion-label>{{ 'PROFILE.phoneNumber' | translate:params }}</ion-label>\n            <ion-input formControlName=\"phoneNumber\" disabled></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-icon name=\"car\" slot=\"start\"></ion-icon>\n            <ion-label>{{ 'PROFILE.carDetails' | translate:params }}</ion-label>\n            <ion-input formControlName=\"carDetails\" placeHolder=\"Model, color...\"></ion-input>\n        </ion-item>\n    </form>\n    <div class=\"options\">\n        <ion-item>\n            <ion-icon name=\"options\" slot=\"start\"></ion-icon>\n            <ion-label>{{ 'PROFILE.selectLanguage' | translate:params }}</ion-label>\n            <ion-select placeholder=\"Select One\" [(ngModel)]=\"selectedLanguage\" (ionChange)=\"languageChanged()\">\n                <ion-select-option value=\"en\">English</ion-select-option>\n                <ion-select-option value=\"es\">Spanish</ion-select-option>\n\n            </ion-select>\n        </ion-item>\n\n        <ion-item lines=\"none\">\n            <ion-icon name=\"alert\" slot=\"start\" color=\"danger\"></ion-icon>\n            <ion-label color=\"danger\" (click)=\"presentAlertConfirm()\">{{ 'PROFILE.cancelAccount' | translate:params }}</ion-label>\n        </ion-item>\n\n    </div>\n    <div class=\"spinner-container\" *ngIf=\"isSpinning\">\n        <ion-spinner name=\"lines\"></ion-spinner>\n    </div>\n    <footer class=\"footer\">\n\n        <ion-button expand=\"full\" type=\"submit\" (click)=\"updateUser()\"\n                    [disabled]=\"profileForm.invalid\">{{ 'GENERIC.save' | translate:params }}\n        </ion-button>\n    </footer>\n\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -1460,7 +1470,7 @@ module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-titl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host .user-photo ion-avatar {\n  margin: 0 auto;\n  width: 200px;\n  height: 200px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvcHJvZmlsZS9wcm9maWxlLWZvcm0vcHJvZmlsZS1mb3JtLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLGNBQWM7RUFDZCxZQUFZO0VBQ1osYUFBYSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdGFicy9wcm9maWxlL3Byb2ZpbGUtZm9ybS9wcm9maWxlLWZvcm0ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICAudXNlci1waG90byBpb24tYXZhdGFyIHtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICB3aWR0aDogMjAwcHg7XG4gICAgaGVpZ2h0OiAyMDBweDtcbiAgfVxufVxuIl19 */"
+module.exports = ":host .user-photo ion-avatar {\n  margin: 0 auto;\n  width: 200px;\n  height: 200px; }\n\n:host .profile-form {\n  margin: 0 20px; }\n\n:host .options {\n  margin: 0 20px; }\n\n:host .footer {\n  position: fixed;\n  z-index: 0;\n  width: 100%;\n  bottom: 10px; }\n\n:host .spinner-container {\n  padding-top: 10%;\n  width: 100%;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-justify-content: center;\n          justify-content: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvcHJvZmlsZS9wcm9maWxlLWZvcm0vcHJvZmlsZS1mb3JtLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUdJLGNBQWM7RUFDZCxZQUFZO0VBQ1osYUFBYSxFQUFBOztBQUxqQjtFQVNJLGNBQWMsRUFBQTs7QUFUbEI7RUFhSSxjQUFjLEVBQUE7O0FBYmxCO0VBaUJJLGVBQWU7RUFDZixVQUFVO0VBQ1YsV0FBVztFQUNYLFlBQVksRUFBQTs7QUFwQmhCO0VBd0JJLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gscUJBQWE7RUFBYixhQUFhO0VBQ2IsK0JBQXVCO1VBQXZCLHVCQUF1QixFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdGFicy9wcm9maWxlL3Byb2ZpbGUtZm9ybS9wcm9maWxlLWZvcm0ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuXG4gIC51c2VyLXBob3RvIGlvbi1hdmF0YXIge1xuICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIHdpZHRoOiAyMDBweDtcbiAgICBoZWlnaHQ6IDIwMHB4O1xuICB9XG5cbiAgLnByb2ZpbGUtZm9ybSB7XG4gICAgbWFyZ2luOiAwIDIwcHg7XG4gIH1cblxuICAub3B0aW9ucyB7XG4gICAgbWFyZ2luOiAwIDIwcHg7XG4gIH1cblxuICAuZm9vdGVyIHtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgei1pbmRleDogMDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBib3R0b206IDEwcHg7XG4gIH1cblxuICAuc3Bpbm5lci1jb250YWluZXIge1xuICAgIHBhZGRpbmctdG9wOiAxMCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgfVxuXG59XG4iXX0= */"
 
 /***/ }),
 
@@ -1482,9 +1492,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "./node_modules/@ionic-native/camera/ngx/index.js");
 /* harmony import */ var _core_services_utils_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../core/services/utils.service */ "./src/app/core/services/utils.service.ts");
-/* harmony import */ var _core_services_loading_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../core/services/loading.service */ "./src/app/core/services/loading.service.ts");
-/* harmony import */ var _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../core/services/translate-config.service */ "./src/app/core/services/translate-config.service.ts");
-
+/* harmony import */ var _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../core/services/translate-config.service */ "./src/app/core/services/translate-config.service.ts");
 
 
 
@@ -1495,14 +1503,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ProfileFormPage = /** @class */ (function () {
-    function ProfileFormPage(userService, fb, router, route, utilsService, loadingService, camera, translateConfigService, alertController) {
+    function ProfileFormPage(userService, fb, router, route, utilsService, camera, translateConfigService, alertController) {
         var _this = this;
         this.userService = userService;
         this.fb = fb;
         this.router = router;
         this.route = route;
         this.utilsService = utilsService;
-        this.loadingService = loadingService;
         this.camera = camera;
         this.translateConfigService = translateConfigService;
         this.alertController = alertController;
@@ -1514,6 +1521,7 @@ var ProfileFormPage = /** @class */ (function () {
                 _this.photo = _this.currentUser.photo;
             }
         });
+        this.isSpinning = false;
     }
     ProfileFormPage.prototype.ngOnInit = function () {
         this.createProfileForm();
@@ -1523,7 +1531,7 @@ var ProfileFormPage = /** @class */ (function () {
             name: [this.currentUser.name, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
             phoneNumber: [this.currentUser.phoneNumber],
             photo: [this.photo],
-            carPlate: [this.currentUser.carPlate ? this.currentUser.carPlate : null]
+            carDetails: [this.currentUser.carDetails ? this.currentUser.carDetails : null]
         });
     };
     ProfileFormPage.prototype.updateUser = function () {
@@ -1535,7 +1543,7 @@ var ProfileFormPage = /** @class */ (function () {
                     id: this.currentUser.id,
                     name: this.profileForm.get('name').value,
                     photo: this.profileForm.get('photo').value,
-                    carPlate: this.profileForm.get('carPlate').value
+                    carDetails: this.profileForm.get('carDetails').value
                 };
                 this.userService.updateUser(user).then(function () {
                     _this.router.navigate(['tabs/tabs/profile']);
@@ -1556,12 +1564,12 @@ var ProfileFormPage = /** @class */ (function () {
                     case 2:
                         preview = _a.sent();
                         base64Image = 'data:image / jpeg;base64,' + preview;
-                        this.loadingService.presentLoading();
+                        this.isSpinning = true;
                         preset = 'gfllyeot';
                         return [4 /*yield*/, this.utilsService.uploadBase64ImageToCloudinary(base64Image, preset)];
                     case 3:
                         url = _a.sent();
-                        this.loadingService.dissmissLoading();
+                        this.isSpinning = false;
                         this.photo = url;
                         this.profileForm.get('photo').setValue(url);
                         this.photoHasChanged = true;
@@ -1591,7 +1599,6 @@ var ProfileFormPage = /** @class */ (function () {
                                     role: 'cancel',
                                     cssClass: 'secondary',
                                     handler: function (blah) {
-                                        console.log('Confirm Cancel: blah');
                                     }
                                 }, {
                                     text: 'Yes',
@@ -1622,9 +1629,8 @@ var ProfileFormPage = /** @class */ (function () {
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
             _core_services_utils_service__WEBPACK_IMPORTED_MODULE_7__["UtilsService"],
-            _core_services_loading_service__WEBPACK_IMPORTED_MODULE_8__["LoadingService"],
             _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_6__["Camera"],
-            _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_9__["TranslateConfigService"],
+            _core_services_translate_config_service__WEBPACK_IMPORTED_MODULE_8__["TranslateConfigService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"]])
     ], ProfileFormPage);
     return ProfileFormPage;
@@ -1686,6 +1692,7 @@ var RatePopoverComponent = /** @class */ (function () {
         this.db = db;
         this.ratingChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.user = this.navParams.data.toUser;
+        console.log(this.user);
         this.isToDriver = this.navParams.data.isToDriver;
         this.rating = {
             id: this.db.createPushId(),
@@ -1747,6 +1754,7 @@ var RatePopoverComponent = /** @class */ (function () {
                 if (this.isToDriver) {
                     extraPoints = 10;
                 }
+                console.log(this.user);
                 this.user.points.currentPoints += this.ratingNumber + extraPoints;
                 if (!this.user.ratings) {
                     this.user.ratings = [];
@@ -1848,7 +1856,7 @@ var RidePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title text-center>Ride Tracking</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<!--<ion-content>\n  <div #map id=\"map\" [hidden]=\"!user\"></div>\n\n  <div *ngIf=\"user\">\n\n    <ion-item>\n      <ion-label>User ID: {{ user.id }}</ion-label>\n    </ion-item>\n\n    <ion-button expand=\"block\" (click)=\"startTracking()\" *ngIf=\"!isTracking\">\n      <ion-icon name=\"locate\" slot=\"start\"></ion-icon>\n      Start Tracking\n    </ion-button>\n\n    <ion-button expand=\"block\" (click)=\"stopTracking()\" *ngIf=\"isTracking\">\n      <ion-icon name=\"hand\" slot=\"start\"></ion-icon>\n      Stop Tracking\n    </ion-button>\n\n    <ion-list>\n      <ion-item-sliding *ngFor=\"let pos of locations | async\">\n        <ion-item>\n          <ion-label text-wrap>\n            Lat: {{ pos.lat }}\n            Lng: {{ pos.lng }}\n            <p>\n              {{ pos.timestamp | date:'short' }}\n            </p>\n          </ion-label>\n        </ion-item>\n\n        <ion-item-options side=\"start\">\n          <ion-item-option color=\"danger\" (click)=\"deleteLocation(pos)\">\n            <ion-icon name=\"trash\" slot=\"icon-only\"></ion-icon>\n          </ion-item-option>\n        </ion-item-options>\n\n      </ion-item-sliding>\n    </ion-list>\n\n  </div>\n</ion-content>-->\n\n<ion-content padding>\n    <ion-card>\n        <div #map id=\"map\"></div>\n    </ion-card>\n\n    <div *ngIf=\"!isRating\" text-center class=\"start-button\">\n        <ion-button (click)=\"startTracking()\" *ngIf=\"!isTracking\">\n            <ion-icon name=\"locate\"></ion-icon>\n            Start Tracking\n        </ion-button>\n        <ion-button color=\"danger\" (click)=\"stopTracking()\" *ngIf=\"isTracking\">\n            <ion-icon name=\"hand\"></ion-icon>\n            Stop Tracking\n        </ion-button>\n    </div>\n\n    <div *ngIf=\"isRating\">\n\n        <div *ngIf=\"currentUser.id !== driver.id\">\n            <h2 text-center>Please, rate your driver!</h2>\n            <ion-item (click)=\"presentRatePopover(driver, 0)\" [disabled]=\"driver.isRated\">\n                <ion-avatar>\n                    <img [src]=\"driver?.photo\">\n                </ion-avatar>\n                <ion-label>{{driver?.name}}</ion-label>\n            </ion-item>\n        </div>\n\n\n        <div *ngIf=\"currentUser.id === driver.id\">\n\n            <h2 text-center>Please, rate your passengers!</h2>\n\n            <ion-list *ngFor=\"let user of passengers; let i = index\" [attr.data-index]=\"i\">\n                <ion-item (click)=\"presentRatePopover(user, i)\" [disabled]=\"user.isRated\">\n                    <ion-avatar>\n                        <img [src]=\"user?.photo\">\n                    </ion-avatar>\n                    <ion-label>{{user?.name}}</ion-label>\n                </ion-item>\n            </ion-list>\n        </div>\n\n        <div text-center class=\"start-button\">\n            <ion-button (click)=\"closeModal()\" [disabled]=\"numberOfUsersNoRated> 0\">Done</ion-button>\n        </div>\n    </div>\n\n</ion-content>\n"
+module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title text-center>Ride Tracking</ion-title>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-card>\n        <div #map id=\"map\"></div>\n    </ion-card>\n\n    <div *ngIf=\"!isRating\" text-center class=\"start-button\">\n        <ion-button (click)=\"startTracking()\" *ngIf=\"!isTracking\">\n            <ion-icon name=\"locate\"></ion-icon>\n            Start Tracking\n        </ion-button>\n        <ion-button color=\"danger\" (click)=\"stopTracking()\" *ngIf=\"isTracking\">\n            <ion-icon name=\"hand\"></ion-icon>\n            Stop Tracking\n        </ion-button>\n    </div>\n\n    <div *ngIf=\"isRating\" class=\"rating\">\n\n        <div *ngIf=\"currentUser.id !== driver.id\">\n            <h2 text-center>Please, rate your driver!</h2>\n            <ion-item (click)=\"presentRatePopover(driver, 0)\" [disabled]=\"driver.isRated\">\n                <ion-avatar>\n                    <img [src]=\"driver?.photo\">\n                </ion-avatar>\n                <ion-label>{{driver?.name}}</ion-label>\n            </ion-item>\n        </div>\n\n\n        <div *ngIf=\"currentUser.id === driver.id\">\n\n            <h2 text-center>Please, rate your passengers!</h2>\n\n            <ion-list *ngFor=\"let user of passengers; let i = index\" [attr.data-index]=\"i\">\n                <ion-item (click)=\"presentRatePopover(user, i)\" [disabled]=\"user.isRated\">\n                    <ion-avatar>\n                        <img [src]=\"user?.photo\">\n                    </ion-avatar>\n                    <ion-label>{{user?.name}}</ion-label>\n                </ion-item>\n            </ion-list>\n        </div>\n\n        <div text-center class=\"done-button\">\n            <ion-button (click)=\"closeModal()\" [disabled]=\"numberOfUsersNoRated> 0\">Done</ion-button>\n        </div>\n    </div>\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -1859,7 +1867,7 @@ module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <io
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#map {\n  width: 100%;\n  height: 300px; }\n\nion-label {\n  margin-left: 10px; }\n\n.start-button {\n  height: 49%;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  -webkit-justify-content: flex-end;\n          justify-content: flex-end; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvcmlkZXMvcmlkZS9yaWRlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxhQUFhLEVBQUE7O0FBRWY7RUFDRSxpQkFBaUIsRUFBQTs7QUFHbkI7RUFDRSxXQUFXO0VBQ1gscUJBQWE7RUFBYixhQUFhO0VBQ2IsOEJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0QixpQ0FBeUI7VUFBekIseUJBQXlCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy90YWJzL3JpZGVzL3JpZGUvcmlkZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjbWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMzAwcHg7XG59XG5pb24tbGFiZWx7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuXG4uc3RhcnQtYnV0dG9uIHtcbiAgaGVpZ2h0OiA0OSU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG59XG4iXX0= */"
+module.exports = "#map {\n  width: 100%;\n  height: 300px; }\n\nion-label {\n  margin-left: 10px; }\n\n.start-button {\n  height: 49%;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  -webkit-justify-content: flex-end;\n          justify-content: flex-end; }\n\n.done-button {\n  display: -webkit-flex;\n  display: flex;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  -webkit-justify-content: flex-end;\n          justify-content: flex-end; }\n\n.rating {\n  height: 49%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvcmlkZXMvcmlkZS9yaWRlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxhQUFhLEVBQUE7O0FBRWY7RUFDRSxpQkFBaUIsRUFBQTs7QUFHbkI7RUFDRSxXQUFXO0VBQ1gscUJBQWE7RUFBYixhQUFhO0VBQ2IsOEJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0QixpQ0FBeUI7VUFBekIseUJBQXlCLEVBQUE7O0FBRzNCO0VBQ0UscUJBQWE7RUFBYixhQUFhO0VBQ2IsOEJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0QixpQ0FBeUI7VUFBekIseUJBQXlCLEVBQUE7O0FBRzNCO0VBQ0UsV0FBVyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdGFicy9yaWRlcy9yaWRlL3JpZGUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI21hcCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDMwMHB4O1xufVxuaW9uLWxhYmVse1xuICBtYXJnaW4tbGVmdDogMTBweDtcbn1cblxuLnN0YXJ0LWJ1dHRvbiB7XG4gIGhlaWdodDogNDklO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xufVxuXG4uZG9uZS1idXR0b24ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xufVxuXG4ucmF0aW5nIHtcbiAgaGVpZ2h0OiA0OSU7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -1882,6 +1890,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_services_user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../core/services/user.service */ "./src/app/core/services/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _rate_popover_rate_popover_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./rate-popover/rate-popover.component */ "./src/app/pages/tabs/rides/ride/rate-popover/rate-popover.component.ts");
+/* harmony import */ var _core_services_ride_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../core/services/ride.service */ "./src/app/core/services/ride.service.ts");
+
 
 
 
@@ -1892,8 +1902,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var RidePage = /** @class */ (function () {
-    function RidePage(userService, plt, geolocation, trackingService, navParams, router, modalController, popoverController) {
+    function RidePage(userService, rideService, plt, geolocation, trackingService, navParams, router, modalController, popoverController) {
         this.userService = userService;
+        this.rideService = rideService;
         this.plt = plt;
         this.geolocation = geolocation;
         this.trackingService = trackingService;
@@ -2004,10 +2015,10 @@ var RidePage = /** @class */ (function () {
     };
     RidePage.prototype.closeModal = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var onClosedData;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                onClosedData = 'You rated';
-                this.modalController.dismiss(onClosedData);
+                this.ride.isFinished = true;
+                this.rideService.updateRide(this.ride);
+                this.modalController.dismiss();
                 return [2 /*return*/];
             });
         });
@@ -2085,6 +2096,7 @@ var RidePage = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./ride.page.scss */ "./src/app/pages/tabs/rides/ride/ride.page.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_core_services_user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"],
+            _core_services_ride_service__WEBPACK_IMPORTED_MODULE_9__["RideService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Platform"],
             _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__["Geolocation"],
             _core_services_tracking_service__WEBPACK_IMPORTED_MODULE_5__["TrackingService"],

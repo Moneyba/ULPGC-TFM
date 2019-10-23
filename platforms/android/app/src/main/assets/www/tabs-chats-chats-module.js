@@ -1,59 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tabs-chats-chats-module"],{
 
-/***/ "./src/app/core/services/ride.service.ts":
-/*!***********************************************!*\
-  !*** ./src/app/core/services/ride.service.ts ***!
-  \***********************************************/
-/*! exports provided: RideService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RideService", function() { return RideService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-
-
-
-var RideService = /** @class */ (function () {
-    function RideService(db) {
-        this.db = db;
-        this.collectionEndPoint = 'rides';
-    }
-    RideService.prototype.createRide = function (ride) {
-        ride.id = this.db.createPushId();
-        return this.db.object(this.collectionEndPoint + "/" + ride.id).set(ride);
-    };
-    RideService.prototype.updateRide = function (ride) {
-        return this.db.object(this.collectionEndPoint + "/" + ride.id).update(ride);
-    };
-    RideService.prototype.deleteRide = function (rideId) {
-        return this.db.object(this.collectionEndPoint + "/" + rideId).remove();
-    };
-    RideService.prototype.getRides = function () {
-        return this.db.list(this.collectionEndPoint, function (ref) { return ref.orderByChild('dateTime')
-            .startAt(new Date().getTime()); }).valueChanges();
-    };
-    RideService.prototype.getRidesByUserId = function (userId) {
-        return this.db.list(this.collectionEndPoint, function (ref) { return ref.orderByChild('userId').equalTo(userId); }).valueChanges();
-    };
-    RideService.prototype.getRide = function (rideId) {
-        return this.db.object(this.collectionEndPoint + "/" + rideId).valueChanges();
-    };
-    RideService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"]])
-    ], RideService);
-    return RideService;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/pages/tabs/chats/chats-page.component.html":
 /*!************************************************************!*\
   !*** ./src/app/pages/tabs/chats/chats-page.component.html ***!
@@ -61,7 +7,7 @@ var RideService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title text-center>Chats</ion-title>\n  </ion-toolbar>\n\n\n</ion-header>\n\n<ion-content>\n  <ion-list *ngFor=\"let chat of chats\">\n    <ion-item (click)=\"goToChatPage(chat)\">\n      <ion-avatar slot=\"start\">\n        <img [src]=\"chat.otherUser?.photo\">\n      </ion-avatar>\n      <ion-label>\n        <p>{{chat.otherUser?.name}}</p>\n        <h3>{{chat.ride?.originName}} - {{chat.ride?.destinationName}}</h3>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title text-center>Chats</ion-title>\n  </ion-toolbar>\n\n\n</ion-header>\n\n<ion-content>\n  <ion-list *ngFor=\"let chat of chats\" class=\"list-chat\">\n    <ion-item (click)=\"goToChatPage(chat)\">\n      <ion-avatar slot=\"start\">\n        <img [src]=\"chat.otherUser?.photo\">\n      </ion-avatar>\n      <ion-label>\n        <p>{{chat.otherUser?.name}}</p>\n        <h3>{{chat.ride?.originName}} - {{chat.ride?.destinationName}}</h3>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n</ion-content>\n"
 
 /***/ }),
 
@@ -72,7 +18,7 @@ module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-titl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3RhYnMvY2hhdHMvY2hhdHMtcGFnZS5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = ".list-chat {\n  margin-right: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb25leWJhL0Rlc2t0b3AvdW50aXRsZWQgZm9sZGVyL3RmbS9zcmMvYXBwL3BhZ2VzL3RhYnMvY2hhdHMvY2hhdHMtcGFnZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdGFicy9jaGF0cy9jaGF0cy1wYWdlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxpc3QtY2hhdCB7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbn1cbiJdfQ== */"
 
 /***/ }),
 

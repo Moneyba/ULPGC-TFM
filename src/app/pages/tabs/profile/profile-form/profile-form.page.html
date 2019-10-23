@@ -45,8 +45,13 @@
             <ion-icon name="alert" slot="start" color="danger"></ion-icon>
             <ion-label color="danger" (click)="presentAlertConfirm()">{{ 'PROFILE.cancelAccount' | translate:params }}</ion-label>
         </ion-item>
+
+    </div>
+    <div class="spinner-container" *ngIf="isSpinning">
+        <ion-spinner name="lines"></ion-spinner>
     </div>
     <footer class="footer">
+
         <ion-button expand="full" type="submit" (click)="updateUser()"
                     [disabled]="profileForm.invalid">{{ 'GENERIC.save' | translate:params }}
         </ion-button>

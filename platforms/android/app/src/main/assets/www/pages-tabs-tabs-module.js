@@ -17,6 +17,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _tabs_router_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tabs.router.module */ "./src/app/pages/tabs/tabs.router.module.ts");
 /* harmony import */ var _tabs_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tabs.page */ "./src/app/pages/tabs/tabs.page.ts");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
+
 
 
 
@@ -33,6 +35,7 @@ var TabsPageModule = /** @class */ (function () {
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["IonicModule"],
                 _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                _ngx_translate_core__WEBPACK_IMPORTED_MODULE_7__["TranslateModule"],
                 _tabs_router_module__WEBPACK_IMPORTED_MODULE_5__["TabsPageRoutingModule"]
             ],
             declarations: [_tabs_page__WEBPACK_IMPORTED_MODULE_6__["TabsPage"]]
@@ -52,7 +55,7 @@ var TabsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-tabs >\n\n    <ion-tab-bar slot=\"bottom\" color=\"primary\">\n        <ion-tab-button tab=\"home\">\n            <ion-icon name=\"home\"></ion-icon>\n            <ion-label>Home</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"rides\">\n            <ion-icon name=\"car\"></ion-icon>\n            <ion-label>My Rides</ion-label>\n        </ion-tab-button>\n        <ion-tab-button tab=\"chats\">\n            <ion-icon name=\"chatbubbles\"></ion-icon>\n            <ion-label>Chats</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"profile\">\n            <ion-icon name=\"contact\"></ion-icon>\n            <ion-label>Profile</ion-label>\n        </ion-tab-button>\n    </ion-tab-bar>\n</ion-tabs>\n"
+module.exports = "<ion-tabs >\n\n    <ion-tab-bar slot=\"bottom\" color=\"primary\">\n        <ion-tab-button tab=\"home\">\n            <ion-icon name=\"home\"></ion-icon>\n            <ion-label>Home</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"rides\">\n            <ion-icon name=\"car\"></ion-icon>\n            <ion-label>{{ 'MYRIDES.myRides' | translate:params }}</ion-label>\n        </ion-tab-button>\n        <ion-tab-button tab=\"chats\">\n            <ion-icon name=\"chatbubbles\"></ion-icon>\n            <ion-label>Chats</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"profile\">\n            <ion-icon name=\"contact\"></ion-icon>\n            <ion-label>{{ 'PROFILE.profile' | translate:params }}</ion-label>\n        </ion-tab-button>\n    </ion-tab-bar>\n</ion-tabs>\n"
 
 /***/ }),
 

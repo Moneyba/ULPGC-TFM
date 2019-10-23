@@ -25,7 +25,7 @@
     "rating": "Valoración",
     "ratings": "Valoraciones",
     "noRatings": "Sin valoraciones todavía",
-    "earnedPoints": "Puntos Ganados",
+    "earnedPoints": "Puntos Actuales",
 
     "userDetails": "Detalles Usuario",
     "profile": "Perfil",
@@ -47,6 +47,10 @@
     "description": "Descripción",
     "rewardDetails": "Detalles Recompensa",
     "requests": "Solicitudes"
+  },
+
+  "MYRIDES": {
+    "myRides": "Mis Viajes"
   }
 
 }

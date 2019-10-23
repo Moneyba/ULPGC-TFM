@@ -24,6 +24,7 @@ export class RewardsCatalogPage implements OnInit {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.currentUser = this.router.getCurrentNavigation().extras.state.user;
+        console.log(this.currentUser);
       }
     });
     this.getRewards();
@@ -67,8 +68,8 @@ export class RewardsCatalogPage implements OnInit {
 
   public   async presentAlertConfirm(rewardId: string) {
     const alert = await this.alertController.create({
-      header: 'Cancel Ride',
-      message: 'Are you sure you want to delete this product?',
+      header: 'Eliminar Recompensa',
+      message: '¿Estás seguro de que quiere eliminar este producto?',
       buttons: [
         {
           text: 'No',
@@ -77,7 +78,7 @@ export class RewardsCatalogPage implements OnInit {
           handler: (blah) => {
           }
         }, {
-          text: 'Yes',
+          text: 'Sí',
           handler: () => {
             this.rewardService.deleteReward(rewardId);
           }

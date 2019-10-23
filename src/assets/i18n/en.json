@@ -25,7 +25,7 @@
     "rating": "Rating",
     "ratings": "Ratings",
     "noRatings": "No ratings yet",
-    "earnedPoints": "Earned Points",
+    "earnedPoints": "Current Points",
 
     "userDetails": "User Details",
     "profile": "Profile",
@@ -50,5 +50,8 @@
     "rewardDetails": "Reward Details",
     "requests": "Requests"
 
+  },
+  "MYRIDES": {
+    "myRides": "My Rides"
   }
 }

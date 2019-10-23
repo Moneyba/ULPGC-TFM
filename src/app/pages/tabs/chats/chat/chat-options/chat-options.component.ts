@@ -42,10 +42,9 @@ export class ChatOptionsComponent implements OnInit {
         }, {
           text: 'Yes',
           handler: () => {
-            console.log(this.chatId);
-            this.popoverController.dismiss();
-            this.router.navigateByUrl('tabs/tabs/chats');
-            this.chatService.deleteChat(this.chatId);
+            this.popoverController.dismiss().then(() => {
+              this.chatService.deleteChat(this.chatId).then(() =>  this.router.navigateByUrl('tabs/tabs/chats'));
+            });
           }
         }
       ]

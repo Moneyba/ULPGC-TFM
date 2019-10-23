@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {AuthService} from '../../core/services/auth.service';
@@ -21,8 +21,7 @@ export class LoginPage implements OnInit {
     public phoneSent: boolean;
     public verificationID: string;
     public confirmationCode: any;
-
-
+    public isSpinner: boolean;
     @ViewChild(Slides) slides: Slides;
 
     public constructor(private formBuilder: FormBuilder,
@@ -31,8 +30,8 @@ export class LoginPage implements OnInit {
                        private fcmService: FcmService,
                        private platform: Platform,
                        private fireAuth: FirebaseAuthentication,
-                       private loadingService: LoadingService
     ) {
+        this.isSpinner = false;
     }
 
     ngOnInit() {
@@ -57,11 +56,12 @@ export class LoginPage implements OnInit {
 
 
     async logIn() {
-        this.loadingService.presentLoading();
+        this.isSpinner = true;
+
         if (this.phoneNumber && this.phoneNumber.length > 0 && this.phoneNumber.includes('+')) {
             const phoneExists = await this.authService.checkPhone(this.phoneNumber).catch(e => {
                 console.error(e);
-                this.loadingService.dissmissLoading();
+                this.isSpinner = false;
             });
             console.log(phoneExists);
             if (phoneExists && phoneExists.length > 0) {
@@ -69,19 +69,19 @@ export class LoginPage implements OnInit {
                     this.verificationID = await this.fireAuth.verifyPhoneNumber(this.phoneNumber, 120000).catch(e => {
                         console.error(e);
                         // alert(JSON.stringify(e));
-                        this.loadingService.dissmissLoading();
+                        this.isSpinner = false;
                     });
                 } else if (this.platform.is('android')) {
                     const {verificationId} = await this.fireAuth.verifyPhoneNumber(this.phoneNumber, 120000).catch(e => {
                         console.error(e);
                         // alert(JSON.stringify(e));
-                        this.loadingService.dissmissLoading();
+                        this.isSpinner = false;
                     });
                     this.verificationID = verificationId;
                 }
                 console.log(this.platform);
                 this.verificationID = await this.fireAuth.verifyPhoneNumber(this.phoneNumber, 120000);
-                this.loadingService.dissmissLoading();
+                this.isSpinner = false;
                 this.phoneSent = true;
                 console.log('si');
             } else {
@@ -90,9 +90,7 @@ export class LoginPage implements OnInit {
                     phoneNumber: this.phoneNumber
                 }).then(async () => {
                     this.verificationID = await this.fireAuth.verifyPhoneNumber(this.phoneNumber, 120000);
-
-                    console.log('usuario creado y verificado');
-                    this.loadingService.dissmissLoading();
+                    this.isSpinner = false;
                     this.phoneSent = true;
                 });
             }
@@ -102,9 +100,8 @@ export class LoginPage implements OnInit {
     }
 
     public async sendCode(): Promise<any> {
-        this.loadingService.presentLoading();
-        console.log(this.verificationID);
-        console.log(this.confirmationCode);
+        this.isSpinner = true;
+
 
         await this.fireAuth.signInWithVerificationId(this.verificationID, this.confirmationCode);
 
@@ -112,6 +109,8 @@ export class LoginPage implements OnInit {
         //     console.error(e);
         //     this.utils.dissmissLoading();
         // });
-        this.loadingService.dissmissLoading();
+
+
+        this.isSpinner = false;
     }
 }

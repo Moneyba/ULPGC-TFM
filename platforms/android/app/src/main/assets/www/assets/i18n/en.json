@@ -11,6 +11,47 @@
     "time": "Time",
     "cancel": "Cancel",
     "search": "Search",
-    "dateTime": "Date and time:"
+    "dateTime": "Date and time:",
+
+    "save": "Save"
+  },
+  "PROFILE":{
+    "displayName": "Display Name: ",
+    "phoneNumber": "Phone Number: ",
+    "carDetails": "Car Details: ",
+    "selectLanguage": "Select Language",
+    "cancelAccount": "Cancel Account",
+
+    "rating": "Rating",
+    "ratings": "Ratings",
+    "noRatings": "No ratings yet",
+    "earnedPoints": "Current Points",
+
+    "userDetails": "User Details",
+    "profile": "Profile",
+
+    "options": "Account options",
+    "editProfile": "Edit Profile",
+    "contact": "Contact us"
+  },
+  "REWARDS": {
+    "rewards": "Rewards",
+    "earned": "Earned",
+    "used": "Used",
+    "onHold": "On hold",
+    "exchange": "Exchange for",
+
+    "newReward": "New Reward",
+    "editReward": "Edit Reward",
+    "name": "Display Name",
+    "points": "Points",
+    "description": "Description",
+
+    "rewardDetails": "Reward Details",
+    "requests": "Requests"
+
+  },
+  "MYRIDES": {
+    "myRides": "My Rides"
   }
 }

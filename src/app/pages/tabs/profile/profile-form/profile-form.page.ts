@@ -3,12 +3,10 @@ import {User} from '../../../../shared/models/User';
 import {UserService} from '../../../../core/services/user.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
-import {AlertController, ModalController, NavController, NavParams} from '@ionic/angular';
+import {AlertController} from '@ionic/angular';
 import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
 import {UtilsService} from '../../../../core/services/utils.service';
-import {LoadingService} from '../../../../core/services/loading.service';
 import {TranslateConfigService} from '../../../../core/services/translate-config.service';
-import {FirebaseAuthentication} from '@ionic-native/firebase-authentication/ngx';
 
 @Component({
   selector: 'app-profile-form',
@@ -22,6 +20,7 @@ export class ProfileFormPage implements OnInit {
   public photoHasChanged = false;
   public selectedLanguage: string;
   public photo: string;
+  public isSpinning: boolean;
 
   constructor(
       private userService: UserService,
@@ -29,7 +28,6 @@ export class ProfileFormPage implements OnInit {
       private router: Router,
       private route: ActivatedRoute,
       private utilsService: UtilsService,
-      private loadingService: LoadingService,
       private camera: Camera,
       private translateConfigService: TranslateConfigService,
       private alertController: AlertController) {
@@ -40,6 +38,8 @@ export class ProfileFormPage implements OnInit {
         this.photo = this.currentUser.photo;
       }
     });
+    this.isSpinning = false;
+
   }
 
   ngOnInit() {
@@ -73,10 +73,10 @@ export class ProfileFormPage implements OnInit {
     const cameraOptions: CameraOptions = await this.utilsService.actionSheetCameraOptions();
     const preview = await this.camera.getPicture(cameraOptions);
     const base64Image = 'data:image / jpeg;base64,' + preview;
-    this.loadingService.presentLoading();
+    this.isSpinning = true;
     const preset = 'gfllyeot';
     const url = await this.utilsService.uploadBase64ImageToCloudinary(base64Image, preset);
-    this.loadingService.dissmissLoading();
+    this.isSpinning = false;
     this.photo = url;
     this.profileForm.get('photo').setValue(url);
     this.photoHasChanged = true;

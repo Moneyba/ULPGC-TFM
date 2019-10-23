@@ -88,7 +88,6 @@ var HomePage = /** @class */ (function () {
         });
     };
     HomePage.prototype.dateFormat = function (input) {
-        console.log(input);
         var dateToSet = moment__WEBPACK_IMPORTED_MODULE_7__(input, 'DD/MM/YYYY').toDate();
         if (moment__WEBPACK_IMPORTED_MODULE_7__(input, 'DD/MM/YYYY', true).isValid()) {
             this.dateTimeForm.get('dateTime').setValue(dateToSet);
@@ -151,7 +150,6 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.getRides = function () {
         var _this = this;
         this.rideService.getRides().subscribe(function (rides) {
-            console.log(rides);
             _this.rides = rides;
             _this.filteredRides = rides;
         });
@@ -159,11 +157,9 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.filterItems = function () {
         if (this.originLocation) {
             this.filterByLocation('origin');
-            console.log('despues del filtrado por origen', this.filteredRides);
         }
         if (this.destinationLocation) {
             this.filterByLocation('destination');
-            console.log('despues del filtrado por destino', this.filteredRides);
         }
         if (this.dateTimeForm.get('date').value) {
             this.filterByDate();
@@ -176,7 +172,6 @@ var HomePage = /** @class */ (function () {
         }
         var date = new Date(this.dateTimeForm.get('date').value).toDateString();
         var dateTime = new Date(date + " " + time);
-        console.log(dateTime);
         this.filteredRides = this.filteredRides.filter(function (item) {
             var itemDateTime = new Date(item.dateTime);
             if (dateTime.getDate() === itemDateTime.getDate()) {
@@ -203,9 +198,10 @@ var HomePage = /** @class */ (function () {
             travelMode: google.maps.TravelMode.DRIVING
         };
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["bindCallback"])(this.directionsService.route)(direction).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])((function (result) {
-            if (result[1].toString() === 'ZERO_RESULTS') {
+            if (result[0].toString() === 'ZERO_RESULTS') {
                 return false;
             }
+            console.log(result);
             var distance = result[0].routes[0].legs[0].distance;
             if (distance.value < _this.maxDistance) {
                 return true;

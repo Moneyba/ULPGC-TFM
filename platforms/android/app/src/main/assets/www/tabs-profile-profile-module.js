@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-list>\n  <ion-list-header>Account options</ion-list-header>\n  <ion-item button (click)=\"gotoProfileFormPage()\">Edit Profile</ion-item>\n  <ion-item button (click)=\"contact()\">Contact us</ion-item>\n  <ion-item button (click)=\"logout()\">Logout</ion-item>\n</ion-list>\n"
+module.exports = "<ion-list>\n  <ion-list-header>{{ 'PROFILE.options' | translate:params }}</ion-list-header>\n  <ion-item button (click)=\"gotoProfileFormPage()\">{{ 'PROFILE.editProfile' | translate:params }}</ion-item>\n  <ion-item button (click)=\"contact()\">{{ 'PROFILE.contact' | translate:params }}</ion-item>\n  <ion-item button (click)=\"logout()\">Logout</ion-item>\n</ion-list>\n"
 
 /***/ }),
 
@@ -113,6 +113,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _profile_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./profile.page */ "./src/app/pages/tabs/profile/profile.page.ts");
 /* harmony import */ var _profile_popover_profile_popover_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./profile-popover/profile-popover.component */ "./src/app/pages/tabs/profile/profile-popover/profile-popover.component.ts");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
+
 
 
 
@@ -136,6 +138,7 @@ var ProfilePageModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"],
+                _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__["TranslateModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)
             ],
             declarations: [_profile_page__WEBPACK_IMPORTED_MODULE_6__["ProfilePage"], _profile_popover_profile_popover_component__WEBPACK_IMPORTED_MODULE_7__["ProfilePopoverComponent"]],
@@ -156,7 +159,7 @@ var ProfilePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title text-center>Profile</ion-title>\n    <ion-icon id=\"icon-more\" name=\"md-more\" slot=\"end\" (click)=\"presentPopover($event)\"></ion-icon>\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div class=\"user-photo\" padding-top>\n    <ion-avatar>\n      <img [src]=\"currentUser?.photo || '/assets/icon/favicon.jpg'\">\n    </ion-avatar>\n  </div>\n\n  <ion-list>\n    <ion-item>\n      <ion-icon name=\"person\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Display Name</p>\n        <h2>{{currentUser?.name}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\"call\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Mobile Phone Number</p>\n        <h2>{{currentUser?.phoneNumber}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item (click)=\"goToPublicProfilePage()\">\n      <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Rating</p>\n        <h2 *ngIf=\"currentUser?.averageRating\">{{currentUser?.averageRating}}/5 - {{currentUser?.numberOfRatings}} ratings</h2>\n        <h2 *ngIf=\"!currentUser?.averageRating\">No ratings yet</h2>\n      </ion-label>\n      <ion-icon name=\"ios-arrow-forward\" slot=\"end\"></ion-icon>\n    </ion-item>\n    <ion-item (click)=\"gotoRewardsCatalogPage()\">\n      <ion-icon name=\"gift\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Earned Points</p>\n        <h2>{{currentUser?.points?.currentPoints}}</h2>\n      </ion-label>\n      <ion-icon name=\"ios-arrow-forward\" slot=\"end\"></ion-icon>\n    </ion-item>\n    <ion-item *ngIf=\"currentUser?.carPlate\">\n      <ion-icon name=\"car\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>Car Plate</p>\n        <h2>{{currentUser?.carPlate}}</h2>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n    <!--<ion-button (click)=\"gotoSetup()\">Setup</ion-button>-->\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title text-center>{{ 'PROFILE.profile' | translate:params }}</ion-title>\n    <ion-icon id=\"icon-more\" name=\"md-more\" slot=\"end\" (click)=\"presentPopover($event)\"></ion-icon>\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div class=\"user-photo\" padding-top>\n    <ion-avatar>\n      <img [src]=\"currentUser?.photo || '/assets/icon/favicon.jpg'\">\n    </ion-avatar>\n  </div>\n\n  <ion-list>\n    <ion-item>\n      <ion-icon name=\"person\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>{{ 'PROFILE.displayName' | translate:params }}</p>\n        <h2>{{currentUser?.name}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item>\n      <ion-icon name=\"call\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>{{ 'PROFILE.phoneNumber' | translate:params }}</p>\n        <h2>{{currentUser?.phoneNumber}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item *ngIf=\"currentUser?.carPlate\">\n      <ion-icon name=\"car\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>{{ 'PROFILE.carDetails' | translate:params }}</p>\n        <h2>{{currentUser?.carDetails}}</h2>\n      </ion-label>\n    </ion-item>\n    <ion-item (click)=\"goToPublicProfilePage()\">\n      <ion-icon name=\"star\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>{{ 'PROFILE.rating' | translate:params }}</p>\n        <h2 *ngIf=\"currentUser?.averageRating\">{{currentUser?.averageRating}}/5 - {{currentUser?.numberOfRatings}} ratings</h2>\n        <h2 *ngIf=\"!currentUser?.averageRating\">{{ 'PROFILE.noRatings' | translate:params }}</h2>\n      </ion-label>\n      <ion-icon name=\"ios-arrow-forward\" slot=\"end\"></ion-icon>\n    </ion-item>\n    <ion-item (click)=\"gotoRewardsCatalogPage()\">\n      <ion-icon name=\"gift\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <p>{{ 'PROFILE.earnedPoints' | translate:params }}</p>\n        <h2>{{currentUser?.points?.currentPoints}}</h2>\n      </ion-label>\n      <ion-icon name=\"ios-arrow-forward\" slot=\"end\"></ion-icon>\n    </ion-item>\n\n  </ion-list>\n</ion-content>\n"
 
 /***/ }),
 
@@ -198,10 +201,8 @@ var ProfilePage = /** @class */ (function () {
         this.userService = userService;
         this.router = router;
         this.popoverController = popoverController;
-        this.currentUser = this.userService.user.getValue();
     }
     ProfilePage.prototype.ngOnInit = function () {
-        console.log(this.currentUser);
     };
     ProfilePage.prototype.ionViewWillEnter = function () {
         this.currentUser = this.userService.user.getValue();

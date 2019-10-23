@@ -19,6 +19,7 @@ export class RewardFormPage implements OnInit {
     public photoHasChanged = false;
     public photo = '/assets/icon/favicon.jpg';
     private reward: RewardProduct;
+    public isSpinning = false;
 
     constructor(private utilsService: UtilsService,
                 private loadingService: LoadingService,
@@ -60,7 +61,7 @@ export class RewardFormPage implements OnInit {
 
         };
         this.rewardService.createReward(reward).then(() => {
-            this.router.navigate(['tabs/tabs/profile']);
+            this.router.navigate(['rewards-catalog']);
         });
     }
 
@@ -75,7 +76,7 @@ export class RewardFormPage implements OnInit {
 
         };
         this.rewardService.updateReward(reward).then(() => {
-            this.router.navigate(['tabs/tabs/profile']);
+            this.router.navigate(['rewards-catalog']);
         });
     }
 
@@ -83,10 +84,10 @@ export class RewardFormPage implements OnInit {
         const cameraOptions: CameraOptions = await this.utilsService.actionSheetCameraOptions();
         const preview = await this.camera.getPicture(cameraOptions);
         const base64Image = 'data:image / jpeg;base64,' + preview;
-        this.loadingService.presentLoading();
+        this.isSpinning = true;
         const preset = 'gfllyeot';
         const url = await this.utilsService.uploadBase64ImageToCloudinary(base64Image, preset);
-        this.loadingService.dissmissLoading();
+        this.isSpinning = false;
         this.photo = url;
         this.photoHasChanged = true;
     }
